@@ -4,6 +4,7 @@ import { Phone, MapPin, Clock, Scissors, Sparkles, Palette, Star } from "lucide-
 import { useState } from "react";
 import { useLocation } from "wouter";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 
 /**
  * Design Philosophy: Modern Luxury Minimalism
@@ -99,6 +100,9 @@ export default function Home() {
             </a>
             <a href="/blog" className="text-foreground hover:text-primary transition-colors">
               Blog
+            </a>
+            <a href="/reviews" className="text-foreground hover:text-primary transition-colors">
+              Reviews
             </a>
             <a href="#team" className="text-foreground hover:text-primary transition-colors">
               Team
@@ -280,6 +284,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Google Reviews Section */}
+      <section className="py-24 bg-background">
+        <div className="container">
+          <div className="mb-12">
+            <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Verified Client Reviews
+            </h2>
+            <p className="text-lg text-foreground/70 max-w-2xl">
+              See what our satisfied clients are saying about their experiences at Hello Beauty Lounge on Vagaro.
+            </p>
+          </div>
+          <GoogleReviewsWidget />
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-background">
         <div className="container">
@@ -386,6 +405,7 @@ export default function Home() {
                 <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
                 <li><a href="/gallery" className="hover:text-white transition-colors">Gallery</a></li>
                 <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
+                <li><a href="/reviews" className="hover:text-white transition-colors">Reviews</a></li>
                 <li><a href="#team" className="hover:text-white transition-colors">Team</a></li>
                 <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
