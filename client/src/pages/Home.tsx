@@ -122,7 +122,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hero-salon-interior-i9ostRpJtP75SXmbiubSKU.webp"
+            src="/manus-storage/IMG_0069_Original_a9f0a198.JPG"
             alt="Luxury salon interior"
             className="w-full h-full object-cover"
           />
