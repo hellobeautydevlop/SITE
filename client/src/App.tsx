@@ -18,8 +18,8 @@ import KevinMurphy from "./pages/KevinMurphy";
 import StylistQuiz from "./components/StylistQuiz";
 import BookingAssistant from "./components/BookingAssistant";
 
+
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />

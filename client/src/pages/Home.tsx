@@ -1,4 +1,3 @@
-import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import SEO from "@/components/SEO";
@@ -10,7 +9,6 @@ import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import MobileNav from "@/components/MobileNav";
 import InstagramFeed from "@/components/InstagramFeed";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
-import ContactForm from "@/components/ContactForm";
 
 /**
  * Design Philosophy: Modern Luxury Minimalism
@@ -21,10 +19,6 @@ import ContactForm from "@/components/ContactForm";
  */
 
 export default function Home() {
-  // The userAuth hooks provides authentication state
-  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
-  let { user, loading, error, isAuthenticated, logout } = useAuth();
-
   const [, setLocation] = useLocation();
   const [activeService, setActiveService] = useState(0);
 
@@ -402,7 +396,18 @@ export default function Home() {
               </div>
             </div>
 
-            <ContactForm />
+            <div className="bg-white p-12 rounded-lg text-center">
+              <h3 className="text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Ready to Transform Your Look?
+              </h3>
+              <p className="text-gray-600 mb-8">Book your appointment directly with our expert stylists on Vagaro.</p>
+              <Button 
+                className="bg-primary hover:bg-primary/90 text-white py-3 px-8 text-lg"
+                onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+              >
+                Book Your Appointment
+              </Button>
+            </div>
           </div>
         </div>
       </section>
