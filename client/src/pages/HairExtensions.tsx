@@ -8,58 +8,22 @@ export default function HairExtensions() {
 
   const services = [
     {
-      name: "Hand-Tied Extensions",
-      description: "Premium extensions for natural, undetectable results",
-      price: "$300 - $600",
+      name: "Extensions - Install",
+      description: "Professional installation of premium hair extensions",
+      price: "$211.87 avg",
       duration: "3-4 hours",
       details: [
         "100% human hair",
-        "Hand-tied wefts",
+        "Expert installation",
         "Seamless blending",
-        "Long-lasting (6-12 months)",
+        "Long-lasting results",
       ],
     },
     {
-      name: "Tape-In Extensions",
-      description: "Quick, non-damaging extensions for instant length",
-      price: "$200 - $400",
-      duration: "2-3 hours",
-      details: [
-        "Lightweight application",
-        "Easy maintenance",
-        "Reusable wefts",
-        "Lasts 6-8 weeks",
-      ],
-    },
-    {
-      name: "Clip-In Extensions",
-      description: "Temporary extensions for flexible styling options",
-      price: "$150 - $300",
-      duration: "1-2 hours",
-      details: [
-        "Easy application",
-        "No commitment",
-        "Reusable",
-        "Perfect for events",
-      ],
-    },
-    {
-      name: "Extension Color Match",
-      description: "Custom color matching for seamless blending",
-      price: "$50 - $100",
-      duration: "1-1.5 hours",
-      details: [
-        "Expert color analysis",
-        "Custom blending",
-        "Toning included",
-        "Perfect match guaranteed",
-      ],
-    },
-    {
-      name: "Extension Maintenance",
-      description: "Regular maintenance and adjustments",
-      price: "$100 - $200",
-      duration: "1-2 hours",
+      name: "Extensions - Touch-up",
+      description: "Maintenance and repositioning of existing extensions",
+      price: "$77.31 avg",
+      duration: "1.5-2 hours",
       details: [
         "Repositioning",
         "Tightening",
@@ -68,9 +32,21 @@ export default function HairExtensions() {
       ],
     },
     {
-      name: "Extension Removal",
+      name: "Extensions - Consultation",
+      description: "Expert consultation for extension options",
+      price: "$356.25 avg",
+      duration: "1-1.5 hours",
+      details: [
+        "Hair type assessment",
+        "Extension options review",
+        "Custom recommendations",
+        "Pricing discussion",
+      ],
+    },
+    {
+      name: "Extensions - Removal",
       description: "Safe, professional removal of extensions",
-      price: "$75 - $150",
+      price: "$95.00 avg",
       duration: "1-1.5 hours",
       details: [
         "Gentle removal process",
@@ -79,12 +55,36 @@ export default function HairExtensions() {
         "Aftercare advice",
       ],
     },
+    {
+      name: "Extension - Fix",
+      description: "Quick fixes and adjustments for extensions",
+      price: "$22.50 avg",
+      duration: "30-45 minutes",
+      details: [
+        "Quick repairs",
+        "Adjustment",
+        "Damage assessment",
+        "Extended longevity",
+      ],
+    },
+    {
+      name: "Bellami Hair Extension Consultation",
+      description: "Specialized consultation for Bellami extensions",
+      price: "$175.00 avg",
+      duration: "1-1.5 hours",
+      details: [
+        "Bellami specialist",
+        "Product overview",
+        "Custom recommendations",
+        "Installation planning",
+      ],
+    },
   ];
 
   const specialists = [
     {
       name: "Melissa Mitchell",
-      specialty: "Hand-Tied Extensions",
+      specialty: "Extension Specialist",
       reviews: 11,
       rating: 5.0,
     },

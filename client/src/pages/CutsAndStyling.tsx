@@ -8,9 +8,9 @@ export default function CutsAndStyling() {
 
   const services = [
     {
-      name: "Women's Precision Cut",
+      name: "Adult Haircut - Long",
       description: "Custom cut tailored to your face shape and hair type",
-      price: "$55 - $85",
+      price: "$64.87 avg",
       duration: "1-1.5 hours",
       details: [
         "Face shape analysis",
@@ -20,21 +20,45 @@ export default function CutsAndStyling() {
       ],
     },
     {
-      name: "Men's Cut & Style",
-      description: "Sharp, clean cuts with expert fading and styling",
-      price: "$35 - $50",
+      name: "Adult Haircut - Short",
+      description: "Sharp, clean cuts with expert precision",
+      price: "$53.95 avg",
       duration: "45 minutes - 1 hour",
       details: [
-        "Fade and blend options",
+        "Precision cutting",
         "Line-up and detailing",
-        "Product styling",
+        "Shape maintenance",
         "Quick turnaround",
       ],
     },
     {
-      name: "Blowout & Style",
+      name: "Men's Haircut",
+      description: "Professional cuts with expert fading and styling",
+      price: "$35.01 avg",
+      duration: "30-45 minutes",
+      details: [
+        "Fade and blend options",
+        "Line-up and detailing",
+        "Product styling",
+        "Quick service",
+      ],
+    },
+    {
+      name: "Child Haircut Medium",
+      description: "Gentle, professional cuts for children",
+      price: "$57.93 avg",
+      duration: "30-45 minutes",
+      details: [
+        "Child-friendly approach",
+        "Custom styling",
+        "Quick service",
+        "Fun experience",
+      ],
+    },
+    {
+      name: "Wash and Style",
       description: "Professional styling for any occasion",
-      price: "$45 - $75",
+      price: "$45.13 avg",
       duration: "1-1.5 hours",
       details: [
         "Blow-dry styling",
@@ -44,39 +68,15 @@ export default function CutsAndStyling() {
       ],
     },
     {
-      name: "Updo & Special Occasion",
-      description: "Elegant updos for weddings, events, and celebrations",
-      price: "$75 - $120",
-      duration: "1.5-2 hours",
-      details: [
-        "Custom design consultation",
-        "Bridal & event styling",
-        "Long-lasting hold",
-        "Hair accessories available",
-      ],
-    },
-    {
-      name: "Bangs Trim",
-      description: "Quick and precise bang trimming",
-      price: "$20 - $30",
-      duration: "15-30 minutes",
-      details: [
-        "Precision cutting",
-        "Angle customization",
-        "Quick service",
-        "Shape maintenance",
-      ],
-    },
-    {
-      name: "Layers & Texture",
-      description: "Add movement and dimension with strategic layering",
-      price: "$60 - $90",
+      name: "Custom Haircut",
+      description: "Personalized cut for your unique style",
+      price: "$36.20 avg",
       duration: "1-1.5 hours",
       details: [
-        "Textured layers",
-        "Movement creation",
-        "Face-framing options",
-        "Styling included",
+        "Custom design consultation",
+        "Expert styling",
+        "Long-lasting shape",
+        "Maintenance tips included",
       ],
     },
   ];
@@ -89,9 +89,9 @@ export default function CutsAndStyling() {
       rating: 5.0,
     },
     {
-      name: "Noon K",
+      name: "Melissa Mitchell",
       specialty: "Master Stylist",
-      reviews: 12,
+      reviews: 11,
       rating: 5.0,
     },
   ];

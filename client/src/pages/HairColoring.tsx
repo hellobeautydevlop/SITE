@@ -8,21 +8,9 @@ export default function HairColoring() {
 
   const services = [
     {
-      name: "Full Color",
-      description: "Complete hair color transformation with expert application",
-      price: "$85 - $150",
-      duration: "2-3 hours",
-      details: [
-        "Professional color consultation",
-        "Premium color products",
-        "Strand test included",
-        "Color protection treatment",
-      ],
-    },
-    {
-      name: "Balayage",
-      description: "Hand-painted highlights for a natural, sun-kissed look",
-      price: "$120 - $200",
+      name: "Balayage & Foilayage",
+      description: "Hand-painted or foil highlights for natural, dimensional color",
+      price: "$257.76 avg",
       duration: "2.5-3.5 hours",
       details: [
         "Custom color placement",
@@ -32,21 +20,45 @@ export default function HairColoring() {
       ],
     },
     {
-      name: "Foilayage",
-      description: "Precision highlights using foil for dimensional color",
-      price: "$110 - $180",
+      name: "The Partial Highlight",
+      description: "Precision partial highlights for subtle dimension",
+      price: "$178.14 avg",
       duration: "2-3 hours",
       details: [
-        "Precise foil placement",
-        "Multiple color tones",
-        "Root touch-up option",
+        "Strategic placement",
+        "Blended tones",
         "Shine-enhancing gloss",
+        "Color protection",
       ],
     },
     {
-      name: "Color Correction",
+      name: "The Full Highlight",
+      description: "Complete head of dimensional highlights",
+      price: "$271.93 avg",
+      duration: "2.5-3.5 hours",
+      details: [
+        "Full head coverage",
+        "Multiple color tones",
+        "Toner application",
+        "Conditioning treatment",
+      ],
+    },
+    {
+      name: "Color Retouch",
+      description: "Refresh your existing color with precision",
+      price: "$127.14 avg",
+      duration: "1.5-2 hours",
+      details: [
+        "Root color matching",
+        "Precise application",
+        "Gloss included",
+        "Quick turnaround",
+      ],
+    },
+    {
+      name: "The Color Correction",
       description: "Expert correction of previous color mishaps",
-      price: "$150 - $250",
+      price: "$316.67 avg",
       duration: "3-4 hours",
       details: [
         "Damage assessment",
@@ -56,27 +68,15 @@ export default function HairColoring() {
       ],
     },
     {
-      name: "Root Touch-Up",
-      description: "Refresh your color at the roots",
-      price: "$45 - $75",
-      duration: "1-1.5 hours",
+      name: "Solid Color",
+      description: "Complete hair color transformation",
+      price: "$153.33 avg",
+      duration: "2-3 hours",
       details: [
-        "Root-only application",
-        "Color matching",
-        "Quick turnaround",
-        "Glossing included",
-      ],
-    },
-    {
-      name: "Toning & Gloss",
-      description: "Enhance and refresh your existing color",
-      price: "$35 - $60",
-      duration: "45 minutes - 1 hour",
-      details: [
-        "Custom toning",
-        "Shine enhancement",
-        "Color vibrancy boost",
-        "Quick service",
+        "Professional consultation",
+        "Premium color products",
+        "Strand test included",
+        "Color protection treatment",
       ],
     },
   ];
@@ -89,9 +89,9 @@ export default function HairColoring() {
       rating: 5.0,
     },
     {
-      name: "Shutala Narong",
-      specialty: "Color Specialist",
-      reviews: 9,
+      name: "Noon K",
+      specialty: "Master Colorist",
+      reviews: 12,
       rating: 5.0,
     },
   ];

@@ -16,7 +16,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/services/hair-coloring"} component={HairColoring} />
-      <Route path={"/services/cuts-styling"} component={CutsAndStyling} />
+      <Route path={"/services/cuts-and-styling"} component={CutsAndStyling} />
       <Route path={"/services/hair-extensions"} component={HairExtensions} />
       <Route path={"/services/nail-design"} component={NailDesign} />
       <Route path={"/404"} component={NotFound} />

@@ -27,7 +27,7 @@ export default function Home() {
       icon: Scissors,
       title: "Professional Cuts & Styling",
       description: "Precision cuts tailored to your face shape and lifestyle, with expert styling for every occasion.",
-      link: "/services/cuts-styling",
+      link: "/services/cuts-and-styling",
     },
     {
       icon: Sparkles,
