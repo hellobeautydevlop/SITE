@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Phone, MapPin, Clock, Scissors, Sparkles, Palette } from "lucide-react";
+import { Phone, MapPin, Clock, Scissors, Sparkles, Palette, Star } from "lucide-react";
 import { useState } from "react";
 
 /**
@@ -39,10 +39,40 @@ export default function Home() {
 
   const team = [
     {
-      name: "Brianna Dubois",
+      name: "Noon K",
       role: "Master Stylist & Founder",
-      specialty: "Hair Color & Balayage",
+      specialty: "Hair Transformation & Artistry",
+      bio: "The visionary founder and master stylist at Hello Beauty Lounge. With an artistic eye and a passion for perfection, Noon transforms hair into a masterpiece, ensuring every client leaves feeling fabulous and confident.",
+      rating: 5.0,
+      reviews: 12,
       image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/stylist-portrait-D72Wo49dJ6s56MUDowxBpn.webp",
+    },
+    {
+      name: "Melissa Mitchell",
+      role: "Hair Specialist",
+      specialty: "Balayage, Extensions & Color",
+      bio: "With over a decade of experience, Melissa specializes in balayage, foilayage, color corrections, hand-tied extensions, updos, and makeup. She's passionate about enhancing natural beauty with affordable luxury.",
+      rating: 5.0,
+      reviews: 11,
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hair-transformation-LsCxWNw4JuV82YSRKYyjfN.webp",
+    },
+    {
+      name: "Tiara Black",
+      role: "Hair Stylist",
+      specialty: "Precision Cuts & Styling",
+      bio: "With an eye for detail and a knack for making clients feel comfortable and chic, Tiara creates beautiful styles that are sure to turn heads. Your go-to for gorgeous hair at Hello Beauty Lounge.",
+      rating: 5.0,
+      reviews: 6,
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/nail-art-closeup-7V8sKJvXpYZ9tQwFmNbRsA.webp",
+    },
+    {
+      name: "Shutala Narong",
+      role: "Color Specialist",
+      specialty: "Extensions, Bridal & Ethnic Hair",
+      bio: "A dedicated color specialist with a passion for crafting stunning, personalized looks. Expert in extensions, bridal hair, special event styling, and precision cuts with a specialty in Asian and ethnic hair.",
+      rating: 5.0,
+      reviews: 9,
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/team-salon-5HjKmLpQvWz3xNsYtUvJcA.webp",
     },
   ];
 
@@ -178,21 +208,35 @@ export default function Home() {
             Meet Our Master Stylists
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-2 gap-12">
             {team.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="mb-6 overflow-hidden rounded-lg">
+              <div key={index} className="bg-background rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div className="h-96 overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-96 object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  {member.name}
-                </h3>
-                <p className="text-accent font-semibold mb-2">{member.role}</p>
-                <p className="text-foreground/70">{member.specialty}</p>
+                <div className="p-8">
+                  <h3 className="text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    {member.name}
+                  </h3>
+                  <p className="text-accent font-semibold mb-1">{member.role}</p>
+                  <p className="text-sm text-foreground/60 mb-4">{member.specialty}</p>
+                  
+                  {/* Rating */}
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                      ))}
+                    </div>
+                    <span className="text-sm text-foreground/70">({member.reviews} reviews)</span>
+                  </div>
+                  
+                  <p className="text-foreground/70 leading-relaxed text-sm">{member.bio}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -202,7 +246,7 @@ export default function Home() {
               Our Team
             </h3>
             <p className="text-center text-foreground/70 leading-relaxed max-w-2xl mx-auto">
-              With over 4 years of professional experience, our stylists are passionate about creating beautiful transformations. We specialize in luxury hair color, expert cuts, premium extensions, and professional nail design.
+              With over a decade of professional experience, our stylists are passionate about creating beautiful transformations. We specialize in luxury hair color, expert cuts, premium extensions, and professional nail design. Each team member brings unique expertise and a commitment to excellence.
             </p>
           </div>
         </div>
