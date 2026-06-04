@@ -54,7 +54,7 @@ export default function Home() {
       bio: "With over a decade of experience, Melissa specializes in balayage, foilayage, color corrections, hand-tied extensions, updos, and makeup. She's passionate about enhancing natural beauty with affordable luxury.",
       rating: 5.0,
       reviews: 11,
-      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hair-transformation-LsCxWNw4JuV82YSRKYyjfN.webp",
+      image: "/manus-storage/IMG_3887_Original_057626f3.JPG",
     },
     {
       name: "Tiara Black",
