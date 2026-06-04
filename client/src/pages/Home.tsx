@@ -385,44 +385,17 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white p-12 rounded-lg">
+            <div className="bg-white p-12 rounded-lg text-center">
               <h3 className="text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Book Your Appointment
+                Ready to Transform Your Look?
               </h3>
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-semibold mb-2">Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-2">Email</label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-2">Service</label>
-                  <select className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
-                    <option>Select a service</option>
-                    <option>Hair Coloring & Balayage</option>
-                    <option>Professional Cuts & Styling</option>
-                    <option>Premium Hair Extensions</option>
-                    <option>Nail Design</option>
-                  </select>
-                </div>
-            <Button 
-              className="w-full bg-primary hover:bg-primary/90 text-white py-3"
-              onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
-            >
-              Book on Vagaro
-            </Button>
-              </form>
+              <p className="text-gray-600 mb-8">Book your appointment directly with our expert stylists on Vagaro.</p>
+              <Button 
+                className="bg-primary hover:bg-primary/90 text-white py-3 px-8 text-lg"
+                onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+              >
+                Book Your Appointment
+              </Button>
             </div>
           </div>
         </div>
