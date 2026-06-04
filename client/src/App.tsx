@@ -12,6 +12,7 @@ import HairColoring from "./pages/HairColoring";
 import CutsAndStyling from "./pages/CutsAndStyling";
 import HairExtensions from "./pages/HairExtensions";
 import NailDesign from "./pages/NailDesign";
+import KevinMurphy from "./pages/KevinMurphy";
 
 
 function Router() {
@@ -25,6 +26,7 @@ function Router() {
       <Route path={"/gallery"} component={Gallery} />
       <Route path={"/blog"} component={Blog} />
       <Route path={"/reviews"} component={Reviews} />
+      <Route path={"/kevin-murphy"} component={KevinMurphy} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

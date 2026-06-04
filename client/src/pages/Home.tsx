@@ -116,6 +116,9 @@ export default function Home() {
             <a href="/reviews" className="text-foreground hover:text-primary transition-colors">
               Reviews
             </a>
+            <a href="/kevin-murphy" className="text-foreground hover:text-primary transition-colors">
+              Kevin Murphy
+            </a>
             <a href="#team" className="text-foreground hover:text-primary transition-colors">
               Team
             </a>
