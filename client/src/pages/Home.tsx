@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useLocation } from "wouter";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
+import MobileNav from "@/components/MobileNav";
 
 /**
  * Design Philosophy: Modern Luxury Minimalism
@@ -85,8 +86,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+      {/* Mobile Navigation */}
+      <MobileNav onBookClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')} />
+
+      {/* Desktop Navigation */}
+      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border hidden md:block">
         <div className="container py-4 flex justify-between items-center">
           <div className="text-2xl font-bold text-primary" style={{ fontFamily: "'Playfair Display', serif" }}>
             Hello Beauty Lounge
@@ -119,7 +123,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center overflow-hidden">
+      <section className="relative h-[60vh] md:h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/manus-storage/IMG_0069_Original_a9f0a198.JPG"
@@ -130,37 +134,38 @@ export default function Home() {
         </div>
 
         <div className="container relative z-10 max-w-2xl">
-          <h1 className="text-5xl md:text-6xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="text-3xl md:text-6xl text-white mb-4 md:mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Elevate Your Beauty Journey
           </h1>
-          <p className="text-xl text-white/90 mb-8 leading-relaxed">
+          <p className="text-base md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed">
             Experience luxury hair and beauty services in Red Deer. Our master stylists specialize in color, cuts, extensions, and nail design.
           </p>
-          <div className="flex gap-4">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}>
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+            <Button className="bg-accent hover:bg-accent/90 text-white" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}>
               <Phone className="w-4 h-4 mr-2" />
               Book Now
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('tel:+15872731668')}>
-              Call: (587) 273-1668
+            <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('tel:+15872731668')}>
+              <Phone className="w-4 h-4 mr-2" />
+              Call
             </Button>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-white">
+      <section id="services" className="py-16 md:py-24 bg-white">
         <div className="container">
-          <div className="max-w-2xl mb-16">
-            <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <div className="max-w-2xl mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-5xl mb-4 md:mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
               Our Services
             </h2>
-            <p className="text-lg text-foreground/70">
+            <p className="text-base md:text-lg text-foreground/70">
               We offer comprehensive beauty services designed to transform and enhance your natural beauty with expert care and premium products.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -211,13 +216,13 @@ export default function Home() {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-24 bg-white">
+      <section id="team" className="py-16 md:py-24 bg-white">
         <div className="container">
-          <h2 className="text-4xl md:text-5xl mb-16 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="text-3xl md:text-5xl mb-12 md:mb-16 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
             Meet Our Master Stylists
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {team.map((member, index) => (
               <div key={index} className="bg-background rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
                 <div className="h-96 overflow-hidden">
@@ -300,11 +305,11 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-background">
+      <section id="contact" className="py-16 md:py-24 bg-background">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             <div>
-              <h2 className="text-4xl md:text-5xl mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h2 className="text-3xl md:text-5xl mb-6 md:mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
                 Visit Us
               </h2>
 
