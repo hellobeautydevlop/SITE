@@ -45,7 +45,7 @@ export default function Home() {
       bio: "The visionary founder and master stylist at Hello Beauty Lounge. With an artistic eye and a passion for perfection, Noon transforms hair into a masterpiece, ensuring every client leaves feeling fabulous and confident.",
       rating: 5.0,
       reviews: 12,
-      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/stylist-portrait-D72Wo49dJ6s56MUDowxBpn.webp",
+      image: "/manus-storage/IMG_4067_Original_13c5ff7d.JPG",
     },
     {
       name: "Melissa Mitchell",
