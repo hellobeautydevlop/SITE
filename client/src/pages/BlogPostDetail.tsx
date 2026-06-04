@@ -1,7 +1,8 @@
 import { useRoute, useLocation } from "wouter";
-import { ChevronLeft, Calendar, Clock, User, Sparkles, BookOpen } from "lucide-react";
+import { ChevronLeft, Calendar, Clock, User, Sparkles, BookOpen, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { blogPosts } from "@/const/blogData";
 
 export default function BlogPostDetail() {
@@ -141,15 +142,38 @@ export default function BlogPostDetail() {
 
       {/* Header */}
       <div className="sticky top-0 z-40 glassmorphism border-b border-border/50">
-        <div className="container py-6 flex items-center justify-between">
-          <button
-            onClick={() => navigate("/blog")}
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-all duration-300 hover:-translate-x-1"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            Back to Blog
-          </button>
-          <div className="text-lg font-bold text-primary" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <div className="container py-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          {/* Breadcrumb Navigation */}
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink 
+                  onClick={() => navigate("/")} 
+                  className="cursor-pointer flex items-center gap-1.5 text-xs font-medium"
+                >
+                  <Home className="w-3.5 h-3.5" />
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink 
+                  onClick={() => navigate("/blog")} 
+                  className="cursor-pointer text-xs font-medium"
+                >
+                  Blog
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage className="text-xs font-medium text-accent max-w-[200px] truncate">
+                  {post.title}
+                </BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+
+          <div className="text-lg font-bold text-primary self-start md:self-auto" style={{ fontFamily: "'Playfair Display', serif" }}>
             Hello <span className="text-accent font-medium">Beauty Lounge</span>
           </div>
         </div>

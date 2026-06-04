@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
-import { ChevronLeft, Search, Clock, Calendar, User, Sparkles, BookOpen } from "lucide-react";
+import { ChevronLeft, Search, Clock, Calendar, User, Sparkles, BookOpen, Home } from "lucide-react";
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { useLocation } from "wouter";
 import { blogPosts } from "@/const/blogData";
 
@@ -31,13 +32,25 @@ export default function Blog() {
       {/* Header */}
       <div className="sticky top-0 z-40 glassmorphism border-b border-border/50">
         <div className="container py-6">
-          <button
-            onClick={() => navigate("/")}
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-all duration-300 mb-6 hover:-translate-x-1"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            Back to Home
-          </button>
+          {/* Breadcrumb Navigation */}
+          <Breadcrumb className="mb-6">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink 
+                  onClick={() => navigate("/")} 
+                  className="cursor-pointer flex items-center gap-1.5 text-xs font-medium"
+                >
+                  <Home className="w-3.5 h-3.5" />
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage className="text-xs font-medium text-accent">Blog</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+          
           <h1 className="text-4xl md:text-5xl font-display font-semibold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
             The Beauty <span className="text-gold">Journal</span>
           </h1>
