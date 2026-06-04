@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import { ArrowLeft, Check, Star } from "lucide-react";
+import { ArrowLeft, Check, Sparkles, Star } from "lucide-react";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { useLocation } from "wouter";
 
 export default function HairExtensions() {
@@ -347,29 +348,108 @@ export default function HairExtensions() {
           <h3 className="text-4xl mb-16 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
             Frequently Asked Questions
           </h3>
-          <div className="max-w-3xl mx-auto space-y-6">
-            <div className="bg-accent/5 p-8 rounded-lg">
-              <h4 className="font-semibold mb-3 text-lg">Will extensions damage my hair?</h4>
-              <p className="text-foreground/70">When applied and maintained properly, extensions should not damage your natural hair. We use gentle techniques and provide aftercare guidance to protect your hair health.</p>
-            </div>
-            <div className="bg-accent/5 p-8 rounded-lg">
-              <h4 className="font-semibold mb-3 text-lg">How long do extensions last?</h4>
-              <p className="text-foreground/70">Longevity depends on the type: hand-tied (6-12 months), tape-in (6-8 weeks), and clip-in (reusable indefinitely). Regular maintenance extends their lifespan.</p>
-            </div>
-            <div className="bg-accent/5 p-8 rounded-lg">
-              <h4 className="font-semibold mb-3 text-lg">Can I style my extensions?</h4>
-              <p className="text-foreground/70">Yes! You can curl, straighten, and style your extensions just like natural hair. We recommend using heat protectant products and gentle techniques.</p>
-            </div>
-            <div className="bg-accent/5 p-8 rounded-lg">
-              <h4 className="font-semibold mb-3 text-lg">How do I care for my extensions?</h4>
-              <p className="text-foreground/70">Use sulfate-free products, brush gently from ends to roots, sleep in a braid, and avoid excessive heat. We provide detailed aftercare instructions at your appointment.</p>
-            </div>
-            <div className="bg-accent/5 p-8 rounded-lg">
-              <h4 className="font-semibold mb-3 text-lg">What's the consultation process?</h4>
-              <p className="text-foreground/70">We assess your hair type, discuss your goals, recommend the best extension type, and show you color options. This ensures we create the perfect look for you.</p>
-            </div>
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="faq-1" className="bg-accent/5 px-6 rounded-lg border border-border/50">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline">
+                  Will extensions damage my hair?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base pb-6 leading-relaxed">
+                  When applied and maintained properly, extensions should not damage your natural hair. We use gentle techniques and provide aftercare guidance to protect your hair health.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-2" className="bg-accent/5 px-6 rounded-lg border border-border/50">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline">
+                  How long do extensions last?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base pb-6 leading-relaxed">
+                  Longevity depends on the type: hand-tied (6-12 months), tape-in (6-8 weeks), and clip-in (reusable indefinitely). Regular maintenance extends their lifespan.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-3" className="bg-accent/5 px-6 rounded-lg border border-border/50">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline">
+                  Can I style my extensions?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base pb-6 leading-relaxed">
+                  Yes! You can curl, straighten, and style your extensions just like natural hair. We recommend using heat protectant products and gentle techniques.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-4" className="bg-accent/5 px-6 rounded-lg border border-border/50">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline">
+                  How do I care for my extensions?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base pb-6 leading-relaxed">
+                  Use sulfate-free products, brush gently from ends to roots, sleep in a braid, and avoid excessive heat. We provide detailed aftercare instructions at your appointment.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-5" className="bg-accent/5 px-6 rounded-lg border border-border/50">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline">
+                  What's the consultation process?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base pb-6 leading-relaxed">
+                  We assess your hair type, discuss your goals, recommend the best extension type, and show you color options. This ensures we create the perfect look for you.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
+
+        {/* JSON-LD FAQPage Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Will extensions damage my hair?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "When applied and maintained properly, extensions should not damage your natural hair. We use gentle techniques and provide aftercare guidance to protect your hair health."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long do extensions last?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Longevity depends on the type: hand-tied (6-12 months), tape-in (6-8 weeks), and clip-in (reusable indefinitely). Regular maintenance extends their lifespan."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I style my extensions?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! You can curl, straighten, and style your extensions just like natural hair. We recommend using heat protectant products and gentle techniques."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do I care for my extensions?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use sulfate-free products, brush gently from ends to roots, sleep in a braid, and avoid excessive heat. We provide detailed aftercare instructions at your appointment."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What's the consultation process?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We assess your hair type, discuss your goals, recommend the best extension type, and show you color options. This ensures we create the perfect look for you."
+                  }
+                }
+              ]
+            })
+          }}
+        />
       </section>
 
       {/* CTA Section */}

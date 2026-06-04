@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import { ArrowLeft, Check, Star } from "lucide-react";
+import { ArrowLeft, Check, Sparkles, Star } from "lucide-react";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { useLocation } from "wouter";
 
 export default function CutsAndStyling() {
@@ -300,25 +301,91 @@ export default function CutsAndStyling() {
           <h3 className="text-4xl mb-16 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
             Frequently Asked Questions
           </h3>
-          <div className="max-w-3xl mx-auto space-y-6">
-            <div className="bg-background p-8 rounded-lg">
-              <h4 className="font-semibold mb-3 text-lg">How often should I get a haircut?</h4>
-              <p className="text-foreground/70">We recommend getting a cut every 4-8 weeks to maintain your style and keep your hair healthy. This depends on your hair type and the style you're maintaining.</p>
-            </div>
-            <div className="bg-background p-8 rounded-lg">
-              <h4 className="font-semibold mb-3 text-lg">Can you work with my hair type?</h4>
-              <p className="text-foreground/70">Absolutely! Our stylists are experienced with all hair types—straight, curly, wavy, and textured. We customize every cut and style to work with your natural hair.</p>
-            </div>
-            <div className="bg-background p-8 rounded-lg">
-              <h4 className="font-semibold mb-3 text-lg">Do you offer bridal styling?</h4>
-              <p className="text-foreground/70">Yes! We specialize in bridal and special occasion styling. Book a consultation to discuss your vision and ensure your big day is perfect.</p>
-            </div>
-            <div className="bg-background p-8 rounded-lg">
-              <h4 className="font-semibold mb-3 text-lg">What should I bring to my appointment?</h4>
-              <p className="text-foreground/70">Bring inspiration photos of styles you love! This helps us understand your vision and create the perfect look for you.</p>
-            </div>
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="faq-1" className="bg-background px-6 rounded-lg border border-border/50">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline">
+                  How often should I get a haircut?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base pb-6 leading-relaxed">
+                  We recommend getting a cut every 4-8 weeks to maintain your style and keep your hair healthy. This depends on your hair type and the style you're maintaining.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-2" className="bg-background px-6 rounded-lg border border-border/50">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline">
+                  Can you work with my hair type?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base pb-6 leading-relaxed">
+                  Absolutely! Our stylists are experienced with all hair types—straight, curly, wavy, and textured. We customize every cut and style to work with your natural hair.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-3" className="bg-background px-6 rounded-lg border border-border/50">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline">
+                  Do you offer bridal styling?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base pb-6 leading-relaxed">
+                  Yes! We specialize in bridal and special occasion styling. Book a consultation to discuss your vision and ensure your big day is perfect.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-4" className="bg-background px-6 rounded-lg border border-border/50">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline">
+                  What should I bring to my appointment?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base pb-6 leading-relaxed">
+                  Bring inspiration photos of styles you love! This helps us understand your vision and create the perfect look for you.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
+
+        {/* JSON-LD FAQPage Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How often should I get a haircut?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We recommend getting a cut every 4-8 weeks to maintain your style and keep your hair healthy. This depends on your hair type and the style you're maintaining."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can you work with my hair type?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! Our stylists are experienced with all hair types—straight, curly, wavy, and textured. We customize every cut and style to work with your natural hair."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do you offer bridal styling?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! We specialize in bridal and special occasion styling. Book a consultation to discuss your vision and ensure your big day is perfect."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What should I bring to my appointment?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bring inspiration photos of styles you love! This helps us understand your vision and create the perfect look for you."
+                  }
+                }
+              ]
+            })
+          }}
+        />
       </section>
 
       {/* CTA Section */}

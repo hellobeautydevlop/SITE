@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, Check, Sparkles, Info } from "lucide-react";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { useLocation } from "wouter";
 import ServiceDetailModal from "@/components/ServiceDetailModal";
 
@@ -225,6 +226,99 @@ export default function HairColoring() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-accent/5">
+        <div className="container">
+          <h3 className="text-4xl mb-16 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Frequently Asked Questions
+          </h3>
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="faq-1" className="bg-background px-6 rounded-lg border border-border/50">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline">
+                  How long does a balayage service take?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base pb-6 leading-relaxed">
+                  A custom balayage or foilayage service typically takes between 2.5 to 3.5 hours. This includes custom color placement, strategic hand-painting or foiling, toner application, and a deep conditioning treatment.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-2" className="bg-background px-6 rounded-lg border border-border/50">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline">
+                  How do I maintain my hair color between salon visits?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base pb-6 leading-relaxed">
+                  To keep your color vibrant, wait 48-72 hours before your first wash, use sulfate-free professional products (like Kevin Murphy ANGEL.WASH), wash with cool water, and minimize heat styling. We also recommend scheduling a quick toner or gloss treatment every 6-8 weeks.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-3" className="bg-background px-6 rounded-lg border border-border/50">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline">
+                  What is the difference between partial and full highlights?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base pb-6 leading-relaxed">
+                  Partial highlights target strategic areas, primarily around the face and top crown, to add subtle brightness and dimension. Full highlights cover the entire head, offering maximum blonde impact or global dimensional changes.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-4" className="bg-background px-6 rounded-lg border border-border/50">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:no-underline">
+                  Do I need a consultation before booking a major color change?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base pb-6 leading-relaxed">
+                  Yes, we highly recommend booking a consultation for dramatic color transformations or color corrections. This allows our master stylists to assess your hair health, discuss your goals, and outline a realistic, safe plan to achieve your desired look.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+
+        {/* JSON-LD FAQPage Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How long does a balayage service take?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A custom balayage or foilayage service typically takes between 2.5 to 3.5 hours. This includes custom color placement, strategic hand-painting or foiling, toner application, and a deep conditioning treatment."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do I maintain my hair color between salon visits?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To keep your color vibrant, wait 48-72 hours before your first wash, use sulfate-free professional products (like Kevin Murphy ANGEL.WASH), wash with cool water, and minimize heat styling. We also recommend scheduling a quick toner or gloss treatment every 6-8 weeks."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the difference between partial and full highlights?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Partial highlights target strategic areas, primarily around the face and top crown, to add subtle brightness and dimension. Full highlights cover the entire head, offering maximum blonde impact or global dimensional changes."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do I need a consultation before booking a major color change?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we highly recommend booking a consultation for dramatic color transformations or color corrections. This allows our master stylists to assess your hair health, discuss your goals, and outline a realistic, safe plan to achieve your desired look."
+                  }
+                }
+              ]
+            })
+          }}
+        />
       </section>
 
       {/* Reusable Detail Modal */}
