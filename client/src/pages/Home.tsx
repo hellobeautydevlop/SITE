@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Phone, MapPin, Clock, Scissors, Sparkles, Palette, Star } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 
 /**
  * Design Philosophy: Modern Luxury Minimalism
@@ -92,6 +93,12 @@ export default function Home() {
           <div className="flex gap-8 items-center">
             <a href="#services" className="text-foreground hover:text-primary transition-colors">
               Services
+            </a>
+            <a href="/gallery" className="text-foreground hover:text-primary transition-colors">
+              Gallery
+            </a>
+            <a href="/blog" className="text-foreground hover:text-primary transition-colors">
+              Blog
             </a>
             <a href="#team" className="text-foreground hover:text-primary transition-colors">
               Team
@@ -184,7 +191,7 @@ export default function Home() {
               <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
                 Our expert stylists specialize in creating stunning transformations. From vibrant color to luxurious length, we bring your beauty vision to life.
               </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white" onClick={() => setLocation('/gallery')}>
                 View Gallery
               </Button>
             </div>
@@ -255,6 +262,21 @@ export default function Home() {
               With over a decade of professional experience, our stylists are passionate about creating beautiful transformations. We specialize in luxury hair color, expert cuts, premium extensions, and professional nail design. Each team member brings unique expertise and a commitment to excellence.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-white">
+        <div className="container">
+          <div className="max-w-3xl mx-auto mb-12">
+            <h2 className="text-4xl md:text-5xl mb-6 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
+              What Our Clients Say
+            </h2>
+            <p className="text-lg text-foreground/70 text-center">
+              Real testimonials from clients who've experienced our transformations
+            </p>
+          </div>
+          <TestimonialsCarousel />
         </div>
       </section>
 
@@ -362,6 +384,8 @@ export default function Home() {
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-white/80">
                 <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
+                <li><a href="/gallery" className="hover:text-white transition-colors">Gallery</a></li>
+                <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
                 <li><a href="#team" className="hover:text-white transition-colors">Team</a></li>
                 <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
               </ul>

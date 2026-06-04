@@ -5,6 +5,8 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import Gallery from "./pages/Gallery";
+import Blog from "./pages/Blog";
 import HairColoring from "./pages/HairColoring";
 import CutsAndStyling from "./pages/CutsAndStyling";
 import HairExtensions from "./pages/HairExtensions";
@@ -19,6 +21,8 @@ function Router() {
       <Route path={"/services/cuts-and-styling"} component={CutsAndStyling} />
       <Route path={"/services/hair-extensions"} component={HairExtensions} />
       <Route path={"/services/nail-design"} component={NailDesign} />
+      <Route path={"/gallery"} component={Gallery} />
+      <Route path={"/blog"} component={Blog} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
