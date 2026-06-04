@@ -6,6 +6,7 @@ import { useLocation } from "wouter";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import MobileNav from "@/components/MobileNav";
+import InstagramFeed from "@/components/InstagramFeed";
 
 /**
  * Design Philosophy: Modern Luxury Minimalism
@@ -427,6 +428,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Instagram Feed */}
+      <InstagramFeed />
+
       {/* Footer */}
       <footer className="bg-primary text-white py-12">
         <div className="container">
@@ -451,8 +455,8 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Follow Us</h4>
               <div className="flex gap-4">
-                <a href="#" className="text-white/80 hover:text-white transition-colors">Instagram</a>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">Facebook</a>
+                <a href="https://www.instagram.com/hello.beauty.lounge" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">Instagram</a>
+                <a href="https://www.facebook.com/RedDeerHelloBeauty" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">Facebook</a>
               </div>
             </div>
           </div>
