@@ -22,8 +22,8 @@ export default function Home() {
   const services = [
     {
       icon: Palette,
-      title: "Hair Coloring & Balayage",
-      description: "Expert color techniques including balayage, highlights, and custom color matching to enhance your natural beauty.",
+      title: "Custom Dimensional Color",
+      description: "Expert balayage and dimensional color using Kevin Murphy products for stunning, natural-looking results.",
       link: "/services/hair-coloring",
     },
     {
@@ -34,14 +34,14 @@ export default function Home() {
     },
     {
       icon: Sparkles,
-      title: "Premium Hair Extensions",
-      description: "High-quality hair extensions and professional installation for length, volume, and transformation.",
+      title: "Premium Hand-Tied Extensions",
+      description: "Luxury hand-tied extensions for seamless length and volume transformation with professional installation.",
       link: "/services/hair-extensions",
     },
     {
       icon: Sparkles,
-      title: "Nail Design",
-      description: "Professional nail art and design services using premium products and techniques.",
+      title: "Bridal & Wedding Hair",
+      description: "Specialized bridal packages including consultations, trials, and on-the-day styling for your perfect wedding day.",
       link: "/services/nail-design",
     },
   ];
@@ -77,11 +77,19 @@ export default function Home() {
   ];
 
   const businessHours = [
-    { day: "Monday", hours: "Appointment Only" },
-    { day: "Tuesday - Friday", hours: "9:00 AM - 7:00 PM" },
-    { day: "Wednesday - Thursday", hours: "9:00 AM - 8:00 PM" },
-    { day: "Saturday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Sunday", hours: "Appointment Only" },
+    { day: "Monday", hours: "Closed" },
+    { day: "Tuesday", hours: "10:00 AM - 6:00 PM" },
+    { day: "Wednesday", hours: "10:00 AM - 8:00 PM" },
+    { day: "Thursday", hours: "10:00 AM - 8:00 PM" },
+    { day: "Friday", hours: "10:00 AM - 6:00 PM" },
+    { day: "Saturday", hours: "10:00 AM - 5:00 PM" },
+    { day: "Sunday", hours: "Closed" },
+  ];
+
+  const brands = [
+    { name: "Kevin Murphy", description: "Premium, environmentally conscious hair care" },
+    { name: "Living Proof", description: "Advanced hair science products" },
+    { name: "K18", description: "Professional hair repair technology" },
   ];
 
   return (
@@ -138,7 +146,7 @@ export default function Home() {
             Elevate Your Beauty Journey
           </h1>
           <p className="text-base md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed">
-            Experience luxury hair and beauty services in Red Deer. Our master stylists specialize in color, cuts, extensions, and nail design.
+            Experience luxury hair and beauty services in Red Deer using premium Kevin Murphy products. Specializing in custom dimensional color, hand-tied extensions, and bridal packages.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
             <Button className="bg-accent hover:bg-accent/90 text-white" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}>
@@ -149,6 +157,28 @@ export default function Home() {
               <Phone className="w-4 h-4 mr-2" />
               Call
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Kevin Murphy Partnership Section */}
+      <section className="py-12 md:py-16 bg-gradient-to-r from-accent/10 to-primary/10">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-primary mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Proud Kevin Murphy Salon Partner
+            </h2>
+            <p className="text-base md:text-lg text-foreground/70">
+              We use premium, environmentally conscious, and weightless hair care products
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {brands.map((brand, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-semibold text-primary mb-2">{brand.name}</h3>
+                <p className="text-foreground/70">{brand.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
