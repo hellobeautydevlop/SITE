@@ -27,7 +27,7 @@ export default function MobileNav({ onBookClick }: MobileNavProps) {
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border md:hidden">
       <div className="container py-4 flex justify-between items-center">
         <div className="text-xl font-bold text-primary" style={{ fontFamily: "'Playfair Display', serif" }}>
-          HBL
+          HELLO BEAUTY LOUNGE
         </div>
         <button
           onClick={() => setIsOpen(!isOpen)}
