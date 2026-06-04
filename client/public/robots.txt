@@ -1,0 +1,14 @@
+# Robots.txt for Hello Beauty Lounge
+# Allow all search engines to crawl the website
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /*.json$
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://hello-beauty-lounge.manus.space/sitemap.xml
+
+# Crawl delay (optional - adjust if needed)
+Crawl-delay: 1

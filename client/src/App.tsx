@@ -13,6 +13,8 @@ import CutsAndStyling from "./pages/CutsAndStyling";
 import HairExtensions from "./pages/HairExtensions";
 import NailDesign from "./pages/NailDesign";
 import KevinMurphy from "./pages/KevinMurphy";
+import StylistQuiz from "./components/StylistQuiz";
+import BookingAssistant from "./components/BookingAssistant";
 
 
 function Router() {
@@ -48,6 +50,8 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <StylistQuiz />
+          <BookingAssistant />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

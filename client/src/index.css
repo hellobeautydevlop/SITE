@@ -44,39 +44,47 @@
 
 :root {
   /* Modern Luxury Minimalism: Warm taupe + rose-gold accents */
-  --primary: #8B7355;
-  --primary-foreground: #FAF8F3;
+  --primary: #8B7355; /* Warm Taupe */
+  --primary-foreground: #FAF8F3; /* Cream */
   --sidebar-primary: #8B7355;
   --sidebar-primary-foreground: #FAF8F3;
-  --chart-1: #D4A574;
+  --chart-1: #D4A574; /* Rose Gold */
   --chart-2: #8B7355;
   --chart-3: #A0826D;
   --chart-4: #6B5D52;
   --chart-5: #4A4238;
-  --radius: 0.5rem;
-  --background: #FAF8F3;
-  --foreground: #2C2C2C;
+  --radius: 0.75rem; /* Smoother, premium rounded corners */
+  --background: #FCFAF7; /* Luxurious Off-White / Alabaster */
+  --foreground: #232323; /* Soft Onyx / Charcoal */
   --card: #FFFFFF;
-  --card-foreground: #2C2C2C;
+  --card-foreground: #232323;
   --popover: #FFFFFF;
-  --popover-foreground: #2C2C2C;
-  --secondary: #E8D5C4;
-  --secondary-foreground: #2C2C2C;
-  --muted: #E8D5C4;
+  --popover-foreground: #232323;
+  --secondary: #F3EFEA; /* Soft Champagne */
+  --secondary-foreground: #232323;
+  --muted: #F3EFEA;
   --muted-foreground: #6B5D52;
-  --accent: #D4A574;
+  --accent: #C5A070; /* Radiant Gold / Brass */
   --accent-foreground: #FFFFFF;
-  --destructive: #C85C5C;
+  --destructive: #A34E4E;
   --destructive-foreground: #FFFFFF;
-  --border: #E8D5C4;
+  --border: #EBE4DC; /* Subtle Warm Border */
   --input: #FFFFFF;
   --ring: #8B7355;
   --sidebar: #FFFFFF;
-  --sidebar-foreground: #2C2C2C;
-  --sidebar-accent: #D4A574;
+  --sidebar-foreground: #232323;
+  --sidebar-accent: #C5A070;
   --sidebar-accent-foreground: #FFFFFF;
-  --sidebar-border: #E8D5C4;
+  --sidebar-border: #EBE4DC;
   --sidebar-ring: #8B7355;
+  
+  /* Premium Custom Variables */
+  --gold-gradient: linear-gradient(135deg, #DFBA8C 0%, #C5A070 50%, #A47E50 100%);
+  --rose-gold-gradient: linear-gradient(135deg, #E5C1B3 0%, #D4A574 50%, #B88056 100%);
+  --luxury-shadow: 0 10px 30px -10px rgba(139, 115, 85, 0.15);
+  --luxury-shadow-hover: 0 20px 40px -15px rgba(139, 115, 85, 0.25);
+  --glass-bg: rgba(252, 250, 247, 0.75);
+  --glass-border: rgba(235, 228, 220, 0.5);
 }
 
 .dark {
@@ -116,31 +124,36 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 transition-all duration-300;
   }
   html {
     font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     font-weight: 400;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    line-height: 1.2;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
   }
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-weight: 600;
   }
   h2 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
+    letter-spacing: -0.01em;
   }
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
   p {
-    line-height: 1.6;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -153,6 +166,75 @@
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
   }
+}
+
+/* Premium Animations & Interactive Utilities */
+.text-gold {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-rose-gold {
+  background: var(--rose-gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: var(--gold-gradient);
+}
+
+.bg-rose-gold-gradient {
+  background: var(--rose-gold-gradient);
+}
+
+.glassmorphism {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.luxury-card {
+  box-shadow: var(--luxury-shadow);
+  border: 1px solid var(--border);
+}
+
+.luxury-card:hover {
+  box-shadow: var(--luxury-shadow-hover);
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.parallax-container {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-bg {
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
+
+/* Scroll Entrance Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.reveal-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Premium Button Active State */
+button:active, .btn-active:active {
+  transform: scale(0.97);
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @layer components {

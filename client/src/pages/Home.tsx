@@ -7,6 +7,7 @@ import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import MobileNav from "@/components/MobileNav";
 import InstagramFeed from "@/components/InstagramFeed";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 /**
  * Design Philosophy: Modern Luxury Minimalism
@@ -99,34 +100,34 @@ export default function Home() {
       <MobileNav onBookClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')} />
 
       {/* Desktop Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border hidden md:block">
+      <nav className="sticky top-0 z-50 glassmorphism border-b border-border/50 hidden md:block transition-all duration-300">
         <div className="container py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-primary" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Hello Beauty Lounge
+          <div className="text-2xl font-bold tracking-tight text-primary hover:scale-[1.02] transition-transform" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Hello <span className="text-accent font-medium">Beauty Lounge</span>
           </div>
-          <div className="flex gap-8 items-center">
-            <a href="#services" className="text-foreground hover:text-primary transition-colors">
+          <div className="flex gap-8 items-center font-medium text-sm tracking-wide uppercase">
+            <a href="#services" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Services
             </a>
-            <a href="/gallery" className="text-foreground hover:text-primary transition-colors">
+            <a href="/gallery" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Gallery
             </a>
-            <a href="/blog" className="text-foreground hover:text-primary transition-colors">
+            <a href="/blog" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Blog
             </a>
-            <a href="/reviews" className="text-foreground hover:text-primary transition-colors">
+            <a href="/reviews" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Reviews
             </a>
-            <a href="/kevin-murphy" className="text-foreground hover:text-primary transition-colors">
+            <a href="/kevin-murphy" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Kevin Murphy
             </a>
-            <a href="#team" className="text-foreground hover:text-primary transition-colors">
+            <a href="#team" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Team
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+            <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Contact
             </a>
-            <Button className="bg-primary hover:bg-primary/90 text-white" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}>
+            <Button className="bg-primary hover:bg-primary/90 text-white font-medium shadow-sm rounded-full px-6 transition-all duration-300 hover:shadow-md hover:scale-[1.02]" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}>
               <Phone className="w-4 h-4 mr-2" />
               Book Now
             </Button>
@@ -134,32 +135,31 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative h-[60vh] md:h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/manus-storage/IMG_0069_Original_a9f0a198.JPG"
-            alt="Luxury salon interior"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/30"></div>
+      {/* Hero Section with Parallax Effect */}
+      <section className="relative h-[80vh] md:h-[100vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-fixed bg-cover bg-center" style={{ backgroundImage: "url('/manus-storage/IMG_0069_Original_a9f0a198.JPG')" }}>
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
         </div>
 
-        <div className="container relative z-10 max-w-2xl">
-          <h1 className="text-3xl md:text-6xl text-white mb-4 md:mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Elevate Your Beauty Journey
+        <div className="container relative z-10 max-w-3xl">
+          <span className="inline-block text-accent font-semibold tracking-widest uppercase text-xs md:text-sm mb-4 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+            Welcome to Luxury Haircare
+          </span>
+          <h1 className="text-4xl md:text-7xl text-white mb-4 md:mb-6 font-semibold leading-[1.15]" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Elevate Your <br className="hidden md:inline" />
+            <span className="text-gold">Beauty Journey</span>
           </h1>
-          <p className="text-base md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed">
+          <p className="text-base md:text-xl text-white/90 mb-8 md:mb-10 leading-relaxed max-w-xl">
             Experience luxury hair and beauty services in Red Deer using premium Kevin Murphy products. Specializing in custom dimensional color, hand-tied extensions, and bridal packages.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-            <Button className="bg-accent hover:bg-accent/90 text-white" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}>
-              <Phone className="w-4 h-4 mr-2" />
-              Book Now
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-full px-8 py-6 text-base shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}>
+              <Phone className="w-5 h-5 mr-2" />
+              Book Appointment
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('tel:+15872731668')}>
-              <Phone className="w-4 h-4 mr-2" />
-              Call
+            <Button variant="outline" className="border-white/40 text-white hover:bg-white/10 backdrop-blur-md font-semibold rounded-full px-8 py-6 text-base transition-all duration-300" onClick={() => window.open('tel:+15872731668')}>
+              <Phone className="w-5 h-5 mr-2" />
+              Call Salon
             </Button>
           </div>
         </div>
@@ -173,15 +173,15 @@ export default function Home() {
               Proud Kevin Murphy Salon Partner
             </h2>
             <p className="text-base md:text-lg text-foreground/70">
-              We use premium, environmentally conscious, and weightless hair care products
+              We use premium, environmentally conscious, and weightless hair care products for all our salon services
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {brands.map((brand, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+              <article key={index} className="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-primary mb-2">{brand.name}</h3>
                 <p className="text-foreground/70">{brand.description}</p>
-              </div>
+              </article>
             ))}
           </div>
         </div>
@@ -239,10 +239,11 @@ export default function Home() {
               </Button>
             </div>
             <div className="relative">
-              <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hair-transformation-LsCxWNw4JuV82YSRKYyjfN.webp"
-                alt="Hair transformation before and after"
-                className="w-full rounded-lg shadow-xl"
+              <BeforeAfterSlider
+                beforeImage="/manus-storage/IMG_8230_Original_1ca1da2d.JPG"
+                afterImage="/manus-storage/IMG_8232_Original_dc440cbb.JPG"
+                title="Teaser Transformation"
+                heightClass="h-[400px] md:h-[450px]"
               />
             </div>
           </div>
@@ -258,11 +259,11 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {team.map((member, index) => (
-              <div key={index} className="bg-background rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <article key={index} className="bg-background rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
                 <div className="h-96 overflow-hidden">
                   <img
                     src={member.image}
-                    alt={member.name}
+                    alt={`${member.name} - ${member.role} at Hello Beauty Lounge`}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -293,14 +294,14 @@ export default function Home() {
                     Book with {member.name.split(' ')[0]}
                   </Button>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
 
           <div className="mt-16 bg-background p-12 rounded-lg">
-            <h3 className="text-2xl mb-6 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
               Our Team
-            </h3>
+            </h2>
             <p className="text-center text-foreground/70 leading-relaxed max-w-2xl mx-auto">
               With over a decade of professional experience, our stylists are passionate about creating beautiful transformations. We specialize in luxury hair color, expert cuts, premium extensions, and professional nail design. Each team member brings unique expertise and a commitment to excellence.
             </p>

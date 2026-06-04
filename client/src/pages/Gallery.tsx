@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 import { useLocation } from "wouter";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 interface Transformation {
   id: string;
@@ -106,19 +107,19 @@ export default function Gallery() {
   const transformations = galleryData[activeCategory] || [];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-24">
       {/* Header */}
-      <div className="sticky top-0 z-40 bg-background border-b border-border">
+      <div className="sticky top-0 z-40 glassmorphism border-b border-border/50">
         <div className="container py-6">
           <button
             onClick={() => navigate("/")}
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
+            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-all duration-300 mb-6 hover:-translate-x-1"
           >
             <ChevronLeft className="w-4 h-4" />
-            Back
+            Back to Home
           </button>
-          <h1 className="text-4xl font-display font-bold text-foreground">
-            Transformation Gallery
+          <h1 className="text-4xl md:text-5xl font-display font-semibold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Transformation <span className="text-gold">Gallery</span>
           </h1>
           <p className="text-muted-foreground mt-2">
             See the stunning results our stylists create every day
@@ -133,10 +134,10 @@ export default function Gallery() {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all ${
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-sm ${
                 activeCategory === category.id
-                  ? "bg-primary text-primary-foreground shadow-lg"
-                  : "bg-secondary text-secondary-foreground hover:bg-accent"
+                  ? "bg-primary text-primary-foreground shadow-md hover:shadow-lg scale-[1.02]"
+                  : "bg-white text-foreground hover:bg-secondary border border-border"
               }`}
             >
               <span className="mr-2">{category.icon}</span>
@@ -150,71 +151,48 @@ export default function Gallery() {
           {transformations.map((transformation) => (
             <div
               key={transformation.id}
-              className="group bg-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+              className="group bg-white rounded-2xl overflow-hidden luxury-card transition-all duration-300 flex flex-col h-full"
             >
-              {/* Before & After Container */}
-              <div className="relative h-96 bg-muted overflow-hidden">
-                <div className="absolute inset-0 flex">
-                  {/* Before */}
-                  <div className="w-1/2 overflow-hidden">
-                    <img
-                      src={transformation.before}
-                      alt="Before"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  {/* After */}
-                  <div className="w-1/2 overflow-hidden">
-                    <img
-                      src={transformation.after}
-                      alt="After"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* Labels */}
-                <div className="absolute inset-0 flex pointer-events-none">
-                  <div className="w-1/2 flex items-end justify-center pb-4">
-                    <span className="bg-black/50 text-white px-3 py-1 rounded text-sm font-medium">
-                      Before
-                    </span>
-                  </div>
-                  <div className="w-1/2 flex items-end justify-center pb-4">
-                    <span className="bg-primary text-primary-foreground px-3 py-1 rounded text-sm font-medium">
-                      After
-                    </span>
-                  </div>
-                </div>
+              {/* Interactive Before & After Slider */}
+              <div className="relative h-96 overflow-hidden">
+                <BeforeAfterSlider
+                  beforeImage={transformation.before}
+                  afterImage={transformation.after}
+                  title={transformation.title}
+                  heightClass="h-full"
+                />
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="text-lg font-display font-semibold text-foreground mb-2">
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-semibold text-foreground mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
                   {transformation.title}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-sm text-foreground/70 mb-6 flex-grow leading-relaxed">
                   {transformation.description}
                 </p>
-                <p className="text-sm font-medium text-primary">
-                  By {transformation.stylist}
-                </p>
+                <div className="flex justify-between items-center border-t border-border/50 pt-4 mt-auto">
+                  <span className="text-xs text-foreground/50">STYLIST</span>
+                  <span className="text-sm font-semibold text-primary">
+                    {transformation.stylist}
+                  </span>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <h2 className="text-3xl font-display font-bold text-foreground mb-4">
-            Ready for Your Transformation?
+        <div className="mt-24 text-center bg-white p-12 md:p-16 rounded-3xl shadow-sm border border-border max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-display font-semibold text-foreground mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Ready for Your <span className="text-gold">Transformation?</span>
           </h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-foreground/70 mb-8 max-w-2xl mx-auto leading-relaxed">
             Our expert stylists are ready to create your perfect look. Book your appointment today
             and join our gallery of beautiful transformations.
           </p>
           <a href="https://www.vagaro.com/hellobeautylounge/staff" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold rounded-full px-8 py-6 shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
               Book Your Appointment
             </Button>
           </a>
