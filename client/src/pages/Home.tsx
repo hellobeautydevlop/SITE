@@ -63,16 +63,7 @@ export default function Home() {
       bio: "With an eye for detail and a knack for making clients feel comfortable and chic, Tiara creates beautiful styles that are sure to turn heads. Your go-to for gorgeous hair at Hello Beauty Lounge.",
       rating: 5.0,
       reviews: 6,
-      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/nail-art-closeup-7V8sKJvXpYZ9tQwFmNbRsA.webp",
-    },
-    {
-      name: "Shutala Narong",
-      role: "Color Specialist",
-      specialty: "Extensions, Bridal & Ethnic Hair",
-      bio: "A dedicated color specialist with a passion for crafting stunning, personalized looks. Expert in extensions, bridal hair, special event styling, and precision cuts with a specialty in Asian and ethnic hair.",
-      rating: 5.0,
-      reviews: 9,
-      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/team-salon-5HjKmLpQvWz3xNsYtUvJcA.webp",
+      image: "/manus-storage/IMG_0253_Original_76cd13e1.JPG",
     },
   ];
 
