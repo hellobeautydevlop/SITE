@@ -1,25 +1,331 @@
 import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import { Card } from "@/components/ui/card";
+import { Phone, MapPin, Clock, Scissors, Sparkles, Palette } from "lucide-react";
+import { useState } from "react";
 
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Design Philosophy: Modern Luxury Minimalism
+ * - Warm taupe (#8B7355) + rose-gold (#D4A574) accents
+ * - Playfair Display (headlines) + Lato (body)
+ * - Generous whitespace, asymmetric layouts
+ * - Restrained motion, purposeful interactions
  */
+
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  const [activeService, setActiveService] = useState(0);
+
+  const services = [
+    {
+      icon: Palette,
+      title: "Hair Coloring & Balayage",
+      description: "Expert color techniques including balayage, highlights, and custom color matching to enhance your natural beauty.",
+    },
+    {
+      icon: Scissors,
+      title: "Professional Cuts & Styling",
+      description: "Precision cuts tailored to your face shape and lifestyle, with expert styling for every occasion.",
+    },
+    {
+      icon: Sparkles,
+      title: "Premium Hair Extensions",
+      description: "High-quality hair extensions and professional installation for length, volume, and transformation.",
+    },
+    {
+      icon: Sparkles,
+      title: "Nail Design",
+      description: "Professional nail art and design services using premium products and techniques.",
+    },
+  ];
+
+  const team = [
+    {
+      name: "Brianna Dubois",
+      role: "Master Stylist & Founder",
+      specialty: "Hair Color & Balayage",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/stylist-portrait-D72Wo49dJ6s56MUDowxBpn.webp",
+    },
+  ];
+
+  const businessHours = [
+    { day: "Monday", hours: "Appointment Only" },
+    { day: "Tuesday - Friday", hours: "9:00 AM - 7:00 PM" },
+    { day: "Wednesday - Thursday", hours: "9:00 AM - 8:00 PM" },
+    { day: "Saturday", hours: "9:00 AM - 6:00 PM" },
+    { day: "Sunday", hours: "Appointment Only" },
+  ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+        <div className="container py-4 flex justify-between items-center">
+          <div className="text-2xl font-bold text-primary" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Hello Beauty Lounge
+          </div>
+          <div className="flex gap-8 items-center">
+            <a href="#services" className="text-foreground hover:text-primary transition-colors">
+              Services
+            </a>
+            <a href="#team" className="text-foreground hover:text-primary transition-colors">
+              Team
+            </a>
+            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+              Contact
+            </a>
+            <Button className="bg-primary hover:bg-primary/90 text-white">
+              <Phone className="w-4 h-4 mr-2" />
+              Book Now
+            </Button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hero-salon-interior-i9ostRpJtP75SXmbiubSKU.webp"
+            alt="Luxury salon interior"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        <div className="container relative z-10 max-w-2xl">
+          <h1 className="text-5xl md:text-6xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Elevate Your Beauty Journey
+          </h1>
+          <p className="text-xl text-white/90 mb-8 leading-relaxed">
+            Experience luxury hair and beauty services in Red Deer. Our master stylists specialize in color, cuts, extensions, and nail design.
+          </p>
+          <div className="flex gap-4">
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white">
+              <Phone className="w-4 h-4 mr-2" />
+              Call: (587) 273-1668
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              Book Appointment
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-24 bg-white">
+        <div className="container">
+          <div className="max-w-2xl mb-16">
+            <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Our Services
+            </h2>
+            <p className="text-lg text-foreground/70">
+              We offer comprehensive beauty services designed to transform and enhance your natural beauty with expert care and premium products.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <Card
+                  key={index}
+                  className="p-8 border-border hover:shadow-lg transition-all duration-300 cursor-pointer"
+                  onMouseEnter={() => setActiveService(index)}
+                >
+                  <div className="mb-4">
+                    <Icon className="w-12 h-12 text-accent" />
+                  </div>
+                  <h3 className="text-2xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    {service.title}
+                  </h3>
+                  <p className="text-foreground/70 leading-relaxed">{service.description}</p>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Transformation Section */}
+      <section className="py-24 bg-background">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                See the Transformation
+              </h2>
+              <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
+                Our expert stylists specialize in creating stunning transformations. From vibrant color to luxurious length, we bring your beauty vision to life.
+              </p>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
+                View Gallery
+              </Button>
+            </div>
+            <div className="relative">
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hair-transformation-LsCxWNw4JuV82YSRKYyjfN.webp"
+                alt="Hair transformation before and after"
+                className="w-full rounded-lg shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section id="team" className="py-24 bg-white">
+        <div className="container">
+          <h2 className="text-4xl md:text-5xl mb-16 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Meet Our Master Stylists
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {team.map((member, index) => (
+              <div key={index} className="text-center">
+                <div className="mb-6 overflow-hidden rounded-lg">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-96 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {member.name}
+                </h3>
+                <p className="text-accent font-semibold mb-2">{member.role}</p>
+                <p className="text-foreground/70">{member.specialty}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 bg-background p-12 rounded-lg">
+            <h3 className="text-2xl mb-6 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Our Team
+            </h3>
+            <p className="text-center text-foreground/70 leading-relaxed max-w-2xl mx-auto">
+              With over 4 years of professional experience, our stylists are passionate about creating beautiful transformations. We specialize in luxury hair color, expert cuts, premium extensions, and professional nail design.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24 bg-background">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-16">
+            <div>
+              <h2 className="text-4xl md:text-5xl mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Visit Us
+              </h2>
+
+              <div className="space-y-8">
+                <div className="flex gap-4">
+                  <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold mb-2">Location</h3>
+                    <p className="text-foreground/70">
+                      4919 59 Street Unit 120<br />
+                      Red Deer, AB T4N 6C9<br />
+                      Canada
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold mb-2">Phone</h3>
+                    <p className="text-foreground/70">+1 (587) 273-1668</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold mb-4">Business Hours</h3>
+                    <div className="space-y-2 text-foreground/70">
+                      {businessHours.map((item, index) => (
+                        <div key={index} className="flex justify-between gap-4">
+                          <span>{item.day}</span>
+                          <span className="font-medium">{item.hours}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-12 rounded-lg">
+              <h3 className="text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Book Your Appointment
+              </h3>
+              <form className="space-y-6">
+                <div>
+                  <label className="block text-sm font-semibold mb-2">Name</label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold mb-2">Email</label>
+                  <input
+                    type="email"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+                    placeholder="your@email.com"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold mb-2">Service</label>
+                  <select className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                    <option>Select a service</option>
+                    <option>Hair Coloring & Balayage</option>
+                    <option>Professional Cuts & Styling</option>
+                    <option>Premium Hair Extensions</option>
+                    <option>Nail Design</option>
+                  </select>
+                </div>
+                <Button className="w-full bg-primary hover:bg-primary/90 text-white py-3">
+                  Request Appointment
+                </Button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-primary text-white py-12">
+        <div className="container">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Hello Beauty Lounge
+              </h3>
+              <p className="text-white/80">Luxury hair and beauty services in Red Deer, Alberta.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-white/80">
+                <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
+                <li><a href="#team" className="hover:text-white transition-colors">Team</a></li>
+                <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Follow Us</h4>
+              <div className="flex gap-4">
+                <a href="#" className="text-white/80 hover:text-white transition-colors">Instagram</a>
+                <a href="#" className="text-white/80 hover:text-white transition-colors">Facebook</a>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-white/20 pt-8 text-center text-white/80">
+            <p>&copy; 2026 Hello Beauty Lounge. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

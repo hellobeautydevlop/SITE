@@ -43,39 +43,40 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  /* Modern Luxury Minimalism: Warm taupe + rose-gold accents */
+  --primary: #8B7355;
+  --primary-foreground: #FAF8F3;
+  --sidebar-primary: #8B7355;
+  --sidebar-primary-foreground: #FAF8F3;
+  --chart-1: #D4A574;
+  --chart-2: #8B7355;
+  --chart-3: #A0826D;
+  --chart-4: #6B5D52;
+  --chart-5: #4A4238;
+  --radius: 0.5rem;
+  --background: #FAF8F3;
+  --foreground: #2C2C2C;
+  --card: #FFFFFF;
+  --card-foreground: #2C2C2C;
+  --popover: #FFFFFF;
+  --popover-foreground: #2C2C2C;
+  --secondary: #E8D5C4;
+  --secondary-foreground: #2C2C2C;
+  --muted: #E8D5C4;
+  --muted-foreground: #6B5D52;
+  --accent: #D4A574;
+  --accent-foreground: #FFFFFF;
+  --destructive: #C85C5C;
+  --destructive-foreground: #FFFFFF;
+  --border: #E8D5C4;
+  --input: #FFFFFF;
+  --ring: #8B7355;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #2C2C2C;
+  --sidebar-accent: #D4A574;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #E8D5C4;
+  --sidebar-ring: #8B7355;
 }
 
 .dark {
@@ -117,8 +118,29 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    font-family: 'Lato', sans-serif;
+  }
   body {
     @apply bg-background text-foreground;
+    font-weight: 400;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    line-height: 1.6;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
