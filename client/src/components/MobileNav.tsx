@@ -11,6 +11,7 @@ export default function MobileNav({ onBookClick }: MobileNavProps) {
 
   const navLinks = [
     { label: "Services", href: "#services" },
+    { label: "Weddings", href: "/services/bridal-hair" },
     { label: "Gallery", href: "/gallery" },
     { label: "Blog", href: "/blog" },
     { label: "Reviews", href: "/reviews" },

@@ -13,6 +13,7 @@ import HairColoring from "./pages/HairColoring";
 import CutsAndStyling from "./pages/CutsAndStyling";
 import HairExtensions from "./pages/HairExtensions";
 import NailDesign from "./pages/NailDesign";
+import BridalHair from "./pages/BridalHair";
 import KevinMurphy from "./pages/KevinMurphy";
 import StylistQuiz from "./components/StylistQuiz";
 import BookingAssistant from "./components/BookingAssistant";
@@ -26,7 +27,7 @@ function Router() {
       <Route path={"/services/cuts-and-styling"} component={CutsAndStyling} />
       <Route path={"/services/hair-extensions"} component={HairExtensions} />
       <Route path={"/services/nail-design"} component={NailDesign} />
-      <Route path={"/services/bridal-hair"} component={NailDesign} />
+      <Route path={"/services/bridal-hair"} component={BridalHair} />
       <Route path={"/gallery"} component={Gallery} />
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/:slug"} component={BlogPostDetail} />
