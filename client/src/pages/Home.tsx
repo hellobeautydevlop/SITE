@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Phone, MapPin, Clock, Scissors, Sparkles, Palette, Star } from "lucide-react";
 import { useState } from "react";
+import { useLocation } from "wouter";
 
 /**
  * Design Philosophy: Modern Luxury Minimalism
@@ -12,6 +13,7 @@ import { useState } from "react";
  */
 
 export default function Home() {
+  const [, setLocation] = useLocation();
   const [activeService, setActiveService] = useState(0);
 
   const services = [
@@ -19,21 +21,25 @@ export default function Home() {
       icon: Palette,
       title: "Hair Coloring & Balayage",
       description: "Expert color techniques including balayage, highlights, and custom color matching to enhance your natural beauty.",
+      link: "/services/hair-coloring",
     },
     {
       icon: Scissors,
       title: "Professional Cuts & Styling",
       description: "Precision cuts tailored to your face shape and lifestyle, with expert styling for every occasion.",
+      link: "/services/cuts-styling",
     },
     {
       icon: Sparkles,
       title: "Premium Hair Extensions",
       description: "High-quality hair extensions and professional installation for length, volume, and transformation.",
+      link: "/services/hair-extensions",
     },
     {
       icon: Sparkles,
       title: "Nail Design",
       description: "Professional nail art and design services using premium products and techniques.",
+      link: "/services/nail-design",
     },
   ];
 
@@ -151,6 +157,7 @@ export default function Home() {
                   key={index}
                   className="p-8 border-border hover:shadow-lg transition-all duration-300 cursor-pointer"
                   onMouseEnter={() => setActiveService(index)}
+                  onClick={() => setLocation(service.link)}
                 >
                   <div className="mb-4">
                     <Icon className="w-12 h-12 text-accent" />
