@@ -58,7 +58,7 @@ export default function GoogleReviewsWidget() {
     reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length
   ).toFixed(1);
 
-  const totalReviews = reviews.length;
+  const totalReviews = "29+";
 
   return (
     <div className="w-full">

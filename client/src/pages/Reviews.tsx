@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Star, ExternalLink } from "lucide-react";
+import SEO from "@/components/SEO";
 import { useLocation } from "wouter";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 
@@ -16,6 +17,12 @@ export default function Reviews() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Client Reviews & Testimonials | Hello Beauty Lounge Red Deer"
+        description="Read verified 5-star reviews from clients of Hello Beauty Lounge in Red Deer, Alberta. See why we are the top-rated luxury hair salon."
+        keywords="salon reviews Red Deer, hair salon ratings Alberta, customer testimonials Hello Beauty Lounge, top rated hair stylist Red Deer"
+        canonicalUrl="https://hellobeautylounge.com/reviews"
+      />
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
         <div className="container py-4 flex justify-between items-center">
@@ -66,7 +73,7 @@ export default function Reviews() {
               <p className="text-white/80">Average Rating</p>
             </div>
             <div>
-              <div className="text-5xl font-bold mb-2">25+</div>
+              <div className="text-5xl font-bold mb-2">29+</div>
               <p className="text-white/80">Total Reviews</p>
             </div>
             <div>

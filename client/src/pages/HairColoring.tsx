@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, Check, Sparkles, Info } from "lucide-react";
 import { useLocation } from "wouter";
@@ -100,8 +101,14 @@ export default function HairColoring() {
   ];
 
   return (
-    <div className="min-h-screen bg-background pb-24">
-      {/* Sticky Header */}
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Custom Dimensional Hair Coloring & Balayage | Red Deer"
+        description="Expert custom dimensional color, balayage, highlights, and toner treatments in Red Deer. Achieve stunning, natural-looking results with our master colorists."
+        keywords="balayage Red Deer, hair coloring Alberta, custom hair highlights, dimensional color, professional hair dye"
+        canonicalUrl="https://hellobeautylounge.com/services/hair-coloring"
+      />
+      {/* Header */}
       <header className="sticky top-0 z-40 glassmorphism border-b border-border/50">
         <div className="container py-4 flex items-center justify-between">
           <button

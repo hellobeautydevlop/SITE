@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import SEO from "@/components/SEO";
 import { Phone, MapPin, Clock, Scissors, Sparkles, Palette, Star } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
@@ -44,7 +45,7 @@ export default function Home() {
       icon: Sparkles,
       title: "Bridal & Wedding Hair",
       description: "Specialized bridal packages including consultations, trials, and on-the-day styling for your perfect wedding day.",
-      link: "/services/nail-design",
+      link: "/services/bridal-hair",
     },
   ];
 
@@ -96,7 +97,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Mobile Navigation */}
+      <SEO 
+        title="Hello Beauty Lounge | Luxury Hair & Beauty Salon in Red Deer, Alberta"
+        description="Luxury hair salon in Red Deer, AB. Expert stylists, custom color, extensions & bridal services."
+        keywords="hair salon Red Deer, beauty salon Alberta, hair color, extensions, bridal hair, balayage, professional cuts, Kevin Murphy salon"
+        canonicalUrl="https://hellobeautylounge.com/"
+      />
+      {/* Sticky Header */}
       <MobileNav onBookClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')} />
 
       {/* Desktop Navigation */}

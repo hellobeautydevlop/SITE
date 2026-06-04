@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
+import BlogPostDetail from "./pages/BlogPostDetail";
 import Reviews from "./pages/Reviews";
 import HairColoring from "./pages/HairColoring";
 import CutsAndStyling from "./pages/CutsAndStyling";
@@ -25,8 +26,10 @@ function Router() {
       <Route path={"/services/cuts-and-styling"} component={CutsAndStyling} />
       <Route path={"/services/hair-extensions"} component={HairExtensions} />
       <Route path={"/services/nail-design"} component={NailDesign} />
+      <Route path={"/services/bridal-hair"} component={NailDesign} />
       <Route path={"/gallery"} component={Gallery} />
       <Route path={"/blog"} component={Blog} />
+      <Route path={"/blog/:slug"} component={BlogPostDetail} />
       <Route path={"/reviews"} component={Reviews} />
       <Route path={"/kevin-murphy"} component={KevinMurphy} />
       <Route path={"/404"} component={NotFound} />

@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Leaf, Sparkles, Shield, ArrowLeft } from "lucide-react";
+import SEO from "@/components/SEO";
 import { useLocation } from "wouter";
 import KevinMurphyCatalog from "@/components/KevinMurphyCatalog";
 
@@ -27,7 +28,13 @@ export default function KevinMurphy() {
   ];
 
   return (
-    <div className="min-h-screen bg-background pb-24">
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Kevin Murphy Products | Hello Beauty Lounge Red Deer"
+        description="Discover our premium Kevin Murphy hair care range. Environmentally conscious, sulfate-free, and paraben-free products for professional results."
+        keywords="Kevin Murphy products Red Deer, sulfate free hair care Alberta, premium salon shampoo, eco friendly hair treatments"
+        canonicalUrl="https://hellobeautylounge.com/kevin-murphy"
+      />
       {/* Sticky Header */}
       <header className="sticky top-0 z-40 glassmorphism border-b border-border/50">
         <div className="container py-4 flex items-center justify-between">

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import SEO from "@/components/SEO";
 import { ArrowLeft, Check, Star } from "lucide-react";
 import { useLocation } from "wouter";
 
@@ -98,6 +99,12 @@ export default function HairExtensions() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Premium Hand-Tied Hair Extensions | Hello Beauty Lounge Red Deer"
+        description="Get luxurious length and volume with our premium hand-tied hair extensions in Red Deer, AB. Seamless blending and professional installation. Book today."
+        keywords="hair extensions Red Deer, hand tied extensions Alberta, professional hair extensions, luxury hair length volume"
+        canonicalUrl="https://hellobeautylounge.com/services/hair-extensions"
+      />
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background border-b border-border">
         <div className="container py-4 flex items-center justify-between">

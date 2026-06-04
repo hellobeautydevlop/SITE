@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import SEO from "@/components/SEO";
 import { ArrowLeft, Check, Star } from "lucide-react";
 import { useLocation } from "wouter";
 
@@ -98,6 +99,12 @@ export default function CutsAndStyling() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Professional Hair Cuts & Styling | Hello Beauty Lounge Red Deer"
+        description="Expert hair cuts and styling in Red Deer, AB. Precision cuts tailored to your face shape, lifestyle, and hair type. Book your consultation today."
+        keywords="haircuts Red Deer, professional hair styling Alberta, long haircuts, short hair cuts, salon blowout Red Deer"
+        canonicalUrl="https://hellobeautylounge.com/services/cuts-and-styling"
+      />
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background border-b border-border">
         <div className="container py-4 flex items-center justify-between">

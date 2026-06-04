@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import SEO from "@/components/SEO";
 import { ArrowLeft, Check, Star } from "lucide-react";
 import { useLocation } from "wouter";
 
@@ -98,6 +99,12 @@ export default function NailDesign() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Brow Tinting, Waxing & Beauty Services | Red Deer"
+        description="Enhance your natural beauty with expert brow tinting, brow shaping, waxing, and custom beauty services in Red Deer, AB. Professional care and clean, precise techniques."
+        keywords="brow tinting Red Deer, brow waxing Alberta, professional facial waxing, beauty services Red Deer, brow shaping salon"
+        canonicalUrl="https://hellobeautylounge.com/services/nail-design"
+      />
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background border-b border-border">
         <div className="container py-4 flex items-center justify-between">
