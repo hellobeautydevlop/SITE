@@ -102,7 +102,7 @@ export default function Home() {
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">
               Contact
             </a>
-            <Button className="bg-primary hover:bg-primary/90 text-white">
+            <Button className="bg-primary hover:bg-primary/90 text-white" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}>
               <Phone className="w-4 h-4 mr-2" />
               Book Now
             </Button>
@@ -129,12 +129,12 @@ export default function Home() {
             Experience luxury hair and beauty services in Red Deer. Our master stylists specialize in color, cuts, extensions, and nail design.
           </p>
           <div className="flex gap-4">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white">
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}>
               <Phone className="w-4 h-4 mr-2" />
-              Call: (587) 273-1668
+              Book Now
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              Book Appointment
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" onClick={() => window.open('tel:+15872731668')}>
+              Call: (587) 273-1668
             </Button>
           </div>
         </div>
@@ -235,7 +235,15 @@ export default function Home() {
                     <span className="text-sm text-foreground/70">({member.reviews} reviews)</span>
                   </div>
                   
-                  <p className="text-foreground/70 leading-relaxed text-sm">{member.bio}</p>
+                  <p className="text-foreground/70 leading-relaxed text-sm mb-4">{member.bio}</p>
+                  
+                  <Button 
+                    size="sm" 
+                    className="w-full bg-accent hover:bg-accent/90 text-white"
+                    onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+                  >
+                    Book with {member.name.split(' ')[0]}
+                  </Button>
                 </div>
               </div>
             ))}
@@ -330,9 +338,12 @@ export default function Home() {
                     <option>Nail Design</option>
                   </select>
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white py-3">
-                  Request Appointment
-                </Button>
+            <Button 
+              className="w-full bg-primary hover:bg-primary/90 text-white py-3"
+              onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+            >
+              Book on Vagaro
+            </Button>
               </form>
             </div>
           </div>
