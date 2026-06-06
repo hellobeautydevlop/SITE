@@ -30,7 +30,7 @@ export default function KevinMurphy() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Kevin Murphy Products | Hello Beauty Lounge Red Deer"
+        title="Kevin Murphy Products | Hello Beauty Lounge"
         description="Discover our premium Kevin Murphy hair care range. Environmentally conscious, sulfate-free, and paraben-free products for professional results."
         keywords="Kevin Murphy products Red Deer, sulfate free hair care Alberta, premium salon shampoo, eco friendly hair treatments"
         canonicalUrl="https://hellobeautylounge.com/kevin-murphy"

@@ -104,7 +104,7 @@ export default function HairColoring() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Custom Dimensional Hair Coloring & Balayage | Red Deer"
+        title="Hair Coloring & Balayage | Hello Beauty Lounge"
         description="Expert custom dimensional color, balayage, highlights, and toner treatments in Red Deer. Achieve stunning, natural-looking results with our master colorists."
         keywords="balayage Red Deer, hair coloring Alberta, custom hair highlights, dimensional color, professional hair dye"
         canonicalUrl="https://hellobeautylounge.com/services/hair-coloring"

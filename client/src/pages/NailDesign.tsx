@@ -100,7 +100,7 @@ export default function NailDesign() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Brow Tinting, Waxing & Beauty Services | Red Deer"
+        title="Brow & Waxing Services | Hello Beauty Lounge"
         description="Enhance your natural beauty with expert brow tinting, brow shaping, waxing, and custom beauty services in Red Deer, AB. Professional care and clean, precise techniques."
         keywords="brow tinting Red Deer, brow waxing Alberta, professional facial waxing, beauty services Red Deer, brow shaping salon"
         canonicalUrl="https://hellobeautylounge.com/services/nail-design"

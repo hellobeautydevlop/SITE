@@ -170,9 +170,9 @@ ${formData.message}
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Bridal Hair & Wedding Services Red Deer | Hello Beauty Lounge"
+        title="Bridal & Wedding Hair | Hello Beauty Lounge"
         description="Specializing in traveling artistry. We travel directly to your venue for a luxury in-salon experience on your special day. Book your bridal hair trial."
-        keywords="bridal hair Red Deer, wedding hair Red Deer, bridal styling Red Deer, traveling bridal hair Alberta, wedding hair packages Red Deer, Hello Beauty Lounge bridal"
+        keywords="bridal hair Red Deer, wedding hair Red Deer, bridal styling Alberta, wedding hair packages"
         canonicalUrl="https://www.hellobeautylounge.com/services/bridal-hair"
       />
 

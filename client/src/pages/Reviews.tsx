@@ -18,9 +18,9 @@ export default function Reviews() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Client Reviews & Testimonials | Hello Beauty Lounge Red Deer"
+        title="Client Reviews | Hello Beauty Lounge"
         description="Read verified 5-star reviews from clients of Hello Beauty Lounge in Red Deer, Alberta. See why we are the top-rated luxury hair salon."
-        keywords="salon reviews Red Deer, hair salon ratings Alberta, customer testimonials Hello Beauty Lounge, top rated hair stylist Red Deer"
+        keywords="salon reviews Red Deer, hair salon ratings Alberta, customer testimonials, top rated hair stylist"
         canonicalUrl="https://hellobeautylounge.com/reviews"
       />
       {/* Navigation */}

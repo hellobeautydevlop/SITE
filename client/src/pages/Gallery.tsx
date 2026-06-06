@@ -110,7 +110,7 @@ export default function Gallery() {
   return (
     <div className="min-h-screen bg-background pb-24">
       <SEO 
-        title="Hair Transformation Gallery | Hello Beauty Lounge Red Deer"
+        title="Transformation Gallery | Hello Beauty Lounge"
         description="See real before and after hair transformations by our master stylists. Custom dimensional color, balayage, and premium hand-tied extensions."
         keywords="hair transformations, before and after hair, balayage gallery, hair extensions Red Deer, salon transformations Alberta"
         canonicalUrl="https://hellobeautylounge.com/gallery"

@@ -8,7 +8,7 @@ Disallow: /*.json$
 Disallow: /private/
 
 # Sitemap location
-Sitemap: https://hello-beauty-lounge.manus.space/sitemap.xml
+Sitemap: https://hellobeautylounge.com/sitemap.xml
 
 # Crawl delay (optional - adjust if needed)
 Crawl-delay: 1

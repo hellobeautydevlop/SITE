@@ -101,7 +101,7 @@ export default function CutsAndStyling() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Professional Hair Cuts & Styling | Hello Beauty Lounge Red Deer"
+        title="Hair Cuts & Styling | Hello Beauty Lounge"
         description="Expert hair cuts and styling in Red Deer, AB. Precision cuts tailored to your face shape, lifestyle, and hair type. Book your consultation today."
         keywords="haircuts Red Deer, professional hair styling Alberta, long haircuts, short hair cuts, salon blowout Red Deer"
         canonicalUrl="https://hellobeautylounge.com/services/cuts-and-styling"

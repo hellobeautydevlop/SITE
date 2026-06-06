@@ -24,7 +24,7 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-background pb-24">
       <SEO 
-        title="Hair Care Blog & Styling Tips | Hello Beauty Lounge Red Deer"
+        title="Hair Care Blog & Tips | Hello Beauty Lounge"
         description="Read professional hair care tips, balayage maintenance guides, extension styling advice, and wedding hair trends from our master stylists in Red Deer."
         keywords="hair care blog Red Deer, salon tips Alberta, balayage maintenance, extension styling guide, bridal hair trends"
         canonicalUrl="https://hellobeautylounge.com/blog"
