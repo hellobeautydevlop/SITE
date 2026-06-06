@@ -98,9 +98,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Hello Beauty Lounge | Luxury Hair & Beauty Salon in Red Deer, Alberta"
+        title="Hello Beauty Lounge | Hair Salon Red Deer"
         description="Luxury hair salon in Red Deer, AB. Expert stylists, custom color, extensions & bridal services."
-        keywords="hair salon Red Deer, Red Deer hair salon, beauty salon Red Deer, Red Deer beauty salon, best hair salon Red Deer, hair stylists Red Deer, balayage Red Deer, hair extensions Red Deer, hand-tied extensions Red Deer, bridal hair Red Deer, wedding hair Red Deer, hair coloring Red Deer, custom hair color Red Deer, women's hair cuts Red Deer, hair styling Red Deer, Kevin Murphy salon Red Deer, luxury hair salon Alberta, brow waxing Red Deer"
+        keywords="hair salon Red Deer, balayage Red Deer, hair extensions Red Deer, bridal hair Red Deer, Kevin Murphy salon, luxury hair salon Alberta"
         canonicalUrl="https://hellobeautylounge.com/"
       />
       {/* Sticky Header */}
