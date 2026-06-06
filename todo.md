@@ -5,3 +5,4 @@
 - [x] Add JSON-LD LocalBusiness structured data on homepage
 - [x] Add unique meta descriptions and titles per page (Gallery, Blog, Reviews, Services, Team, etc.)
 - [x] Add XML sitemap at /sitemap.xml with all page routes
+- [x] Add OG image for social sharing previews (Facebook, Twitter)
