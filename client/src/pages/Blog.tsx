@@ -165,7 +165,7 @@ export default function Blog() {
             Our expert stylists at Hello Beauty Lounge in Red Deer are ready to help you achieve
             your hair goals. Book your appointment today!
           </p>
-          <a href="https://www.vagaro.com/hellobeautylounge/staff" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.vagaro.com/hellobeautylounge" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold rounded-full px-8 py-6 shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
               Book Your Appointment
             </Button>

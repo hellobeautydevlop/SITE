@@ -87,7 +87,7 @@ export default function BookingAssistant() {
           <div className="space-y-3 pt-2">
             <Button
               onClick={() => {
-                window.open("https://www.vagaro.com/hellobeautylounge/staff", "_blank");
+                window.open("https://www.vagaro.com/hellobeautylounge", "_blank");
                 setIsOpen(false);
               }}
               className="w-full bg-accent hover:bg-accent/90 text-white rounded-full py-6 font-semibold shadow-md flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform"

@@ -9,3 +9,6 @@
 - [x] Set up Google Business Profile structured data (consolidated, deduplicated, fixed geo coordinates)
 - [x] Add service-specific schema markup with pricing for rich snippets
 - [x] Verify structured data consistency (single HairSalon schema, matching coordinates)
+- [x] Update all booking links to www.vagaro.com/hellobeautylounge
+- [x] Create FAQ page with common salon questions
+- [x] Add FAQ schema markup for search result enhancement

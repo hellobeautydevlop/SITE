@@ -120,7 +120,7 @@ export default function GoogleReviewsWidget() {
         </div>
 
         <a
-          href="https://www.vagaro.com/hellobeautylounge/staff"
+          href="https://www.vagaro.com/hellobeautylounge"
           target="_blank"
           rel="noopener noreferrer"
           className="self-start lg:self-auto"
@@ -184,7 +184,7 @@ export default function GoogleReviewsWidget() {
           Join our growing community of happy clients in Red Deer. Our expert stylists are dedicated to bringing your unique hair goals to life.
         </p>
         <a
-          href="https://www.vagaro.com/hellobeautylounge/staff"
+          href="https://www.vagaro.com/hellobeautylounge"
           target="_blank"
           rel="noopener noreferrer"
         >

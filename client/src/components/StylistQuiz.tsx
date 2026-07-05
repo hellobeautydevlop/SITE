@@ -49,7 +49,7 @@ const stylistsData = {
     specialty: "Hair Transformation & Artistry",
     image: "/manus-storage/IMG_4067_Original_13c5ff7d.JPG",
     matchReason: "Noon is the visionary founder and specializes in premium custom color artistry and high-end transformations. Her meticulous eye for detail is perfect for bold, luxurious hair transformations.",
-    bookingLink: "https://www.vagaro.com/hellobeautylounge/staff",
+    bookingLink: "https://www.vagaro.com/hellobeautylounge",
   },
   melissa: {
     name: "Melissa Mitchell",
@@ -57,7 +57,7 @@ const stylistsData = {
     specialty: "Balayage, Extensions & Color",
     image: "/manus-storage/IMG_3887_Original_057626f3.JPG",
     matchReason: "Melissa is our balayage and hand-tied extensions expert with over a decade of experience. She is perfect for clients seeking luxurious length, fullness, and rich dimensional color.",
-    bookingLink: "https://www.vagaro.com/hellobeautylounge/staff",
+    bookingLink: "https://www.vagaro.com/hellobeautylounge",
   },
   tiara: {
     name: "Tiara Black",
@@ -65,7 +65,7 @@ const stylistsData = {
     specialty: "Precision Cuts & Styling",
     image: "/manus-storage/IMG_0253_Original_76cd13e1.JPG",
     matchReason: "Tiara specializes in precision cuts and chic styling. She has a knack for making clients feel incredibly comfortable while crafting modern, easy-to-maintain, beautiful styles.",
-    bookingLink: "https://www.vagaro.com/hellobeautylounge/staff",
+    bookingLink: "https://www.vagaro.com/hellobeautylounge",
   },
 };
 

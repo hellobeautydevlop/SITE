@@ -107,7 +107,7 @@ export default function Home() {
         canonicalUrl="https://hellobeautylounge.com/"
       />
       {/* Sticky Header */}
-      <MobileNav onBookClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')} />
+      <MobileNav onBookClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')} />
 
       {/* Desktop Navigation */}
       <nav className="sticky top-0 z-50 glassmorphism border-b border-border/50 hidden md:block transition-all duration-300">
@@ -134,13 +134,16 @@ export default function Home() {
             <a href="/kevin-murphy" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Kevin Murphy
             </a>
+            <a href="/faq" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
+              FAQ
+            </a>
             <a href="#team" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Team
             </a>
             <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Contact
             </a>
-            <Button className="bg-primary hover:bg-primary/90 text-white font-medium shadow-sm rounded-full px-6 transition-all duration-300 hover:shadow-md hover:scale-[1.02]" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}>
+            <Button className="bg-primary hover:bg-primary/90 text-white font-medium shadow-sm rounded-full px-6 transition-all duration-300 hover:shadow-md hover:scale-[1.02]" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}>
               <Phone className="w-4 h-4 mr-2" />
               Book Now
             </Button>
@@ -166,7 +169,7 @@ export default function Home() {
             Experience luxury hair and beauty services in Red Deer using premium Kevin Murphy products. Specializing in custom dimensional color, hand-tied extensions, and bridal packages.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-full px-8 py-6 text-base shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}>
+            <Button className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-full px-8 py-6 text-base shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}>
               <Phone className="w-5 h-5 mr-2" />
               Book Appointment
             </Button>
@@ -302,7 +305,7 @@ export default function Home() {
                   <Button 
                     size="sm" 
                     className="w-full bg-accent hover:bg-accent/90 text-white"
-                    onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+                    onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
                   >
                     Book with {member.name.split(' ')[0]}
                   </Button>
@@ -406,7 +409,7 @@ export default function Home() {
               <p className="text-gray-600 mb-8">Book your appointment directly with our expert stylists on Vagaro.</p>
               <Button 
                 className="bg-primary hover:bg-primary/90 text-white py-3 px-8 text-lg"
-                onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+                onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
               >
                 Book Your Appointment
               </Button>

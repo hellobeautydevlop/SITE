@@ -121,7 +121,7 @@ export default function HairExtensions() {
           </h1>
           <Button
             className="bg-accent hover:bg-accent/90 text-white"
-            onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+            onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
           >
             Book Now
           </Button>
@@ -142,7 +142,7 @@ export default function HairExtensions() {
               <Button
                 size="lg"
                 className="bg-accent hover:bg-accent/90 text-white"
-                onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+                onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
               >
                 Book Your Extensions
               </Button>
@@ -185,7 +185,7 @@ export default function HairExtensions() {
 
                 <Button
                   className="w-full bg-accent hover:bg-accent/90 text-white"
-                  onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+                  onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
                 >
                   Book {service.name}
                 </Button>
@@ -332,7 +332,7 @@ export default function HairExtensions() {
                 <p className="text-sm text-foreground/70 mb-6">({specialist.reviews} reviews)</p>
                 <Button
                   className="w-full bg-accent hover:bg-accent/90 text-white"
-                  onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+                  onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
                 >
                   Book with {specialist.name.split(' ')[0]}
                 </Button>
@@ -464,7 +464,7 @@ export default function HairExtensions() {
           <Button
             size="lg"
             className="bg-accent hover:bg-accent/90 text-white"
-            onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+            onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
           >
             Book Your Consultation
           </Button>

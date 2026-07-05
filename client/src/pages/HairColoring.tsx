@@ -124,7 +124,7 @@ export default function HairColoring() {
           </h1>
           <Button
             className="bg-accent hover:bg-accent/90 text-white rounded-full px-6 shadow-sm hover:shadow-md transition-all"
-            onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+            onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
           >
             Book Now
           </Button>
@@ -148,7 +148,7 @@ export default function HairColoring() {
               <Button
                 size="lg"
                 className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-full px-8 py-6 shadow-md hover:shadow-lg hover:scale-[1.02] transition-all"
-                onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+                onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
               >
                 Book Your Color Service
               </Button>
@@ -217,7 +217,7 @@ export default function HairColoring() {
                   className="w-full bg-primary hover:bg-primary/90 text-white rounded-full py-5 text-sm font-semibold mt-auto"
                   onClick={(e) => {
                     e.stopPropagation();
-                    window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank');
+                    window.open('https://www.vagaro.com/hellobeautylounge', '_blank');
                   }}
                 >
                   Book {service.name.split(' ')[0]}

@@ -91,7 +91,7 @@ export default function ServiceDetailModal({ isOpen, onClose, service }: Service
           <div className="flex flex-col sm:flex-row gap-3">
             <Button
               onClick={() => {
-                window.open("https://www.vagaro.com/hellobeautylounge/staff", "_blank");
+                window.open("https://www.vagaro.com/hellobeautylounge", "_blank");
                 onClose();
               }}
               className="bg-accent hover:bg-accent/90 text-white rounded-full px-8 py-6 text-base font-semibold shadow-md flex-grow flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform"

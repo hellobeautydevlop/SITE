@@ -154,7 +154,7 @@ export default function Reviews() {
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-white"
-            onClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')}
+            onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
           >
             <ExternalLink className="w-4 h-4 mr-2" />
             Book on Vagaro

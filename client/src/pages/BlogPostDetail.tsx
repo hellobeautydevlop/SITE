@@ -224,7 +224,7 @@ export default function BlogPostDetail() {
           <p className="text-foreground/70 mb-6 max-w-xl mx-auto leading-relaxed text-sm md:text-base">
             Book a session with <strong className="text-primary font-semibold">{post.author}</strong> or any of our master stylists to get a customized hair plan tailored just for you.
           </p>
-          <a href="https://www.vagaro.com/hellobeautylounge/staff" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.vagaro.com/hellobeautylounge" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold rounded-full px-8 py-6 shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
               Book Your Appointment
             </Button>
