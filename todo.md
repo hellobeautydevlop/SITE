@@ -6,3 +6,6 @@
 - [x] Add unique meta descriptions and titles per page (Gallery, Blog, Reviews, Services, Team, etc.)
 - [x] Add XML sitemap at /sitemap.xml with all page routes
 - [x] Add OG image for social sharing previews (Facebook, Twitter)
+- [x] Set up Google Business Profile structured data (consolidated, deduplicated, fixed geo coordinates)
+- [x] Add service-specific schema markup with pricing for rich snippets
+- [x] Verify structured data consistency (single HairSalon schema, matching coordinates)

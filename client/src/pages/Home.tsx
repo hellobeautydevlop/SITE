@@ -9,7 +9,7 @@ import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import MobileNav from "@/components/MobileNav";
 import InstagramFeed from "@/components/InstagramFeed";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
-import JsonLd from "@/components/JsonLd";
+
 
 /**
  * Design Philosophy: Modern Luxury Minimalism
@@ -23,55 +23,7 @@ export default function Home() {
   const [, setLocation] = useLocation();
   const [activeService, setActiveService] = useState(0);
 
-  const localBusinessSchema = useMemo(() => ({
-    "@context": "https://schema.org",
-    "@type": "HairSalon",
-    "name": "Hello Beauty Lounge",
-    "image": "https://hellobeautylounge.com/manus-storage/IMG_4067_Original_13c5ff7d.JPG",
-    "@id": "https://hellobeautylounge.com",
-    "url": "https://hellobeautylounge.com",
-    "telephone": "+1-587-273-1668",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "4919 59 Street Unit 120",
-      "addressLocality": "Red Deer",
-      "addressRegion": "AB",
-      "postalCode": "T4N 6C9",
-      "addressCountry": "CA"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 52.2681,
-      "longitude": -113.8112
-    },
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "10:00", "closes": "18:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "10:00", "closes": "20:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "10:00", "closes": "20:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "18:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "17:00" }
-    ],
-    "sameAs": [
-      "https://www.instagram.com/hellobeautylounge/",
-      "https://www.facebook.com/hellobeautylounge/"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "29"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Hair & Beauty Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Dimensional Color & Balayage" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Professional Cuts & Styling" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Premium Hand-Tied Extensions" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bridal & Wedding Hair" } }
-      ]
-    }
-  }), []);
+
 
   const services = [
     {
@@ -154,7 +106,6 @@ export default function Home() {
         keywords="hair salon Red Deer, balayage Red Deer, hair extensions Red Deer, bridal hair Red Deer, Kevin Murphy salon, luxury hair salon Alberta"
         canonicalUrl="https://hellobeautylounge.com/"
       />
-      <JsonLd data={localBusinessSchema} />
       {/* Sticky Header */}
       <MobileNav onBookClick={() => window.open('https://www.vagaro.com/hellobeautylounge/staff', '_blank')} />
 
