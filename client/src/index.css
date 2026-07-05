@@ -141,19 +141,40 @@
     letter-spacing: -0.02em;
   }
   h1 {
-    font-size: 3.5rem;
+    font-size: 2rem;
     font-weight: 600;
   }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
   h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     letter-spacing: -0.01em;
   }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.75rem;
+    }
   }
   p {
+    font-size: 0.95rem;
     line-height: 1.75;
     letter-spacing: 0.01em;
+  }
+  @media (min-width: 768px) {
+    p {
+      font-size: 1rem;
+    }
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -278,4 +299,48 @@ button:active, .btn-active:active {
       max-width: 1280px; /* Standard content width */
     }
   }
+}
+
+/* Mobile-First Responsive Utilities */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+.mobile-safe-tap {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+  
+  /* Improve readability on mobile */
+  body {
+    font-size: 16px; /* Prevents zoom on input focus */
+  }
+  
+  /* Better spacing for mobile buttons */
+  button, [role="button"], a[href] {
+    @apply active:scale-95 transition-transform duration-150;
+  }
+  
+  /* Improve form inputs on mobile */
+  input, textarea, select {
+    font-size: 16px;
+    @apply p-3;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    @apply !transition-none !animate-none;
+  }
+}
+
+/* Improve image loading on mobile */
+img {
+  @apply max-w-full h-auto;
 }

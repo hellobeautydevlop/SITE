@@ -15,6 +15,8 @@ export default function MobileNav({ onBookClick }: MobileNavProps) {
     { label: "Gallery", href: "/gallery" },
     { label: "Blog", href: "/blog" },
     { label: "Reviews", href: "/reviews" },
+    { label: "Kevin Murphy", href: "/kevin-murphy" },
+    { label: "FAQ", href: "/faq" },
     { label: "Team", href: "#team" },
     { label: "Contact", href: "#contact" },
   ];
@@ -31,7 +33,9 @@ export default function MobileNav({ onBookClick }: MobileNavProps) {
         </div>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2 hover:bg-primary/10 rounded-lg transition-colors"
+          className="p-3 hover:bg-primary/10 rounded-lg transition-colors active:scale-95 duration-150 touch-manipulation"
+          aria-label="Toggle navigation menu"
+          aria-expanded={isOpen}
         >
           {isOpen ? (
             <X className="w-6 h-6 text-foreground" />
@@ -43,29 +47,31 @@ export default function MobileNav({ onBookClick }: MobileNavProps) {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="bg-white border-t border-border animate-in fade-in slide-in-from-top-2">
-          <div className="container py-4 flex flex-col gap-4">
+        <div className="bg-white border-t border-border animate-in fade-in slide-in-from-top-2 overflow-y-auto max-h-[calc(100vh-60px)]">
+          <div className="container py-6 flex flex-col gap-2">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={handleLinkClick}
-                className="text-foreground hover:text-primary transition-colors py-2 px-2 rounded hover:bg-primary/5"
+                className="text-foreground hover:text-primary transition-colors py-3 px-4 rounded-lg hover:bg-primary/5 active:bg-primary/10 text-base font-medium touch-manipulation"
               >
                 {link.label}
               </a>
             ))}
-            <Button
-              size="lg"
-              className="w-full bg-primary hover:bg-primary/90 text-white mt-2"
-              onClick={() => {
-                handleLinkClick();
-                onBookClick();
-              }}
-            >
-              <Phone className="w-4 h-4 mr-2" />
-              Book Now
-            </Button>
+            <div className="pt-4 border-t border-border/50">
+              <Button
+                size="lg"
+                className="w-full bg-primary hover:bg-primary/90 text-white active:scale-95 duration-150 touch-manipulation h-12 text-base font-semibold"
+                onClick={() => {
+                  handleLinkClick();
+                  onBookClick();
+                }}
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Book Now
+              </Button>
+            </div>
           </div>
         </div>
       )}
