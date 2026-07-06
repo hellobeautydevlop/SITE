@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import { Phone, MapPin, Clock, Scissors, Sparkles, Palette, Star, Instagram, ArrowRight } from "lucide-react";
+import { Phone, MapPin, Clock, Scissors, Sparkles, Palette, Star, Instagram, ArrowRight, Mail } from "lucide-react";
 import { useState, useMemo } from "react";
 import { useLocation } from "wouter";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
@@ -272,17 +272,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Location Map Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Visit Us in Red Deer
-          </h2>
-          <div className="flex justify-center">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4882.409713928075!2d-113.81135974641876!3d52.2759827619041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53745431017e59dd%3A0x777a3cd00b0f179d!2sHello%20Beauty%20Lounge!5e0!3m2!1sen!2sca!4v1783370441593!5m2!1sen!2sca" width="100%" height="400" style={{border: 0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Hello Beauty Lounge Location"></iframe>
-          </div>
-        </div>
-      </section>
+
 
       {/* Team Section */}
       <section id="team" className="py-16 md:py-24 bg-background">
