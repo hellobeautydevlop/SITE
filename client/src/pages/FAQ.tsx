@@ -87,7 +87,7 @@ const faqItems: FAQItem[] = [
   {
     question: "Do you offer online consultations?",
     answer:
-      "We primarily offer in-person consultations for the best assessment. However, you can send photos and questions via email to hello@beautylounge.ca, and our team will provide guidance.",
+      "We primarily offer in-person consultations for the best assessment. However, you can send photos and questions via email to info@hellobeautylounge.com, and our team will provide guidance.",
   },
   {
     question: "Are you located in Red Deer?",
@@ -199,10 +199,10 @@ export default function FAQ() {
                 Call Us: +1-587-273-1668
               </a>
               <a
-                href="mailto:hello@beautylounge.ca"
+                href="mailto:info@hellobeautylounge.com"
                 className="inline-block px-6 py-2 bg-accent text-white rounded-full hover:bg-accent/90 transition-colors"
               >
-                Email: hello@beautylounge.ca
+                Email: info@hellobeautylounge.com
               </a>
             </div>
           </div>
