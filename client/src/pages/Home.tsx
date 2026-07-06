@@ -165,8 +165,8 @@ export default function Home() {
       </nav>
 
       {/* Hero Section with Parallax Effect */}
-      <section className="relative h-[80vh] md:h-[100vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-fixed bg-cover bg-center" style={{ backgroundImage: "url('/manus-storage/IMG_0069_Original_a9f0a198.JPG')" }}>
+      <section className="relative h-[60vh] md:h-[90vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/IMG_0069_Original_a9f0a198.JPG')", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
         </div>
 
@@ -289,11 +289,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {team.map((member, index) => (
               <article key={index} className="bg-background rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <div className="h-96 overflow-hidden">
+                <div className="h-80 md:h-96 overflow-hidden bg-muted">
                   <img
                     src={member.image}
                     alt={`${member.name} - ${member.role} at Hello Beauty Lounge`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
                 <div className="p-8">

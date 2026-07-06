@@ -19,3 +19,4 @@
 - [x] Test mobile responsiveness across devices
 - [x] Add team member Keltie Cummins with photo and bio
 - [x] Add clickable Instagram icons to each stylist's profile card
+- [x] Fix hero images and team pictures to fit properly with responsive sizing
