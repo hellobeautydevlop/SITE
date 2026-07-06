@@ -375,7 +375,7 @@ export default function Home() {
               </h3>
               <p className="text-foreground/70 text-lg">
                 <MapPin className="inline-block w-5 h-5 mr-2 text-accent" />
-                #105, 5002 50 Ave, Red Deer, AB T4N 4B2
+                4919 59 St Unit 120, Red Deer, AB T4N 6C9
               </p>
               <p className="text-foreground/70 text-lg">
                 <Phone className="inline-block w-5 h-5 mr-2 text-accent" />
