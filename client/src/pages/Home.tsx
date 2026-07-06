@@ -170,7 +170,7 @@ export default function Home() {
 
       {/* Magazine Hero Section */}
       <section className="relative h-[60vh] md:h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/IMG_1153_968124fe.PNG')", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/IMG_1156_862a96c0.PNG')", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
         </div>
 
@@ -225,14 +225,32 @@ export default function Home() {
           </div>
 
           {/* Kevin Murphy Certification Badge */}
-          <div className="bg-gradient-to-r from-accent/10 via-primary/5 to-accent/10 rounded-xl p-12 text-center border border-accent/20">
-            <div className="text-6xl mb-4">🏆</div>
-            <h3 className="text-2xl font-bold text-primary mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Certified Kevin Murphy Salon
-            </h3>
-            <p className="text-foreground/70 max-w-2xl mx-auto">
-              We are proud to be an official Kevin Murphy salon partner, using only their premium, environmentally conscious, and weightless formulations across all our services.
-            </p>
+          <div className="grid md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-accent/10 via-primary/5 to-accent/10 rounded-xl p-8 md:p-12 border border-accent/20">
+            <div className="relative h-96 rounded-lg overflow-hidden">
+              <img 
+                src="/manus-storage/IMG_1157_d2683ebc.PNG"
+                alt="Kevin Murphy Certified Salon - Hello Beauty Lounge"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <div className="mb-4 flex justify-center md:justify-start">
+                <img 
+                  src="https://www.kevinmurphy.com.au/on/demandware.static/-/Sites-KM-Library/default/dw4f8f8c8e/images/KM-Logo-Black.png"
+                  alt="Kevin Murphy Logo"
+                  className="h-16 object-contain"
+                />
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-primary mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Certified Kevin Murphy Salon
+              </h3>
+              <p className="text-foreground/70 leading-relaxed mb-6">
+                We are proud to be an official Kevin Murphy salon partner, using only their premium, environmentally conscious, and weightless formulations across all our services. Our stylists are trained in Kevin Murphy techniques to deliver exceptional results.
+              </p>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full" onClick={() => setLocation('/kevin-murphy')}>
+                Explore Kevin Murphy Products
+              </Button>
+            </div>
           </div>
         </div>
       </section>
