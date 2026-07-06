@@ -298,9 +298,35 @@ export default function Home() {
                     <Star className="w-4 h-4 fill-current" />
                     <span>{member.rating} ({member.reviews} reviews)</span>
                   </div>
-                  <Button variant="link" className="text-accent hover:text-primary p-0 h-auto" onClick={() => window.open(member.instagram, '_blank')}>
-                    Instagram <Instagram className="w-4 h-4 ml-1" />
-                  </Button>
+                  {member.name === "Noon K" && (
+                    <Button 
+                      onClick={() => setLocation("/stylists/noon-k")}
+                      className="bg-accent hover:bg-accent/90 text-accent-foreground w-full"
+                    >
+                      View Profile
+                    </Button>
+                  )}
+                  {member.name === "Melissa Mitchell" && (
+                    <Button 
+                      onClick={() => setLocation("/stylists/melissa-mitchell")}
+                      className="bg-accent hover:bg-accent/90 text-accent-foreground w-full"
+                    >
+                      View Profile
+                    </Button>
+                  )}
+                  {member.name === "Keltie Cummins" && (
+                    <Button 
+                      onClick={() => setLocation("/stylists/keltie-cummins")}
+                      className="bg-accent hover:bg-accent/90 text-accent-foreground w-full"
+                    >
+                      View Profile
+                    </Button>
+                  )}
+                  {member.name === "Tiara Black" && (
+                    <Button variant="link" className="text-accent hover:text-primary p-0 h-auto" onClick={() => window.open(member.instagram, '_blank')}>
+                      Instagram <Instagram className="w-4 h-4 ml-1" />
+                    </Button>
+                  )}
                 </div>
               </Card>
             ))}

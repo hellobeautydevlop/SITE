@@ -185,7 +185,10 @@ export default function ServicesOverview() {
                   <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                 ))}
               </div>
-              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button 
+                onClick={() => setLocation("/stylists/noon-k")}
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+              >
                 Book with Noon
               </Button>
             </Card>
@@ -202,7 +205,10 @@ export default function ServicesOverview() {
                   <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                 ))}
               </div>
-              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button 
+                onClick={() => setLocation("/stylists/melissa-mitchell")}
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+              >
                 Book with Melissa
               </Button>
             </Card>
@@ -219,7 +225,10 @@ export default function ServicesOverview() {
                   <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                 ))}
               </div>
-              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button 
+                onClick={() => setLocation("/stylists/keltie-cummins")}
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+              >
                 Book with Keltie
               </Button>
             </Card>

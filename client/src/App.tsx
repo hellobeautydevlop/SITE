@@ -21,6 +21,9 @@ import FAQ from "./pages/FAQ";
 import ModelApplication from "./pages/ModelApplication";
 import ContactUs from "./pages/ContactUs";
 import ServicesOverview from "./pages/ServicesOverview";
+import StylistNoonK from "./pages/StylistNoonK";
+import StylistMelissa from "./pages/StylistMelissa";
+import StylistKeltie from "./pages/StylistKeltie";
 import StylistQuiz from "./components/StylistQuiz";
 import BookingAssistant from "./components/BookingAssistant";
 
@@ -30,6 +33,9 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/services"} component={ServicesOverview} />
+      <Route path={"/stylists/noon-k"} component={StylistNoonK} />
+      <Route path={"/stylists/melissa-mitchell"} component={StylistMelissa} />
+      <Route path={"/stylists/keltie-cummins"} component={StylistKeltie} />
       <Route path={"/services/hair-coloring"} component={HairColoring} />
       <Route path={"/services/cuts-and-styling"} component={CutsAndStyling} />
       <Route path={"/services/hair-extensions"} component={HairExtensions} />
