@@ -29,6 +29,25 @@ export default function Blog() {
         keywords="hair care blog Red Deer, salon tips Alberta, balayage maintenance, extension styling guide, bridal hair trends"
         canonicalUrl="https://hellobeautylounge.com/blog"
       />
+      {/* Hero Section */}
+      <section className="relative h-[50vh] md:h-[60vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/IMG_1157_0b7c3b3d.PNG')", backgroundAttachment: "scroll", backgroundSize: "cover", backgroundPosition: "center" }}>
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+        </div>
+
+        <div className="container relative z-10 max-w-3xl px-4 md:px-8">
+          <span className="inline-block text-accent font-semibold tracking-widest uppercase text-xs md:text-sm mb-4 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+            Beauty Journal
+          </span>
+          <h1 className="text-4xl md:text-6xl text-white mb-4 font-bold leading-[1.15]" style={{ fontFamily: "'Playfair Display', serif" }}>
+            The Beauty Journal
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed max-w-2xl">
+            Expert hair care tips, trends, and tutorials from the stylists at Hello Beauty Lounge
+          </p>
+        </div>
+      </section>
+
       {/* Header */}
       <div className="sticky top-0 z-40 glassmorphism border-b border-border/50">
         <div className="container py-6">

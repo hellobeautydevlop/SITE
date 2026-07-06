@@ -59,67 +59,40 @@ export default function StylistKeltie() {
         keywords="bridal hair Red Deer, wedding hair specialist, hair styling expert"
       />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-12 md:py-20">
-        <div className="container">
+      {/* Hero Section with Image */}
+      <section className="relative h-[50vh] md:h-[60vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/keltie-cummins_dd27bc42.png')", backgroundAttachment: "scroll", backgroundSize: "cover", backgroundPosition: "center" }}>
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+        </div>
+
+        <div className="container relative z-10 max-w-3xl px-4 md:px-8">
           <button 
             onClick={() => setLocation("/services")}
-            className="flex items-center gap-2 mb-6 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 mb-6 hover:opacity-80 transition-opacity text-white"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Services
           </button>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            <div className="md:col-span-2">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Keltie Cummins</h1>
-              <p className="text-xl mb-4 opacity-90">Bridal & Styling Expert</p>
-              <div className="flex items-center gap-2 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                ))}
-                <span className="ml-2 text-lg">(4.9 · 156 reviews)</span>
-              </div>
-              
-              <div className="space-y-4 mb-8">
-                <p className="text-lg opacity-90">
-                  With 10+ years of experience in bridal styling and precision cutting, Keltie specializes in creating stunning looks for weddings, special events, and everyday styling.
-                </p>
-                <p className="text-lg opacity-90">
-                  Keltie is known for her attention to detail, creative vision, and ability to make every client feel beautiful and confident on their special day.
-                </p>
-              </div>
-
-              <Button 
-                onClick={() => window.open("https://vagaro.com", "_blank")}
-                className="bg-accent-foreground text-accent hover:bg-accent-foreground/90 mr-4"
-              >
-                Book with Keltie
-              </Button>
-              <Button variant="outline" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground/10">
-                Call: +1 (587) 273-1668
-              </Button>
-            </div>
-
-            <Card className="p-6 text-center">
-              <div className="text-7xl mb-4">💇‍♀️</div>
-              <h3 className="text-2xl font-bold mb-2">Keltie Cummins</h3>
-              <p className="text-accent font-semibold mb-4">Bridal & Styling Expert</p>
-              <div className="space-y-3 text-sm">
-                <div>
-                  <p className="font-semibold">Experience</p>
-                  <p className="text-foreground/70">10+ years</p>
-                </div>
-                <div>
-                  <p className="font-semibold">Specialties</p>
-                  <p className="text-foreground/70">Bridal Hair, Cuts, Styling</p>
-                </div>
-                <div>
-                  <p className="font-semibold">Certification</p>
-                  <p className="text-foreground/70">Master Stylist & Bridal Specialist</p>
-                </div>
-              </div>
-            </Card>
+          <h1 className="text-4xl md:text-6xl text-white mb-4 font-bold leading-[1.15]" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Keltie Cummins
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 mb-4">Bridal & Styling Expert</p>
+          <div className="flex items-center gap-2 mb-6">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+            ))}
+            <span className="ml-2 text-white/90">(4.9 · 156 reviews)</span>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button 
+              onClick={() => window.open("https://vagaro.com", "_blank")}
+              className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-full px-8 py-6"
+            >
+              Book with Keltie
+            </Button>
+            <Button variant="outline" className="border-white/40 text-white hover:bg-white/10 font-semibold rounded-full px-8 py-6">
+              Call: +1 (587) 273-1668
+            </Button>
           </div>
         </div>
       </section>

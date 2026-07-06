@@ -59,67 +59,40 @@ export default function StylistNoonK() {
         keywords="color specialist Red Deer, balayage expert, hair color correction"
       />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-12 md:py-20">
-        <div className="container">
+      {/* Hero Section with Image */}
+      <section className="relative h-[50vh] md:h-[60vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/noon-k-profile_001c7146.png')", backgroundAttachment: "scroll", backgroundSize: "cover", backgroundPosition: "center" }}>
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+        </div>
+
+        <div className="container relative z-10 max-w-3xl px-4 md:px-8">
           <button 
             onClick={() => setLocation("/services")}
-            className="flex items-center gap-2 mb-6 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 mb-6 hover:opacity-80 transition-opacity text-white"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Services
           </button>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            <div className="md:col-span-2">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Noon K.</h1>
-              <p className="text-xl mb-4 opacity-90">Color Specialist</p>
-              <div className="flex items-center gap-2 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                ))}
-                <span className="ml-2 text-lg">(4.9 · 127 reviews)</span>
-              </div>
-              
-              <div className="space-y-4 mb-8">
-                <p className="text-lg opacity-90">
-                  With over 8 years of experience in color correction and custom color design, Noon specializes in creating dimensional, natural-looking tones that complement your skin tone and lifestyle.
-                </p>
-                <p className="text-lg opacity-90">
-                  Noon is certified in advanced color theory and uses only premium Kevin Murphy products to ensure healthy, vibrant results that last.
-                </p>
-              </div>
-
-              <Button 
-                onClick={() => window.open("https://vagaro.com", "_blank")}
-                className="bg-accent-foreground text-accent hover:bg-accent-foreground/90 mr-4"
-              >
-                Book with Noon
-              </Button>
-              <Button variant="outline" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground/10">
-                Call: +1 (587) 273-1668
-              </Button>
-            </div>
-
-            <Card className="p-6 text-center">
-              <div className="text-7xl mb-4">💇‍♀️</div>
-              <h3 className="text-2xl font-bold mb-2">Noon K.</h3>
-              <p className="text-accent font-semibold mb-4">Color Specialist</p>
-              <div className="space-y-3 text-sm">
-                <div>
-                  <p className="font-semibold">Experience</p>
-                  <p className="text-foreground/70">8+ years</p>
-                </div>
-                <div>
-                  <p className="font-semibold">Specialties</p>
-                  <p className="text-foreground/70">Balayage, Color Correction, Full Color</p>
-                </div>
-                <div>
-                  <p className="font-semibold">Certification</p>
-                  <p className="text-foreground/70">Advanced Color Theory</p>
-                </div>
-              </div>
-            </Card>
+          <h1 className="text-4xl md:text-6xl text-white mb-4 font-bold leading-[1.15]" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Noon K.
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 mb-4">Color Specialist</p>
+          <div className="flex items-center gap-2 mb-6">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+            ))}
+            <span className="ml-2 text-white/90">(4.9 · 127 reviews)</span>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button 
+              onClick={() => window.open("https://vagaro.com", "_blank")}
+              className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-full px-8 py-6"
+            >
+              Book with Noon
+            </Button>
+            <Button variant="outline" className="border-white/40 text-white hover:bg-white/10 font-semibold rounded-full px-8 py-6">
+              Call: +1 (587) 273-1668
+            </Button>
           </div>
         </div>
       </section>

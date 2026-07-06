@@ -148,12 +148,7 @@ export default function Gallery() {
 
       {/* Magazine-Style Hero Section */}
       <section className="relative h-96 md:h-[500px] overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
-        <div className="absolute inset-0">
-          <img 
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hair-styling-session-kvQ4Pdu2ZntNcsU5y2tcXx.webp"
-            alt="Gallery Hero"
-            className="w-full h-full object-cover opacity-40"
-          />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/IMG_1156_862a96c0.PNG')", backgroundAttachment: "scroll", backgroundSize: "cover", backgroundPosition: "center" }}>
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
         </div>
         

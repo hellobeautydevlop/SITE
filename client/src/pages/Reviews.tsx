@@ -41,19 +41,21 @@ export default function Reviews() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container">
-          <div className="max-w-3xl">
-            <h1
-              className="text-5xl md:text-6xl mb-6 text-foreground"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              Client Reviews & Testimonials
-            </h1>
-            <p className="text-xl text-foreground/70 leading-relaxed">
-              Discover what our satisfied clients say about their experiences at Hello Beauty Lounge. Read authentic reviews from real customers who've experienced our luxury hair and beauty services.
-            </p>
-          </div>
+      <section className="relative h-[50vh] md:h-[60vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/IMG_1154_b3c5b3d7.PNG')", backgroundAttachment: "scroll", backgroundSize: "cover", backgroundPosition: "center" }}>
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+        </div>
+
+        <div className="container relative z-10 max-w-3xl px-4 md:px-8">
+          <span className="inline-block text-accent font-semibold tracking-widest uppercase text-xs md:text-sm mb-4 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+            Testimonials
+          </span>
+          <h1 className="text-4xl md:text-6xl text-white mb-4 font-bold leading-[1.15]" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Client Reviews
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
+            Discover what our satisfied clients say about their experiences at Hello Beauty Lounge.
+          </p>
         </div>
       </section>
 
