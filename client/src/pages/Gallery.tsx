@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import { ChevronLeft, ArrowRight } from "lucide-react";
 import { useLocation } from "wouter";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import LazyImage from "@/components/LazyImage";
 import Footer from "@/components/Footer";
 
 interface Transformation {
@@ -263,7 +264,7 @@ export default function Gallery() {
             </a>
           </div>
           <div className="relative h-80 rounded-lg overflow-hidden">
-            <img 
+            <LazyImage
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hair-color-service-6tebwYZCegTwyQL73eTdiv.webp"
               alt="Transformation"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
