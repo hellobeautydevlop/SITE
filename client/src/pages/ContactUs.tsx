@@ -114,12 +114,20 @@ export default function ContactUs() {
                   </div>
                 ))}
               </div>
-              <Button
-                onClick={() => window.open("https://www.vagaro.com/hellobeautylounge", "_blank")}
-                className="w-full mt-8 bg-accent hover:bg-accent/90 text-white font-semibold py-3 rounded-lg transition-all duration-300"
-              >
-                Book an Appointment
-              </Button>
+              <div className="flex gap-3 mt-8">
+                <Button
+                  onClick={() => window.open("https://www.vagaro.com/hellobeautylounge", "_blank")}
+                  className="flex-1 bg-accent hover:bg-accent/90 text-white font-semibold py-3 rounded-lg transition-all duration-300"
+                >
+                  Book Appointment
+                </Button>
+                <Button
+                  onClick={() => window.open("https://maps.google.com/?q=4919+59+Street+Unit+120+Red+Deer+AB", "_blank")}
+                  className="flex-1 bg-white hover:bg-accent/10 text-accent border-2 border-accent font-semibold py-3 rounded-lg transition-all duration-300"
+                >
+                  Get Directions
+                </Button>
+              </div>
             </div>
           </div>
         </div>
