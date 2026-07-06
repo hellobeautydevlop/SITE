@@ -227,24 +227,10 @@ export default function Home() {
           </div>
 
           {/* Kevin Murphy Certification Badge */}
-          <div className="grid md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-accent/10 via-primary/5 to-accent/10 rounded-xl p-8 md:p-12 border border-accent/20">
-            <div className="relative h-96 rounded-lg overflow-hidden">
-              <img 
-                src="/manus-storage/IMG_1157_d2683ebc.PNG"
-                alt="Kevin Murphy Certified Salon - Hello Beauty Lounge"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="text-center md:text-left">
-              <div className="mb-4 flex justify-center md:justify-start">
-                <img 
-                  src="https://www.kevinmurphy.com.au/on/demandware.static/-/Sites-KM-Library/default/dw4f8f8c8e/images/KM-Logo-Black.png"
-                  alt="Kevin Murphy Logo"
-                  className="h-16 object-contain"
-                />
-              </div>
+          <div className="grid md:grid-cols-1 gap-8 items-center bg-gradient-to-r from-accent/10 via-primary/5 to-accent/10 rounded-xl p-8 md:p-12 border border-accent/20">
+            <div className="text-center md:text-center">
               <h3 className="text-3xl md:text-4xl font-bold text-primary mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Certified Kevin Murphy Salon
+                ✨ Certified Kevin Murphy Salon ✨
               </h3>
               <p className="text-foreground/70 leading-relaxed mb-6">
                 We are proud to be an official Kevin Murphy salon partner, using only their premium, environmentally conscious, and weightless formulations across all our services. Our stylists are trained in Kevin Murphy techniques to deliver exceptional results.
