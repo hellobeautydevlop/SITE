@@ -97,10 +97,10 @@ export default function Home() {
 
   const businessHours = [
     { day: "Monday", hours: "Closed" },
-    { day: "Tuesday", hours: "10:00 AM - 6:00 PM" },
+    { day: "Tuesday", hours: "10:00 AM - 7:00 PM" },
     { day: "Wednesday", hours: "10:00 AM - 8:00 PM" },
     { day: "Thursday", hours: "10:00 AM - 8:00 PM" },
-    { day: "Friday", hours: "10:00 AM - 6:00 PM" },
+    { day: "Friday", hours: "10:00 AM - 7:00 PM" },
     { day: "Saturday", hours: "10:00 AM - 5:00 PM" },
     { day: "Sunday", hours: "Closed" },
   ];
