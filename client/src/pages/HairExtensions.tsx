@@ -101,9 +101,9 @@ export default function HairExtensions() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Hand-Tied Extensions | Hello Beauty Lounge"
-        description="Get luxurious length and volume with our premium hand-tied hair extensions in Red Deer, AB. Seamless blending and professional installation. Book today."
-        keywords="hair extensions Red Deer, hand tied extensions Alberta, professional hair extensions, luxury hair length volume"
+        title="Hand-Tied Hair Extensions Red Deer | Premium Quality | Hello Beauty Lounge"
+        description="Luxury hand-tied extensions in Red Deer. Seamless length and volume transformation. Free consultation. Expert installation by certified stylists."
+        keywords="hair extensions Red Deer, hand-tied extensions, extension specialist, hair volume, premium extensions, hair transformation"
         canonicalUrl="https://hellobeautylounge.com/services/hair-extensions"
       />
       {/* Header */}

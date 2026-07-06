@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
 import BlogPostDetail from "./pages/BlogPostDetail";
+import BlogMaintainBalayage from "./pages/BlogMaintainBalayage";
+import BlogExtensionMaintenance from "./pages/BlogExtensionMaintenance";
 import Reviews from "./pages/Reviews";
 import HairColoring from "./pages/HairColoring";
 import CutsAndStyling from "./pages/CutsAndStyling";
@@ -33,6 +35,8 @@ function Router() {
       <Route path={"/services/bridal-hair"} component={BridalHair} />
       <Route path={"/gallery"} component={Gallery} />
       <Route path={"/blog"} component={Blog} />
+      <Route path={"/blog/maintain-balayage"} component={BlogMaintainBalayage} />
+      <Route path={"/blog/extension-maintenance"} component={BlogExtensionMaintenance} />
       <Route path={"/blog/:slug"} component={BlogPostDetail} />
       <Route path={"/reviews"} component={Reviews} />
       <Route path={"/kevin-murphy"} component={KevinMurphy} />

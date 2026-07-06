@@ -115,9 +115,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Hello Beauty Lounge | Best Hair Salon in Red Deer, AB"
-        description="Best hair salon in Red Deer, AB. Expert stylists specializing in custom color, balayage, hair extensions, bridal hair, and premium Kevin Murphy products."
-        keywords="hair salon Red Deer, best hair salon Red Deer, balayage Red Deer, hair extensions Red Deer, bridal hair Red Deer, hair color Red Deer, salon Red Deer, best salon Alberta, Kevin Murphy salon, luxury hair salon, hair styling, hair care, professional hair salon"
+        title="Hello Beauty Lounge | Best Hair Salon Red Deer | Balayage"
+        description="Premium hair salon in Red Deer specializing in balayage, hand-tied extensions, and bridal hair. Kevin Murphy certified. Book your appointment today."
+        keywords="hair salon Red Deer, balayage Red Deer, hair extensions Red Deer, bridal hair, Kevin Murphy salon, best hair salon, hair color, professional salon"
         canonicalUrl="https://hellobeautylounge.com/"
       />
       {/* Sticky Header */}
@@ -247,7 +247,7 @@ export default function Home() {
               <p className="text-foreground/70 leading-relaxed mb-6">
                 We are proud to be an official Kevin Murphy salon partner, using only their premium, environmentally conscious, and weightless formulations across all our services. Our stylists are trained in Kevin Murphy techniques to deliver exceptional results.
               </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full" onClick={() => setLocation('/kevin-murphy')}>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold rounded-full px-8 py-6 text-base shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300" onClick={() => setLocation('/kevin-murphy')}>
                 Explore Kevin Murphy Products
               </Button>
             </div>
@@ -255,282 +255,169 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section - Magazine Grid */}
-      <section id="services" className="py-20 md:py-32 bg-background">
+      {/* Services Section */}
+      <section id="services" className="py-16 md:py-24 bg-background">
         <div className="container">
-          <div className="mb-16">
-            <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">What We Offer</span>
-            <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Our Services
-            </h2>
-            <p className="text-lg text-foreground/70 max-w-2xl">
-              We offer comprehensive beauty services designed to transform and enhance your natural beauty with expert care and premium products.
-            </p>
-          </div>
-
-          {/* Magazine-style service grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <Card
-                  key={index}
-                  className="group overflow-hidden border-0 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer bg-white"
-                  onClick={() => setLocation(service.link)}
-                >
-                  {/* Service Image */}
-                  <div className="relative h-48 overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10">
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="p-6">
-                    <div className="mb-3 inline-block p-2 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
-                      <Icon className="w-6 h-6 text-accent" />
-                    </div>
-                    <h3 className="text-lg font-bold text-primary mb-2 group-hover:text-accent transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-foreground/70 leading-relaxed mb-4">{service.description}</p>
-                    <div className="flex items-center text-accent font-semibold text-sm group-hover:translate-x-1 transition-transform">
-                      Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                    </div>
-                  </div>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section - Magazine Layout */}
-      <section id="team" className="py-20 md:py-32 bg-white">
-        <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
-            <div className="relative h-96 rounded-xl overflow-hidden shadow-lg">
-              <img 
-                src="/manus-storage/IMG_1154_20fbf7cb.PNG"
-                alt="Hello Beauty Lounge Team - Professional Hair Stylists in Red Deer, AB"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div>
-              <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Meet Our Experts</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Our Team
-              </h2>
-              <p className="text-lg text-foreground/70 mb-6">
-                Meet the talented stylists behind Hello Beauty Lounge's exceptional transformations. Our team of expert hair professionals is dedicated to delivering the best salon experience in Red Deer, Alberta.
-              </p>
-              <p className="text-lg text-foreground/70">
-                From custom color and balayage to hair extensions and bridal styling, our stylists bring years of experience and passion to every service.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, index) => (
-              <article key={index} className="group">
-                <div className="relative mb-6 overflow-hidden rounded-lg aspect-square bg-gradient-to-br from-accent/10 to-primary/10">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <a href={member.instagram} target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors">
-                      <Instagram className="w-6 h-6" />
-                    </a>
-                  </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Our Signature Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <Card key={index} className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <img 
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    {service.title}
+                  </h3>
+                  <p className="text-foreground/70 text-sm mb-4">{service.description}</p>
+                  <Button variant="link" className="text-accent hover:text-primary p-0 h-auto" onClick={() => setLocation(service.link)}>
+                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                  </Button>
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  {member.name}
-                </h3>
-                <p className="text-sm text-accent font-semibold mb-2 uppercase tracking-wide">{member.role}</p>
-                <p className="text-xs text-foreground/60 mb-3">{member.specialty}</p>
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3 h-3 fill-accent text-accent" />
-                  ))}
-                  <span className="text-xs text-foreground/60 ml-1">({member.reviews})</span>
-                </div>
-                <p className="text-sm text-foreground/70 leading-relaxed">{member.bio}</p>
-              </article>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Transformation Section */}
-      <section className="py-24 bg-background">
+      {/* Before & After Section */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Transformations</span>
-              <h2 className="text-4xl md:text-5xl mb-6 font-bold text-primary" style={{ fontFamily: "'Playfair Display', serif" }}>
-                See the Transformation
-              </h2>
-              <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-                Our expert stylists specialize in creating stunning transformations. From vibrant color to luxurious length, we bring your beauty vision to life using premium Kevin Murphy products.
-              </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full" onClick={() => setLocation('/gallery')}>
-                View Gallery
-              </Button>
-            </div>
-            <div className="relative">
-              <BeforeAfterSlider
-                beforeImage="/manus-storage/IMG_8230_Original_1ca1da2d.JPG"
-                afterImage="/manus-storage/IMG_8232_Original_dc440cbb.JPG"
-              />
-            </div>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Transformations
+          </h2>
+          <BeforeAfterSlider 
+            beforeImage="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/before-after-1-before-d760207f.webp"
+            afterImage="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/before-after-1-after-8316279f.webp"
+            altText="Hair Transformation Before and After"
+          />
         </div>
       </section>
 
-      {/* Instagram Feed Section */}
-      <section className="py-20 md:py-32 bg-white">
+      {/* Team Section */}
+      <section id="team" className="py-16 md:py-24 bg-background">
         <div className="container">
-          <div className="text-center mb-16">
-            <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Follow Us</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-              @HelloBeautyLounge
-            </h2>
-            <p className="text-lg text-foreground/70">
-              See our latest transformations and salon moments
-            </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Meet Our Talented Team
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((member, index) => (
+              <Card key={index} className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <img 
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-64 object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-bold text-primary mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    {member.name}
+                  </h3>
+                  <p className="text-accent text-sm font-semibold mb-2">{member.role}</p>
+                  <p className="text-foreground/70 text-sm mb-4">{member.specialty}</p>
+                  <div className="flex justify-center items-center gap-2 text-yellow-500 mb-4">
+                    <Star className="w-4 h-4 fill-current" />
+                    <span>{member.rating} ({member.reviews} reviews)</span>
+                  </div>
+                  <Button variant="link" className="text-accent hover:text-primary p-0 h-auto" onClick={() => window.open(member.instagram, '_blank')}>
+                    Instagram <Instagram className="w-4 h-4 ml-1" />
+                  </Button>
+                </div>
+              </Card>
+            ))}
           </div>
-          <InstagramFeed />
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Client Love</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-              What Our Clients Say
-            </h2>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>
+            What Our Clients Say
+          </h2>
           <TestimonialsCarousel />
         </div>
       </section>
 
-      {/* Google Reviews */}
-      <section className="py-20 md:py-32 bg-white">
+      {/* Google Reviews Widget */}
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Google Reviews
-            </h2>
-            <p className="text-foreground/70">
-              Trusted by clients across Red Deer
-            </p>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Our 5-Star Reputation
+          </h2>
           <GoogleReviewsWidget />
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 md:py-32 bg-gradient-to-br from-primary/5 to-accent/5">
+      {/* Instagram Feed */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Get In Touch</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Visit Hello Beauty Lounge
-              </h2>
-              
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-primary mb-1">Location</h3>
-                    <p className="text-foreground/70">Red Deer, AB, Canada</p>
-                  </div>
-                </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>
+            #HelloBeautyLounge
+          </h2>
+          <InstagramFeed />
+        </div>
+      </section>
 
-                <div className="flex gap-4">
-                  <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-primary mb-1">Phone</h3>
-                    <a href="tel:+15872731668" className="text-foreground/70 hover:text-accent transition-colors">
-                      +1 (587) 273-1668
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-primary mb-3">Hours</h3>
-                    <div className="space-y-1 text-sm text-foreground/70">
-                      {businessHours.map((item, index) => (
-                        <div key={index} className="flex justify-between gap-8">
-                          <span>{item.day}</span>
-                          <span className="font-medium">{item.hours}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full mt-8 w-full" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}>
-                <Phone className="w-5 h-5 mr-2" />
-                Book Appointment
+      {/* Contact Section */}
+      <section id="contact" className="py-16 md:py-24 bg-background">
+        <div className="container">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Visit Us
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="space-y-6 text-center md:text-left">
+              <h3 className="text-2xl font-bold text-primary" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Hello Beauty Lounge
+              </h3>
+              <p className="text-foreground/70 text-lg">
+                <MapPin className="inline-block w-5 h-5 mr-2 text-accent" />
+                #105, 5002 50 Ave, Red Deer, AB T4N 4B2
+              </p>
+              <p className="text-foreground/70 text-lg">
+                <Phone className="inline-block w-5 h-5 mr-2 text-accent" />
+                <a href="tel:+15872731668" className="hover:text-primary transition-colors">+1 (587) 273-1668</a>
+              </p>
+              <p className="text-foreground/70 text-lg">
+                <Clock className="inline-block w-5 h-5 mr-2 text-accent" />
+                <span className="font-semibold">Hours:</span>
+              </p>
+              <ul className="space-y-2 text-foreground/70 text-lg">
+                {businessHours.map((item, index) => (
+                  <li key={index} className="flex justify-center md:justify-start items-center">
+                    <span className="w-24 text-left">{item.day}:</span>
+                    <span className="font-medium">{item.hours}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-full px-8 py-6 text-base shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300" onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=Hello+Beauty+Lounge+Red+Deer', '_blank')}>
+                Get Directions
               </Button>
             </div>
-
-            <div className="relative h-96 rounded-lg overflow-hidden">
-              <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/salon-team-stylists-9wxGqSBMtWzpcdCXrKnsvz.webp"
-                alt="Hello Beauty Lounge Team"
-                className="w-full h-full object-cover"
-              />
+            <div className="relative h-96 rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.309314013459!2d-113.8123086230008!3d52.26673165780764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537454224b17671b%3A0x736d8c4c7b2e2b2a!2sHello%20Beauty%20Lounge!5e0!3m2!1sen!2sca!4w!5m2!1sen!2sca"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Hello Beauty Lounge Location"
+              ></iframe>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-white py-12">
-        <div className="container">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Hello Beauty Lounge
-              </h3>
-              <p className="text-white/70">
-                Premium hair salon in Red Deer, specializing in custom color, extensions, and bridal services.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-white/70">
-                <li><a href="/services" className="hover:text-white transition-colors">Services</a></li>
-                <li><a href="/gallery" className="hover:text-white transition-colors">Gallery</a></li>
-                <li><a href="/kevin-murphy" className="hover:text-white transition-colors">Kevin Murphy</a></li>
-                <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Follow Us</h4>
-              <div className="flex gap-4">
-                <a href="https://www.instagram.com/hellobeautylounge.ca/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
-                  <Instagram className="w-6 h-6" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
-            <p>&copy; 2024 Hello Beauty Lounge. All rights reserved.</p>
-          </div>
+      <footer className="bg-primary text-primary-foreground py-12">
+        <div className="container text-center text-sm">
+          <p>&copy; {new Date().getFullYear()} Hello Beauty Lounge. All rights reserved.</p>
+          <p className="mt-2">Designed with passion in Red Deer, Alberta.</p>
         </div>
       </footer>
     </div>
