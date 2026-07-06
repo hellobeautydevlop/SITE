@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import { Phone, MapPin, Clock, Scissors, Sparkles, Palette, Star, Instagram } from "lucide-react";
+import { Phone, MapPin, Clock, Scissors, Sparkles, Palette, Star, Instagram, ArrowRight } from "lucide-react";
 import { useState, useMemo } from "react";
 import { useLocation } from "wouter";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
@@ -10,20 +10,17 @@ import MobileNav from "@/components/MobileNav";
 import InstagramFeed from "@/components/InstagramFeed";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
-
 /**
- * Design Philosophy: Modern Luxury Minimalism
+ * Design Philosophy: Editorial Magazine Luxury
  * - Warm taupe (#8B7355) + rose-gold (#D4A574) accents
  * - Playfair Display (headlines) + Lato (body)
- * - Generous whitespace, asymmetric layouts
- * - Restrained motion, purposeful interactions
+ * - Multi-column grids, asymmetric layouts
+ * - Professional photography with editorial typography
  */
 
 export default function Home() {
   const [, setLocation] = useLocation();
   const [activeService, setActiveService] = useState(0);
-
-
 
   const services = [
     {
@@ -31,24 +28,28 @@ export default function Home() {
       title: "Custom Dimensional Color",
       description: "Expert balayage and dimensional color using Kevin Murphy products for stunning, natural-looking results.",
       link: "/services/hair-coloring",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hair-color-service-6tebwYZCegTwyQL73eTdiv.webp",
     },
     {
       icon: Scissors,
       title: "Professional Cuts & Styling",
       description: "Precision cuts tailored to your face shape and lifestyle, with expert styling for every occasion.",
       link: "/services/cuts-and-styling",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hair-styling-session-kvQ4Pdu2ZntNcsU5y2tcXx.webp",
     },
     {
       icon: Sparkles,
       title: "Premium Hand-Tied Extensions",
       description: "Luxury hand-tied extensions for seamless length and volume transformation with professional installation.",
       link: "/services/hair-extensions",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hair-extensions-application-aqjorffUXWPN3dfFAnbwRg.webp",
     },
     {
       icon: Sparkles,
       title: "Bridal & Wedding Hair",
       description: "Specialized bridal packages including consultations, trials, and on-the-day styling for your perfect wedding day.",
       link: "/services/bridal-hair",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/salon-hero-luxury-RsaUTEvBovsCDPH6gANBN9.webp",
     },
   ];
 
@@ -106,9 +107,9 @@ export default function Home() {
   ];
 
   const brands = [
-    { name: "Kevin Murphy", description: "Premium, environmentally conscious hair care" },
-    { name: "Living Proof", description: "Advanced hair science products" },
-    { name: "K18", description: "Professional hair repair technology" },
+    { name: "Kevin Murphy", description: "Premium, environmentally conscious hair care", logo: "🌿" },
+    { name: "Living Proof", description: "Advanced hair science products", logo: "🔬" },
+    { name: "K18", description: "Professional hair repair technology", logo: "✨" },
   ];
 
   return (
@@ -167,15 +168,15 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section with Parallax Effect */}
+      {/* Magazine Hero Section */}
       <section className="relative h-[60vh] md:h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/hero-salon_9b557d64.png')", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/salon-hero-luxury-RsaUTEvBovsCDPH6gANBN9.webp')", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
         </div>
 
         <div className="container relative z-10 max-w-3xl">
           <span className="inline-block text-accent font-semibold tracking-widest uppercase text-xs md:text-sm mb-4 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
-            Welcome to Luxury Haircare
+            Premium Salon Partner
           </span>
           <h1 className="text-4xl md:text-7xl text-white mb-4 md:mb-6 font-semibold leading-[1.15]" style={{ fontFamily: "'Playfair Display', serif" }}>
             Elevate Your <br className="hidden md:inline" />
@@ -197,60 +198,140 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Kevin Murphy Partnership Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-accent/10 to-primary/10">
+      {/* Kevin Murphy Partnership - Magazine Style */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-4xl font-bold text-primary mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Proud Kevin Murphy Salon Partner
-            </h2>
-            <p className="text-base md:text-lg text-foreground/70">
-              We use premium, environmentally conscious, and weightless hair care products for all our salon services
-            </p>
+          <div className="grid md:grid-cols-3 gap-8 items-start mb-16">
+            <div className="md:col-span-1">
+              <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Our Brands</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Premium Partners
+              </h2>
+              <p className="text-foreground/70 leading-relaxed">
+                We partner with the world's leading professional hair care brands to deliver exceptional results.
+              </p>
+            </div>
+            <div className="md:col-span-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {brands.map((brand, index) => (
+                  <article key={index} className="bg-gradient-to-br from-accent/5 to-primary/5 rounded-lg p-8 border border-accent/10 hover:border-accent/30 transition-all group">
+                    <div className="text-4xl mb-4">{brand.logo}</div>
+                    <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">{brand.name}</h3>
+                    <p className="text-foreground/70 text-sm">{brand.description}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {brands.map((brand, index) => (
-              <article key={index} className="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-semibold text-primary mb-2">{brand.name}</h3>
-                <p className="text-foreground/70">{brand.description}</p>
-              </article>
-            ))}
+
+          {/* Kevin Murphy Certification Badge */}
+          <div className="bg-gradient-to-r from-accent/10 via-primary/5 to-accent/10 rounded-xl p-12 text-center border border-accent/20">
+            <div className="text-6xl mb-4">🏆</div>
+            <h3 className="text-2xl font-bold text-primary mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Certified Kevin Murphy Salon
+            </h3>
+            <p className="text-foreground/70 max-w-2xl mx-auto">
+              We are proud to be an official Kevin Murphy salon partner, using only their premium, environmentally conscious, and weightless formulations across all our services.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-16 md:py-24 bg-white">
+      {/* Services Section - Magazine Grid */}
+      <section id="services" className="py-20 md:py-32 bg-background">
         <div className="container">
-          <div className="max-w-2xl mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl mb-4 md:mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <div className="mb-16">
+            <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">What We Offer</span>
+            <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
               Our Services
             </h2>
-            <p className="text-base md:text-lg text-foreground/70">
+            <p className="text-lg text-foreground/70 max-w-2xl">
               We offer comprehensive beauty services designed to transform and enhance your natural beauty with expert care and premium products.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {/* Magazine-style service grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <Card
                   key={index}
-                  className="p-8 border-border hover:shadow-lg transition-all duration-300 cursor-pointer"
-                  onMouseEnter={() => setActiveService(index)}
+                  className="group overflow-hidden border-0 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer bg-white"
                   onClick={() => setLocation(service.link)}
                 >
-                  <div className="mb-4">
-                    <Icon className="w-12 h-12 text-accent" />
+                  {/* Service Image */}
+                  <div className="relative h-48 overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
                   </div>
-                  <h3 className="text-2xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    {service.title}
-                  </h3>
-                  <p className="text-foreground/70 leading-relaxed">{service.description}</p>
+                  
+                  {/* Content */}
+                  <div className="p-6">
+                    <div className="mb-3 inline-block p-2 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
+                      <Icon className="w-6 h-6 text-accent" />
+                    </div>
+                    <h3 className="text-lg font-bold text-primary mb-2 group-hover:text-accent transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-foreground/70 leading-relaxed mb-4">{service.description}</p>
+                    <div className="flex items-center text-accent font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                      Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                    </div>
+                  </div>
                 </Card>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section - Magazine Layout */}
+      <section id="team" className="py-20 md:py-32 bg-white">
+        <div className="container">
+          <div className="mb-16">
+            <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Meet Our Experts</span>
+            <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Our Team
+            </h2>
+            <p className="text-lg text-foreground/70 max-w-2xl">
+              Meet the talented stylists behind Hello Beauty Lounge's exceptional transformations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {team.map((member, index) => (
+              <article key={index} className="group">
+                <div className="relative mb-6 overflow-hidden rounded-lg aspect-square bg-gradient-to-br from-accent/10 to-primary/10">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <a href={member.instagram} target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors">
+                      <Instagram className="w-6 h-6" />
+                    </a>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {member.name}
+                </h3>
+                <p className="text-sm text-accent font-semibold mb-2 uppercase tracking-wide">{member.role}</p>
+                <p className="text-xs text-foreground/60 mb-3">{member.specialty}</p>
+                <div className="flex items-center gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3 h-3 fill-accent text-accent" />
+                  ))}
+                  <span className="text-xs text-foreground/60 ml-1">({member.reviews})</span>
+                </div>
+                <p className="text-sm text-foreground/70 leading-relaxed">{member.bio}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -260,13 +341,14 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Transformations</span>
+              <h2 className="text-4xl md:text-5xl mb-6 font-bold text-primary" style={{ fontFamily: "'Playfair Display', serif" }}>
                 See the Transformation
               </h2>
               <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-                Our expert stylists specialize in creating stunning transformations. From vibrant color to luxurious length, we bring your beauty vision to life.
+                Our expert stylists specialize in creating stunning transformations. From vibrant color to luxurious length, we bring your beauty vision to life using premium Kevin Murphy products.
               </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white" onClick={() => setLocation('/gallery')}>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full" onClick={() => setLocation('/gallery')}>
                 View Gallery
               </Button>
             </div>
@@ -274,111 +356,50 @@ export default function Home() {
               <BeforeAfterSlider
                 beforeImage="/manus-storage/IMG_8230_Original_1ca1da2d.JPG"
                 afterImage="/manus-storage/IMG_8232_Original_dc440cbb.JPG"
-                title="Teaser Transformation"
-                heightClass="h-[400px] md:h-[450px]"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section id="team" className="py-16 md:py-24 bg-white">
+      {/* Instagram Feed Section */}
+      <section className="py-20 md:py-32 bg-white">
         <div className="container">
-          <h2 className="text-3xl md:text-5xl mb-12 md:mb-16 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Meet Our Master Stylists
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            {team.map((member, index) => (
-              <article key={index} className="bg-background rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <div className="h-80 md:h-96 overflow-hidden bg-muted">
-                  <img
-                    src={member.image}
-                    alt={`${member.name} - ${member.role} at Hello Beauty Lounge`}
-                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-8">
-                  <h3 className="text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    {member.name}
-                  </h3>
-                  <p className="text-accent font-semibold mb-1">{member.role}</p>
-                  <p className="text-sm text-foreground/60 mb-4">{member.specialty}</p>
-                  
-                  {/* Rating */}
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                      ))}
-                    </div>
-                    <span className="text-sm text-foreground/70">({member.reviews} reviews)</span>
-                  </div>
-                  
-                  <p className="text-foreground/70 leading-relaxed text-sm mb-4">{member.bio}</p>
-                  
-                  <div className="flex gap-3 mb-4">
-                    <Button 
-                      size="sm" 
-                      className="flex-1 bg-accent hover:bg-accent/90 text-white"
-                      onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
-                    >
-                      Book
-                    </Button>
-                    {member.instagram && (
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="px-3 hover:bg-accent/10"
-                        onClick={() => window.open(member.instagram, '_blank')}
-                        title={`Follow ${member.name} on Instagram`}
-                      >
-                        <Instagram className="w-4 h-4" />
-                      </Button>
-                    )}
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-16 bg-background p-12 rounded-lg">
-            <h2 className="text-2xl mb-6 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Our Team
+          <div className="text-center mb-16">
+            <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Follow Us</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+              @HelloBeautyLounge
             </h2>
-            <p className="text-center text-foreground/70 leading-relaxed max-w-2xl mx-auto">
-              With over a decade of professional experience, our stylists are passionate about creating beautiful transformations. We specialize in luxury hair color, expert cuts, premium extensions, and professional nail design. Each team member brings unique expertise and a commitment to excellence.
+            <p className="text-lg text-foreground/70">
+              See our latest transformations and salon moments
             </p>
           </div>
+          <InstagramFeed />
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-white">
+      <section className="py-20 md:py-32 bg-background">
         <div className="container">
-          <div className="max-w-3xl mx-auto mb-12">
-            <h2 className="text-4xl md:text-5xl mb-6 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <div className="text-center mb-16">
+            <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Client Love</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
               What Our Clients Say
             </h2>
-            <p className="text-lg text-foreground/70 text-center">
-              Real testimonials from clients who've experienced our transformations
-            </p>
           </div>
           <TestimonialsCarousel />
         </div>
       </section>
 
-      {/* Google Reviews Section */}
-      <section className="py-24 bg-background">
+      {/* Google Reviews */}
+      <section className="py-20 md:py-32 bg-white">
         <div className="container">
-          <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Verified Client Reviews
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Google Reviews
             </h2>
-            <p className="text-lg text-foreground/70 max-w-2xl">
-              See what our satisfied clients are saying about their experiences at Hello Beauty Lounge on Vagaro.
+            <p className="text-foreground/70">
+              Trusted by clients across Red Deer
             </p>
           </div>
           <GoogleReviewsWidget />
@@ -386,42 +407,41 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 md:py-24 bg-background">
+      <section id="contact" className="py-20 md:py-32 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+          <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl md:text-5xl mb-6 md:mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Visit Us
+              <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Get In Touch</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Visit Hello Beauty Lounge
               </h2>
-
-              <div className="space-y-8">
+              
+              <div className="space-y-6">
                 <div className="flex gap-4">
                   <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold mb-2">Location</h3>
-                    <p className="text-foreground/70">
-                      4919 59 Street Unit 120<br />
-                      Red Deer, AB T4N 6C9<br />
-                      Canada
-                    </p>
+                    <h3 className="font-semibold text-primary mb-1">Location</h3>
+                    <p className="text-foreground/70">Red Deer, AB, Canada</p>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
                   <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold mb-2">Phone</h3>
-                    <p className="text-foreground/70">+1 (587) 273-1668</p>
+                    <h3 className="font-semibold text-primary mb-1">Phone</h3>
+                    <a href="tel:+15872731668" className="text-foreground/70 hover:text-accent transition-colors">
+                      +1 (587) 273-1668
+                    </a>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
                   <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold mb-4">Business Hours</h3>
-                    <div className="space-y-2 text-foreground/70">
+                    <h3 className="font-semibold text-primary mb-3">Hours</h3>
+                    <div className="space-y-1 text-sm text-foreground/70">
                       {businessHours.map((item, index) => (
-                        <div key={index} className="flex justify-between gap-4">
+                        <div key={index} className="flex justify-between gap-8">
                           <span>{item.day}</span>
                           <span className="font-medium">{item.hours}</span>
                         </div>
@@ -430,26 +450,23 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full mt-8 w-full" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}>
+                <Phone className="w-5 h-5 mr-2" />
+                Book Appointment
+              </Button>
             </div>
 
-            <div className="bg-white p-12 rounded-lg text-center">
-              <h3 className="text-2xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Ready to Transform Your Look?
-              </h3>
-              <p className="text-gray-600 mb-8">Book your appointment directly with our expert stylists on Vagaro.</p>
-              <Button 
-                className="bg-primary hover:bg-primary/90 text-white py-3 px-8 text-lg"
-                onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
-              >
-                Book Your Appointment
-              </Button>
+            <div className="relative h-96 rounded-lg overflow-hidden">
+              <img 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/salon-team-stylists-9wxGqSBMtWzpcdCXrKnsvz.webp"
+                alt="Hello Beauty Lounge Team"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
-
-      {/* Instagram Feed */}
-      <InstagramFeed />
 
       {/* Footer */}
       <footer className="bg-primary text-white py-12">
@@ -459,29 +476,30 @@ export default function Home() {
               <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
                 Hello Beauty Lounge
               </h3>
-              <p className="text-white/80">Luxury hair and beauty services in Red Deer, Alberta.</p>
+              <p className="text-white/70">
+                Premium hair salon in Red Deer, specializing in custom color, extensions, and bridal services.
+              </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-white/80">
-                <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
+              <ul className="space-y-2 text-white/70">
+                <li><a href="/services" className="hover:text-white transition-colors">Services</a></li>
                 <li><a href="/gallery" className="hover:text-white transition-colors">Gallery</a></li>
+                <li><a href="/kevin-murphy" className="hover:text-white transition-colors">Kevin Murphy</a></li>
                 <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="/reviews" className="hover:text-white transition-colors">Reviews</a></li>
-                <li><a href="#team" className="hover:text-white transition-colors">Team</a></li>
-                <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Follow Us</h4>
               <div className="flex gap-4">
-                <a href="https://www.instagram.com/hello.beauty.lounge" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">Instagram</a>
-                <a href="https://www.facebook.com/RedDeerHelloBeauty" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">Facebook</a>
+                <a href="https://www.instagram.com/hellobeautylounge.ca/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
+                  <Instagram className="w-6 h-6" />
+                </a>
               </div>
             </div>
           </div>
-          <div className="border-t border-white/20 pt-8 text-center text-white/80">
-            <p>&copy; 2026 Hello Beauty Lounge. All rights reserved.</p>
+          <div className="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
+            <p>&copy; 2024 Hello Beauty Lounge. All rights reserved.</p>
           </div>
         </div>
       </footer>

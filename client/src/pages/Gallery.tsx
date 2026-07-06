@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, ArrowRight } from "lucide-react";
 import { useLocation } from "wouter";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
@@ -12,6 +12,7 @@ interface Transformation {
   title: string;
   description: string;
   stylist: string;
+  category: string;
 }
 
 const galleryData: Record<string, Transformation[]> = {
@@ -23,6 +24,7 @@ const galleryData: Record<string, Transformation[]> = {
       title: "Vibrant Balayage Transformation",
       description: "Hand-painted balayage with dimensional highlights for a sun-kissed look",
       stylist: "Melissa Mitchell",
+      category: "hair-coloring",
     },
     {
       id: "color-2",
@@ -31,6 +33,7 @@ const galleryData: Record<string, Transformation[]> = {
       title: "Rich Brunette to Warm Copper",
       description: "Complete color transformation with custom toning and shine treatment",
       stylist: "Noon K",
+      category: "hair-coloring",
     },
     {
       id: "color-3",
@@ -39,6 +42,7 @@ const galleryData: Record<string, Transformation[]> = {
       title: "Blonde Highlights with Dimension",
       description: "Full head highlights with multi-tonal blonde for depth and movement",
       stylist: "Melissa Mitchell",
+      category: "hair-coloring",
     },
   ],
   "hair-extensions": [
@@ -49,6 +53,7 @@ const galleryData: Record<string, Transformation[]> = {
       title: "Length & Volume Extensions",
       description: "Hand-tied extensions for luxurious length and fullness",
       stylist: "Melissa Mitchell",
+      category: "hair-extensions",
     },
     {
       id: "ext-2",
@@ -57,6 +62,7 @@ const galleryData: Record<string, Transformation[]> = {
       title: "Dramatic Length Transformation",
       description: "Premium extensions with seamless blending for natural appearance",
       stylist: "Noon K",
+      category: "hair-extensions",
     },
     {
       id: "ext-3",
@@ -65,6 +71,7 @@ const galleryData: Record<string, Transformation[]> = {
       title: "Volume & Texture Enhancement",
       description: "Extensions styled with waves for glamorous, full-bodied hair",
       stylist: "Melissa Mitchell",
+      category: "hair-extensions",
     },
   ],
   "cuts-styling": [
@@ -75,6 +82,7 @@ const galleryData: Record<string, Transformation[]> = {
       title: "Modern Textured Cut",
       description: "Precision cut with layers for movement and style",
       stylist: "Tiara Black",
+      category: "cuts-styling",
     },
     {
       id: "cut-2",
@@ -83,6 +91,7 @@ const galleryData: Record<string, Transformation[]> = {
       title: "Sleek & Polished Styling",
       description: "Professional styling with smooth finish and shine",
       stylist: "Tiara Black",
+      category: "cuts-styling",
     },
     {
       id: "cut-3",
@@ -91,14 +100,15 @@ const galleryData: Record<string, Transformation[]> = {
       title: "Elegant Updo Styling",
       description: "Special occasion styling with sophisticated details",
       stylist: "Melissa Mitchell",
+      category: "cuts-styling",
     },
   ],
 };
 
 const serviceCategories = [
-  { id: "hair-coloring", label: "Hair Coloring", icon: "🎨" },
-  { id: "hair-extensions", label: "Hair Extensions", icon: "✨" },
-  { id: "cuts-styling", label: "Cuts & Styling", icon: "✂️" },
+  { id: "hair-coloring", label: "Hair Coloring", icon: "🎨", description: "Custom dimensional color and balayage" },
+  { id: "hair-extensions", label: "Hair Extensions", icon: "✨", description: "Premium hand-tied extensions" },
+  { id: "cuts-styling", label: "Cuts & Styling", icon: "✂️", description: "Precision cuts and styling" },
 ];
 
 export default function Gallery() {
@@ -106,6 +116,7 @@ export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState("hair-coloring");
 
   const transformations = galleryData[activeCategory] || [];
+  const activeInfo = serviceCategories.find(c => c.id === activeCategory);
 
   return (
     <div className="min-h-screen bg-background pb-24">
@@ -115,7 +126,8 @@ export default function Gallery() {
         keywords="hair transformations, before and after hair, balayage gallery, hair extensions Red Deer, salon transformations Alberta"
         canonicalUrl="https://hellobeautylounge.com/gallery"
       />
-      {/* Header */}
+
+      {/* Sticky Header */}
       <div className="sticky top-0 z-40 glassmorphism border-b border-border/50">
         <div className="container py-6">
           <button
@@ -125,8 +137,8 @@ export default function Gallery() {
             <ChevronLeft className="w-4 h-4" />
             Back to Home
           </button>
-          <h1 className="text-4xl md:text-5xl font-display font-semibold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Transformation <span className="text-gold">Gallery</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Transformation <span className="text-accent">Gallery</span>
           </h1>
           <p className="text-muted-foreground mt-2">
             See the stunning results our stylists create every day
@@ -134,34 +146,79 @@ export default function Gallery() {
         </div>
       </div>
 
-      {/* Category Filter */}
-      <div className="container py-8">
-        <div className="flex flex-wrap gap-3 mb-12">
-          {serviceCategories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-sm ${
-                activeCategory === category.id
-                  ? "bg-primary text-primary-foreground shadow-md hover:shadow-lg scale-[1.02]"
-                  : "bg-white text-foreground hover:bg-secondary border border-border"
-              }`}
-            >
-              <span className="mr-2">{category.icon}</span>
-              {category.label}
-            </button>
-          ))}
+      {/* Magazine-Style Hero Section */}
+      <section className="relative h-96 md:h-[500px] overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
+        <div className="absolute inset-0">
+          <img 
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hair-styling-session-kvQ4Pdu2ZntNcsU5y2tcXx.webp"
+            alt="Gallery Hero"
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+        </div>
+        
+        <div className="container relative z-10 h-full flex items-end pb-12">
+          <div className="max-w-2xl">
+            <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Our Work</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Real Transformations
+            </h2>
+            <p className="text-lg text-foreground/70">
+              Explore our portfolio of stunning hair transformations created by our expert stylists using premium Kevin Murphy products.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="container py-16 md:py-24">
+        {/* Category Filter - Magazine Style */}
+        <div className="mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {serviceCategories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`p-6 rounded-lg text-left transition-all duration-300 group ${
+                  activeCategory === category.id
+                    ? "bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-accent shadow-lg"
+                    : "bg-white border border-border hover:border-accent/50 hover:shadow-md"
+                }`}
+              >
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{category.icon}</div>
+                <h3 className={`text-xl font-bold mb-2 transition-colors ${
+                  activeCategory === category.id ? "text-primary" : "text-foreground"
+                }`} style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {category.label}
+                </h3>
+                <p className="text-sm text-foreground/70">{category.description}</p>
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {transformations.map((transformation) => (
+        {/* Active Category Info */}
+        <div className="mb-12 pb-12 border-b border-border">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            {activeInfo?.label}
+          </h2>
+          <p className="text-lg text-foreground/70 max-w-2xl">
+            {activeInfo?.description}. Each transformation showcases our commitment to excellence and the power of professional hair care.
+          </p>
+        </div>
+
+        {/* Gallery Grid - Magazine Masonry */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          {transformations.map((transformation, index) => (
             <div
               key={transformation.id}
-              className="group bg-white rounded-2xl overflow-hidden luxury-card transition-all duration-300 flex flex-col h-full"
+              className={`group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full ${
+                index === 0 ? "md:col-span-2 md:row-span-2" : ""
+              }`}
             >
               {/* Interactive Before & After Slider */}
-              <div className="relative h-72 md:h-80 lg:h-96 overflow-hidden bg-muted">
+              <div className={`relative overflow-hidden bg-muted ${
+                index === 0 ? "h-96 md:h-full" : "h-72 md:h-80"
+              }`}>
                 <BeforeAfterSlider
                   beforeImage={transformation.before}
                   afterImage={transformation.after}
@@ -172,14 +229,17 @@ export default function Gallery() {
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-foreground mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <span className="text-xs text-accent font-semibold uppercase tracking-wide mb-2">
+                  {activeInfo?.label}
+                </span>
+                <h3 className="text-lg md:text-xl font-bold text-foreground mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
                   {transformation.title}
                 </h3>
                 <p className="text-sm text-foreground/70 mb-6 flex-grow leading-relaxed">
                   {transformation.description}
                 </p>
                 <div className="flex justify-between items-center border-t border-border/50 pt-4 mt-auto">
-                  <span className="text-xs text-foreground/50">STYLIST</span>
+                  <span className="text-xs text-foreground/50 uppercase font-semibold">Stylist</span>
                   <span className="text-sm font-semibold text-primary">
                     {transformation.stylist}
                   </span>
@@ -189,20 +249,30 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-24 text-center bg-white p-12 md:p-16 rounded-3xl shadow-sm border border-border max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-display font-semibold text-foreground mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Ready for Your <span className="text-gold">Transformation?</span>
-          </h2>
-          <p className="text-foreground/70 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Our expert stylists are ready to create your perfect look. Book your appointment today
-            and join our gallery of beautiful transformations.
-          </p>
-          <a href="https://www.vagaro.com/hellobeautylounge" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold rounded-full px-8 py-6 shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
-              Book Your Appointment
-            </Button>
-          </a>
+        {/* CTA Section - Magazine Style */}
+        <div className="grid md:grid-cols-2 gap-12 items-center bg-gradient-to-br from-primary/5 to-accent/5 p-12 md:p-16 rounded-2xl border border-accent/20">
+          <div>
+            <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Ready for Change?</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Your Transformation Awaits
+            </h2>
+            <p className="text-foreground/70 mb-8 leading-relaxed">
+              Our expert stylists are ready to create your perfect look. Book your appointment today and join our gallery of beautiful transformations.
+            </p>
+            <a href="https://www.vagaro.com/hellobeautylounge" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold rounded-full px-8 py-6 shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+                <span>Book Your Appointment</span>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </a>
+          </div>
+          <div className="relative h-80 rounded-lg overflow-hidden">
+            <img 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hair-color-service-6tebwYZCegTwyQL73eTdiv.webp"
+              alt="Transformation"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
         </div>
       </div>
     </div>
