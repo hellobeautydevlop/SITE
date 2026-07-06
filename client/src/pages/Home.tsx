@@ -169,7 +169,7 @@ export default function Home() {
 
       {/* Hero Section with Parallax Effect */}
       <section className="relative h-[60vh] md:h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/IMG_0069_Original_a9f0a198.JPG')", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/hero-salon_9b557d64.png')", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
         </div>
 
