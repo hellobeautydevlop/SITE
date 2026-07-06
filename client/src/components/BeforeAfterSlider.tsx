@@ -74,6 +74,8 @@ export default function BeforeAfterSlider({
         src={afterImage}
         alt="After transformation"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        loading="lazy"
+        decoding="async"
       />
       <div className="absolute top-4 right-4 bg-primary/80 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full border border-white/10 z-10">
         After
@@ -88,6 +90,8 @@ export default function BeforeAfterSlider({
           src={beforeImage}
           alt="Before transformation"
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          loading="lazy"
+          decoding="async"
           style={{
             width: containerRef.current?.getBoundingClientRect().width || "100%",
             maxWidth: "none",

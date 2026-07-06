@@ -161,7 +161,7 @@ export default function Gallery() {
               className="group bg-white rounded-2xl overflow-hidden luxury-card transition-all duration-300 flex flex-col h-full"
             >
               {/* Interactive Before & After Slider */}
-              <div className="relative h-96 overflow-hidden">
+              <div className="relative h-72 md:h-80 lg:h-96 overflow-hidden bg-muted">
                 <BeforeAfterSlider
                   beforeImage={transformation.before}
                   afterImage={transformation.after}

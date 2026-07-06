@@ -20,3 +20,5 @@
 - [x] Add team member Keltie Cummins with photo and bio
 - [x] Add clickable Instagram icons to each stylist's profile card
 - [x] Fix hero images and team pictures to fit properly with responsive sizing
+- [x] Apply lazy loading and responsive sizing to gallery images
+- [x] Optimize BeforeAfterSlider component with lazy loading and async decoding
