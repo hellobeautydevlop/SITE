@@ -115,9 +115,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Hello Beauty Lounge | Hair Salon Red Deer"
-        description="Luxury hair salon in Red Deer, AB. Expert stylists, custom color, extensions & bridal services."
-        keywords="hair salon Red Deer, balayage Red Deer, hair extensions Red Deer, bridal hair Red Deer, Kevin Murphy salon, luxury hair salon Alberta"
+        title="Hello Beauty Lounge | Best Hair Salon in Red Deer, AB"
+        description="Best hair salon in Red Deer, AB. Expert stylists specializing in custom color, balayage, hair extensions, bridal hair, and premium Kevin Murphy products."
+        keywords="hair salon Red Deer, best hair salon Red Deer, balayage Red Deer, hair extensions Red Deer, bridal hair Red Deer, hair color Red Deer, salon Red Deer, best salon Alberta, Kevin Murphy salon, luxury hair salon, hair styling, hair care, professional hair salon"
         canonicalUrl="https://hellobeautylounge.com/"
       />
       {/* Sticky Header */}
@@ -170,7 +170,7 @@ export default function Home() {
 
       {/* Magazine Hero Section */}
       <section className="relative h-[60vh] md:h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/salon-hero-luxury-RsaUTEvBovsCDPH6gANBN9.webp')", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/IMG_1153_968124fe.PNG')", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
         </div>
 
@@ -179,11 +179,11 @@ export default function Home() {
             Premium Salon Partner
           </span>
           <h1 className="text-4xl md:text-7xl text-white mb-4 md:mb-6 font-semibold leading-[1.15]" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Elevate Your <br className="hidden md:inline" />
-            <span className="text-gold">Beauty Journey</span>
+            Best Hair Salon <br className="hidden md:inline" />
+            <span className="text-gold">in Red Deer</span>
           </h1>
           <p className="text-base md:text-xl text-white/90 mb-8 md:mb-10 leading-relaxed max-w-xl">
-            Experience luxury hair and beauty services in Red Deer using premium Kevin Murphy products. Specializing in custom dimensional color, hand-tied extensions, and bridal packages.
+            Hello Beauty Lounge is Red Deer's premier hair salon. Expert stylists specializing in custom color, balayage, hair extensions, and bridal hair services using premium Kevin Murphy products.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-full px-8 py-6 text-base shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}>
@@ -293,14 +293,26 @@ export default function Home() {
       {/* Team Section - Magazine Layout */}
       <section id="team" className="py-20 md:py-32 bg-white">
         <div className="container">
-          <div className="mb-16">
-            <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Meet Our Experts</span>
-            <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Our Team
-            </h2>
-            <p className="text-lg text-foreground/70 max-w-2xl">
-              Meet the talented stylists behind Hello Beauty Lounge's exceptional transformations.
-            </p>
+          <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
+            <div className="relative h-96 rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src="/manus-storage/IMG_1154_20fbf7cb.PNG"
+                alt="Hello Beauty Lounge Team - Professional Hair Stylists in Red Deer, AB"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div>
+              <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Meet Our Experts</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Our Team
+              </h2>
+              <p className="text-lg text-foreground/70 mb-6">
+                Meet the talented stylists behind Hello Beauty Lounge's exceptional transformations. Our team of expert hair professionals is dedicated to delivering the best salon experience in Red Deer, Alberta.
+              </p>
+              <p className="text-lg text-foreground/70">
+                From custom color and balayage to hair extensions and bridal styling, our stylists bring years of experience and passion to every service.
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
