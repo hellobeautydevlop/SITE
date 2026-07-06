@@ -1,0 +1,47 @@
+Kevin Murphy Products with Image URLs
+
+1. BODY.BUILDER
+   - Stylized: https://pro.kevinmurphy.com.au/dw/image/v2/BFSC_PRD/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dwd1ba45e5/images/stylized/BODY.BUILDER - EVERGREEN.png
+   - Large: https://pro.kevinmurphy.com.au/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dwf6d2af65/images/large/BODY-BUILDER_350ML.png
+
+2. BLOW.DRY WASH
+   - Stylized: https://pro.kevinmurphy.com.au/dw/image/v2/BFSC_PRD/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw1633f09e/images/stylized/BLOW.DRY WASH - EVERGREEN.png
+   - Large: https://pro.kevinmurphy.com.au/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw034b9586/images/large/online-BLOW.DRY WASH 250ml.png
+
+3. LEAVE-IN REPAIR
+   - Stylized: https://pro.kevinmurphy.com.au/dw/image/v2/BFSC_PRD/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw8ac1276e/images/stylized/31._LEAVE-IN.REPAIR_V1.png
+   - Large: https://pro.kevinmurphy.com.au/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw00dd98cf/images/large/2024-LEAVE-IN-REPAIR_200ML.png
+
+4. YOUNG.AGAIN.WASH
+   - Stylized: https://pro.kevinmurphy.com.au/dw/image/v2/BFSC_PRD/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw9b25da5b/images/stylized/7._YOUNG.AGAIN.WASH_V1.png
+   - Large: https://pro.kevinmurphy.com.au/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dwf69bd586/images/large/2024-YOUNG-AGAIN-WASH_250ML.png
+
+5. TOUCHABLE
+   - Stylized: https://pro.kevinmurphy.com.au/dw/image/v2/BFSC_PRD/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dwcbef086d/images/stylized/TOUCHABLE HOVER.png
+   - Large: https://pro.kevinmurphy.com.au/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dwd710f2e1/images/large/TOUCHABLE_250ML.png
+
+6. DOO-OVER
+   - Stylized: https://pro.kevinmurphy.com.au/dw/image/v2/BFSC_PRD/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw5f4bbf0c/images/stylized/DOO.OVER HOVER.png
+   - Large: https://pro.kevinmurphy.com.au/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw3c0ec209/images/large/DOO-OVER_250ML.png
+
+7. MOTION-LOTION
+   - Stylized: https://pro.kevinmurphy.com.au/dw/image/v2/BFSC_PRD/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw3235542b/images/stylized/MOTION.LOTION HOVER.png
+   - Large: https://pro.kevinmurphy.com.au/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dwf0958b43/images/large/MOTION-LOTION_150ML.png
+
+8. HAIR-RESORT
+   - Stylized: https://pro.kevinmurphy.com.au/dw/image/v2/BFSC_PRD/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw83753a65/images/stylized/30._HAIR.RESORT_V1.png
+   - Large: https://pro.kevinmurphy.com.au/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dwdeec5336/images/large/HAIR-RESORT_150ML.png
+
+9. REPAIR-ME.WASH
+   - Stylized: https://pro.kevinmurphy.com.au/dw/image/v2/BFSC_PRD/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw12be2c87/images/stylized/9._REPAIR-ME.WASH_V1.png
+   - Large: https://pro.kevinmurphy.com.au/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw417da1b3/images/large/2024-REPAIR-ME-WASH_250ML.png
+
+10. THICK-AGAIN
+    - Stylized: https://pro.kevinmurphy.com.au/dw/image/v2/BFSC_PRD/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw64586216/images/stylized/THICK.AGAIN HOVER.png
+    - Large: https://pro.kevinmurphy.com.au/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dwb60fd682/images/large/2024-THICK-AGAIN_100ML.png
+
+11. NIGHT-SHIFT
+    - Large: https://pro.kevinmurphy.com.au/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw37259a4a/images/large/NIGHT-SHIFT_100ML.png
+
+12. BODY-MASS
+    - Large: https://pro.kevinmurphy.com.au/on/demandware.static/-/Sites-Salesforce_Catalogue_Master/default/dw6ab1c96c/images/large/2024-BODY-MASS_100ML.png
