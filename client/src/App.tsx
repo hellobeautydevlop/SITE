@@ -20,6 +20,7 @@ import KevinMurphy from "./pages/KevinMurphy";
 import FAQ from "./pages/FAQ";
 import ModelApplication from "./pages/ModelApplication";
 import ContactUs from "./pages/ContactUs";
+import ServicesOverview from "./pages/ServicesOverview";
 import StylistQuiz from "./components/StylistQuiz";
 import BookingAssistant from "./components/BookingAssistant";
 
@@ -28,6 +29,7 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/services"} component={ServicesOverview} />
       <Route path={"/services/hair-coloring"} component={HairColoring} />
       <Route path={"/services/cuts-and-styling"} component={CutsAndStyling} />
       <Route path={"/services/hair-extensions"} component={HairExtensions} />
