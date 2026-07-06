@@ -27,6 +27,7 @@ import StylistMelissa from "./pages/StylistMelissa";
 import StylistKeltie from "./pages/StylistKeltie";
 import StylistQuiz from "./components/StylistQuiz";
 import BookingAssistant from "./components/BookingAssistant";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 function PageTransitionWrapper({ children }: { children: React.ReactNode }) {
@@ -92,6 +93,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <ScrollToTop />
           <StylistQuiz />
           <BookingAssistant />
         </TooltipProvider>
