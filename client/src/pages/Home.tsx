@@ -60,7 +60,7 @@ export default function Home() {
       bio: "The visionary founder and master stylist at Hello Beauty Lounge. With an artistic eye and a passion for perfection, Noon transforms hair into a masterpiece, ensuring every client leaves feeling fabulous and confident.",
       rating: 5.0,
       reviews: 12,
-      image: "/manus-storage/IMG_4067_Original_13c5ff7d.JPG",
+      image: "/manus-storage/noon-k-profile_001c7146.png",
       instagram: "https://www.instagram.com/nkhamkhay?igsh=MTZiN2Roc2JnM3Uzbw==",
     },
     {
