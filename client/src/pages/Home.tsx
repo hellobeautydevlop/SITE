@@ -70,7 +70,7 @@ export default function Home() {
       bio: "With over a decade of experience, Melissa specializes in balayage, foilayage, color corrections, hand-tied extensions, updos, and makeup. She's passionate about enhancing natural beauty with affordable luxury.",
       rating: 5.0,
       reviews: 11,
-      image: "/manus-storage/IMG_3887_Original_057626f3.JPG",
+      image: "/manus-storage/melissa-mitchell-profile_c4e9b4c9.png",
       instagram: "https://www.instagram.com/hairbymelyssam?igsh=MWRzZmVwbzh3eGc5NQ==",
     },
     {
