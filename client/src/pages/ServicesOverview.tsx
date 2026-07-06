@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
-import { Scissors, Palette, Sparkles, ArrowRight, Check } from "lucide-react";
+import { Scissors, Palette, Sparkles, ArrowRight, Check, Star } from "lucide-react";
 import { useLocation } from "wouter";
 
 export default function ServicesOverview() {
@@ -162,6 +162,66 @@ export default function ServicesOverview() {
               <p className="text-foreground/70">
                 Every client receives a customized consultation to ensure perfect results tailored to your goals.
               </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet Our Team Section */}
+      <section className="py-16 md:py-24">
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Meet Our Expert Stylists</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <Card className="p-8 text-center hover:shadow-lg transition-shadow">
+              <div className="text-6xl mb-4">💇‍♀️</div>
+              <h3 className="text-xl font-bold mb-2">Noon K.</h3>
+              <p className="text-accent font-semibold mb-3">Color Specialist</p>
+              <p className="text-foreground/70 mb-4">
+                Expert in custom color, balayage, and color correction. Specializes in creating dimensional, natural-looking tones.
+              </p>
+              <div className="flex items-center justify-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                ))}
+              </div>
+              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                Book with Noon
+              </Button>
+            </Card>
+
+            <Card className="p-8 text-center hover:shadow-lg transition-shadow">
+              <div className="text-6xl mb-4">💇‍♀️</div>
+              <h3 className="text-xl font-bold mb-2">Melissa Mitchell</h3>
+              <p className="text-accent font-semibold mb-3">Extensions Specialist</p>
+              <p className="text-foreground/70 mb-4">
+                Certified in hand-tied extensions. Creates seamless, natural-looking length and volume transformations.
+              </p>
+              <div className="flex items-center justify-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                ))}
+              </div>
+              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                Book with Melissa
+              </Button>
+            </Card>
+
+            <Card className="p-8 text-center hover:shadow-lg transition-shadow">
+              <div className="text-6xl mb-4">💇‍♀️</div>
+              <h3 className="text-xl font-bold mb-2">Keltie Cummins</h3>
+              <p className="text-accent font-semibold mb-3">Bridal & Styling Expert</p>
+              <p className="text-foreground/70 mb-4">
+                Specializes in bridal hair, updo designs, and personalized styling for all occasions.
+              </p>
+              <div className="flex items-center justify-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                ))}
+              </div>
+              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                Book with Keltie
+              </Button>
             </Card>
           </div>
         </div>
