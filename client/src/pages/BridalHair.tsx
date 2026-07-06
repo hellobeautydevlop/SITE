@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Heart, Calendar, MapPin, Clock, Phone, Mail, Sparkles, Check, ArrowLeft, Plus, Minus, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 // No custom toast hook, we will use a highly styled custom popup alert or basic browser alert fallback.
 import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 
 interface Headcount {
   bride: number;
@@ -18,6 +19,14 @@ interface Headcount {
 }
 
 export default function BridalHair() {
+  const [, setLocation] = useLocation();
+
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "Bridal Hair" },
+  ];
+
   // Custom inline notification state instead of useToast
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [headcount, setHeadcount] = useState<Headcount>({
@@ -176,6 +185,8 @@ ${formData.message}
         keywords="bridal hair Red Deer, wedding hair, bridal salon, wedding styling, bridal packages, hair trial"
         canonicalUrl="https://www.hellobeautylounge.com/services/bridal-hair"
       />
+
+      <Breadcrumb items={breadcrumbItems} />
 
       {/* Header Banner */}
       <header className="relative h-[60vh] flex items-center justify-center overflow-hidden">

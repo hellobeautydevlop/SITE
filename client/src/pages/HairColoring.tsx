@@ -7,6 +7,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { useLocation } from "wouter";
 import ServiceDetailModal from "@/components/ServiceDetailModal";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 
 interface Service {
   name: string;
@@ -20,6 +21,12 @@ interface Service {
 export default function HairColoring() {
   const [, setLocation] = useLocation();
   const [selectedService, setSelectedService] = useState<Service | null>(null);
+
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "Hair Coloring & Balayage" },
+  ];
 
   const services: Service[] = [
     {
@@ -110,6 +117,8 @@ export default function HairColoring() {
         keywords="balayage Red Deer, hair color Red Deer, dimensional color, highlights, hair coloring, professional colorist, blonde specialist"
         canonicalUrl="https://hellobeautylounge.com/services/hair-coloring"
       />
+      <Breadcrumb items={breadcrumbItems} />
+
       {/* Header */}
       <header className="sticky top-0 z-40 glassmorphism border-b border-border/50">
         <div className="container py-4 flex items-center justify-between">

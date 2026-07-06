@@ -5,9 +5,16 @@ import { ArrowLeft, Check, Sparkles, Star } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { useLocation } from "wouter";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function HairExtensions() {
   const [, setLocation] = useLocation();
+
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "Hair Extensions" },
+  ];
 
   const services = [
     {
@@ -107,6 +114,8 @@ export default function HairExtensions() {
         keywords="hair extensions Red Deer, hand-tied extensions, extension specialist, hair volume, premium extensions, hair transformation"
         canonicalUrl="https://hellobeautylounge.com/services/hair-extensions"
       />
+      <Breadcrumb items={breadcrumbItems} />
+
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background border-b border-border">
         <div className="container py-4 flex items-center justify-between">
