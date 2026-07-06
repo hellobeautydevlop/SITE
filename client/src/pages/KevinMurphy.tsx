@@ -53,7 +53,7 @@ export default function KevinMurphy() {
             Kevin Murphy Products
           </h1>
           <Button
-            className="bg-accent hover:bg-accent/90 text-white rounded-full px-6 shadow-sm hover:shadow-md transition-all"
+            className="bg-accent hover:bg-accent/90 text-white rounded-full px-6 btn-hover-lift"
             onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
           >
             Book Now

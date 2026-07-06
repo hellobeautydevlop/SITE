@@ -138,20 +138,20 @@ export default function Home() {
                 Services
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 duration-300" />
               </button>
-              <div className="absolute left-0 mt-0 w-56 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
-                <a href="/services/hair-coloring" className="block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-accent/10 transition-colors text-left">
+              <div className="absolute left-0 mt-0 w-56 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible dropdown-menu group-hover:visible z-50 overflow-hidden">
+                <a href="/services/hair-coloring" className="dropdown-item block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-accent/10 text-left">
                   <div className="font-semibold">Hair Coloring & Balayage</div>
                   <div className="text-xs text-foreground/60">Custom color & dimensional services</div>
                 </a>
-                <a href="/services/hair-extensions" className="block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-accent/10 transition-colors text-left border-t border-border">
+                <a href="/services/hair-extensions" className="dropdown-item block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-accent/10 text-left border-t border-border">
                   <div className="font-semibold">Hair Extensions</div>
                   <div className="text-xs text-foreground/60">Hand-tied extensions & installation</div>
                 </a>
-                <a href="/services/cuts-and-styling" className="block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-accent/10 transition-colors text-left border-t border-border">
+                <a href="/services/cuts-and-styling" className="dropdown-item block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-accent/10 text-left border-t border-border">
                   <div className="font-semibold">Cuts & Styling</div>
                   <div className="text-xs text-foreground/60">Precision cuts & professional styling</div>
                 </a>
-                <a href="/services/bridal-hair" className="block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-accent/10 transition-colors text-left border-t border-border">
+                <a href="/services/bridal-hair" className="dropdown-item block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-accent/10 text-left border-t border-border">
                   <div className="font-semibold">Bridal Hair</div>
                   <div className="text-xs text-foreground/60">Wedding & special occasion styling</div>
                 </a>
@@ -181,7 +181,7 @@ export default function Home() {
             <a href="/contact" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Contact
             </a>
-            <Button className="bg-primary hover:bg-primary/90 text-white font-medium shadow-sm rounded-full px-6 transition-all duration-300 hover:shadow-md hover:scale-[1.02]" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}>
+            <Button className="bg-primary hover:bg-primary/90 text-white font-medium shadow-sm rounded-full px-6 btn-hover-lift" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}>
               <Phone className="w-4 h-4 mr-2" />
               Book Now
             </Button>

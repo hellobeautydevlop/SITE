@@ -130,7 +130,7 @@ export default function HairExtensions() {
             Hair Extensions
           </h1>
           <Button
-            className="bg-accent hover:bg-accent/90 text-white"
+            className="bg-accent hover:bg-accent/90 text-white btn-hover-lift"
             onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
           >
             Book Now

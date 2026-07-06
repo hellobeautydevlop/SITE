@@ -140,7 +140,7 @@ export default function NailDesign() {
             <div className="flex gap-4">
               <Button
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-white"
+                className="bg-accent hover:bg-accent/90 text-white btn-hover-lift"
                 onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
               >
                 Book Your Nails
