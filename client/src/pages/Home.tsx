@@ -131,8 +131,8 @@ export default function Home() {
           <div className="text-2xl font-bold tracking-tight text-primary hover:scale-[1.02] transition-transform" style={{ fontFamily: "'Playfair Display', serif" }}>
             Hello <span className="text-accent font-medium">Beauty Lounge</span>
           </div>
-          <div className="flex gap-8 items-center font-medium text-sm tracking-wide uppercase">
-            <a href="#services" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
+          <div className="flex gap-6 items-center font-medium text-sm tracking-wide uppercase">
+            <a href="/services" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Services
             </a>
             <a href="/gallery" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
@@ -156,10 +156,7 @@ export default function Home() {
             <a href="/model-application" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Model
             </a>
-            <a href="#team" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
-              Team
-            </a>
-            <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
+            <a href="/contact" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
               Contact
             </a>
             <Button className="bg-primary hover:bg-primary/90 text-white font-medium shadow-sm rounded-full px-6 transition-all duration-300 hover:shadow-md hover:scale-[1.02]" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}>

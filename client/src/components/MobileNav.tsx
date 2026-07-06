@@ -10,15 +10,15 @@ export default function MobileNav({ onBookClick }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { label: "Services", href: "#services" },
-    { label: "Weddings", href: "/services/bridal-hair" },
+    { label: "Services", href: "/services" },
     { label: "Gallery", href: "/gallery" },
     { label: "Blog", href: "/blog" },
     { label: "Reviews", href: "/reviews" },
+    { label: "Weddings", href: "/services/bridal-hair" },
     { label: "Kevin Murphy", href: "/kevin-murphy" },
     { label: "FAQ", href: "/faq" },
-    { label: "Team", href: "#team" },
-    { label: "Contact", href: "#contact" },
+    { label: "Model", href: "/model-application" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const handleLinkClick = () => {
