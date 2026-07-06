@@ -80,6 +80,15 @@ export default function Home() {
       reviews: 6,
       image: "/manus-storage/IMG_0253_Original_76cd13e1.JPG",
     },
+    {
+      name: "Keltie Cummins",
+      role: "Hair Specialist",
+      specialty: "Lived-In Blondes, Dimensional Colour & Extensions",
+      bio: "Keltie specializes in lived-in blondes, dimensional colour, and extensions. With a focus on healthy hair and personalized results, she strives to help every guest feel confident and at home in her chair!",
+      rating: 5.0,
+      reviews: 8,
+      image: "/manus-storage/keltie-cummins_dd27bc42.png",
+    },
   ];
 
   const businessHours = [

@@ -17,3 +17,4 @@
 - [x] Enhance mobile typography and readability
 - [x] Optimize images for mobile performance
 - [x] Test mobile responsiveness across devices
+- [x] Add team member Keltie Cummins with photo and bio
