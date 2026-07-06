@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
+import { useEffect, useState } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -28,33 +29,52 @@ import StylistQuiz from "./components/StylistQuiz";
 import BookingAssistant from "./components/BookingAssistant";
 
 
+function PageTransitionWrapper({ children }: { children: React.ReactNode }) {
+  const [location] = useLocation();
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    setIsTransitioning(true);
+    const timer = setTimeout(() => setIsTransitioning(false), 50);
+    return () => clearTimeout(timer);
+  }, [location]);
+
+  return (
+    <div className={`page-wrapper ${isTransitioning ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}>
+      {children}
+    </div>
+  );
+}
+
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/services"} component={ServicesOverview} />
-      <Route path={"/stylists/noon-k"} component={StylistNoonK} />
-      <Route path={"/stylists/melissa-mitchell"} component={StylistMelissa} />
-      <Route path={"/stylists/keltie-cummins"} component={StylistKeltie} />
-      <Route path={"/services/hair-coloring"} component={HairColoring} />
-      <Route path={"/services/cuts-and-styling"} component={CutsAndStyling} />
-      <Route path={"/services/hair-extensions"} component={HairExtensions} />
-      <Route path={"/services/nail-design"} component={NailDesign} />
-      <Route path={"/services/bridal-hair"} component={BridalHair} />
-      <Route path={"/gallery"} component={Gallery} />
-      <Route path={"/blog"} component={Blog} />
-      <Route path={"/blog/maintain-balayage"} component={BlogMaintainBalayage} />
-      <Route path={"/blog/extension-maintenance"} component={BlogExtensionMaintenance} />
-      <Route path={"/blog/:slug"} component={BlogPostDetail} />
-      <Route path={"/reviews"} component={Reviews} />
-      <Route path={"/kevin-murphy"} component={KevinMurphy} />
-      <Route path={"/faq"} component={FAQ} />
-      <Route path={"/model-application"} component={ModelApplication} />
-      <Route path={"/contact"} component={ContactUs} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <PageTransitionWrapper>
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/services"} component={ServicesOverview} />
+        <Route path={"/stylists/noon-k"} component={StylistNoonK} />
+        <Route path={"/stylists/melissa-mitchell"} component={StylistMelissa} />
+        <Route path={"/stylists/keltie-cummins"} component={StylistKeltie} />
+        <Route path={"/services/hair-coloring"} component={HairColoring} />
+        <Route path={"/services/cuts-and-styling"} component={CutsAndStyling} />
+        <Route path={"/services/hair-extensions"} component={HairExtensions} />
+        <Route path={"/services/nail-design"} component={NailDesign} />
+        <Route path={"/services/bridal-hair"} component={BridalHair} />
+        <Route path={"/gallery"} component={Gallery} />
+        <Route path={"/blog"} component={Blog} />
+        <Route path={"/blog/maintain-balayage"} component={BlogMaintainBalayage} />
+        <Route path={"/blog/extension-maintenance"} component={BlogExtensionMaintenance} />
+        <Route path={"/blog/:slug"} component={BlogPostDetail} />
+        <Route path={"/reviews"} component={Reviews} />
+        <Route path={"/kevin-murphy"} component={KevinMurphy} />
+        <Route path={"/faq"} component={FAQ} />
+        <Route path={"/model-application"} component={ModelApplication} />
+        <Route path={"/contact"} component={ContactUs} />
+        <Route path={"/404"} component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </PageTransitionWrapper>
   );
 }
 
