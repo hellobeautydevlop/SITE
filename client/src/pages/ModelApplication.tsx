@@ -3,6 +3,7 @@ import SEO from "@/components/SEO";
 import { ArrowLeft, Upload, Star, Sparkles } from "lucide-react";
 import { useLocation } from "wouter";
 import { useState } from "react";
+import Footer from "@/components/Footer";
 
 export default function ModelApplication() {
   const [, setLocation] = useLocation();
@@ -417,6 +418,8 @@ ${formData.message ? `ADDITIONAL MESSAGE:\n${formData.message}` : ""}
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

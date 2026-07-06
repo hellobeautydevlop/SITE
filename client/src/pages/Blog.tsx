@@ -5,6 +5,7 @@ import { ChevronLeft, Search, Clock, Calendar, User, Sparkles, BookOpen, Home } 
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { useLocation } from "wouter";
 import { blogPosts } from "@/const/blogData";
+import Footer from "@/components/Footer";
 
 export default function Blog() {
   const [, navigate] = useLocation();
@@ -191,6 +192,8 @@ export default function Blog() {
           </a>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

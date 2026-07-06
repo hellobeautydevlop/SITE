@@ -6,6 +6,7 @@ import { ArrowLeft, Check, Sparkles, Info } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { useLocation } from "wouter";
 import ServiceDetailModal from "@/components/ServiceDetailModal";
+import Footer from "@/components/Footer";
 
 interface Service {
   name: string;
@@ -358,6 +359,8 @@ export default function HairColoring() {
         onClose={() => setSelectedService(null)}
         service={selectedService}
       />
+
+      <Footer />
     </div>
   );
 }

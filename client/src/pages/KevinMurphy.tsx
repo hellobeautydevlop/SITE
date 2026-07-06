@@ -3,6 +3,7 @@ import { ArrowRight, Leaf, Sparkles, Shield, ArrowLeft, Droplets, Wind, Zap } fr
 import SEO from "@/components/SEO";
 import { useLocation } from "wouter";
 import KevinMurphyCatalog from "@/components/KevinMurphyCatalog";
+import Footer from "@/components/Footer";
 
 export default function KevinMurphy() {
   const [, setLocation] = useLocation();
@@ -216,6 +217,8 @@ export default function KevinMurphy() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

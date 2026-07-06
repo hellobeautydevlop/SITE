@@ -3,6 +3,7 @@ import { ArrowLeft, Star, ExternalLink } from "lucide-react";
 import SEO from "@/components/SEO";
 import { useLocation } from "wouter";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
+import Footer from "@/components/Footer";
 
 /**
  * Design Philosophy: Modern Luxury Minimalism
@@ -164,36 +165,7 @@ export default function Reviews() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-primary text-white py-12">
-        <div className="container">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Hello Beauty Lounge
-              </h3>
-              <p className="text-white/80">Luxury hair and beauty services in Red Deer, Alberta.</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-white/80">
-                <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
-                <li><a href="/gallery" className="hover:text-white transition-colors">Gallery</a></li>
-                <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="/reviews" className="hover:text-white transition-colors">Reviews</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <p className="text-white/80 mb-2">+1 (587) 273-1668</p>
-              <p className="text-white/80">4919 59 Street Unit 120<br />Red Deer, AB T4N 6C9</p>
-            </div>
-          </div>
-          <div className="border-t border-white/20 pt-8 text-center text-white/80">
-            <p>&copy; 2026 Hello Beauty Lounge. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

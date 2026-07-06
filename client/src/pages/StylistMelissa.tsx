@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import { Star, ArrowLeft, Check } from "lucide-react";
 import { useLocation } from "wouter";
+import Footer from "@/components/Footer";
 
 export default function StylistMelissa() {
   const [, setLocation] = useLocation();
@@ -269,6 +270,8 @@ export default function StylistMelissa() {
           </Button>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

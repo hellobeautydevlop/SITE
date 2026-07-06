@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import { ChevronLeft, ArrowRight } from "lucide-react";
 import { useLocation } from "wouter";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import Footer from "@/components/Footer";
 
 interface Transformation {
   id: string;
@@ -270,6 +271,8 @@ export default function Gallery() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

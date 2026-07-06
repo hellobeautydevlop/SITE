@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import { ArrowLeft, Check, Sparkles, Star } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { useLocation } from "wouter";
+import Footer from "@/components/Footer";
 
 export default function CutsAndStyling() {
   const [, setLocation] = useLocation();
@@ -418,6 +419,8 @@ export default function CutsAndStyling() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

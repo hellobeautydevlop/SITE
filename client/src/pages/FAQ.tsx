@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { ChevronDown } from "lucide-react";
 import SEO from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
+import Footer from "@/components/Footer";
 
 interface FAQItem {
   question: string;
@@ -209,7 +210,7 @@ export default function FAQ() {
         </div>
       </section>
 
-
+      <Footer />
     </div>
   );
 }

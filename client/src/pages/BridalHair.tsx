@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 // No custom toast hook, we will use a highly styled custom popup alert or basic browser alert fallback.
 import SEO from "@/components/SEO";
+import Footer from "@/components/Footer";
 
 interface Headcount {
   bride: number;
@@ -484,6 +485,8 @@ ${formData.message}
 
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

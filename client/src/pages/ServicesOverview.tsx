@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import { Scissors, Palette, Sparkles, ArrowRight, Check, Star } from "lucide-react";
 import { useLocation } from "wouter";
+import Footer from "@/components/Footer";
 
 export default function ServicesOverview() {
   const [, setLocation] = useLocation();
@@ -297,6 +298,8 @@ export default function ServicesOverview() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
