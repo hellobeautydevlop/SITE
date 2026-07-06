@@ -172,11 +172,11 @@ export default function Home() {
 
       {/* Magazine Hero Section */}
       <section className="relative h-[60vh] md:h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/IMG_1156_862a96c0.PNG')", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/IMG_1156_862a96c0.PNG')", backgroundAttachment: "scroll", backgroundSize: "cover", backgroundPosition: "center" }}>
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
         </div>
 
-        <div className="container relative z-10 max-w-3xl">
+        <div className="container relative z-10 max-w-3xl px-4 md:px-8">
           <span className="inline-block text-accent font-semibold tracking-widest uppercase text-xs md:text-sm mb-4 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
             Premium Salon Partner
           </span>
