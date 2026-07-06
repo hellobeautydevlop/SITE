@@ -9,6 +9,7 @@ import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import MobileNav from "@/components/MobileNav";
 import InstagramFeed from "@/components/InstagramFeed";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import PromotionalBanner from "@/components/PromoticBanner";
 
 /**
  * Design Philosophy: Editorial Magazine Luxury
@@ -114,6 +115,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
+      <PromotionalBanner />
       <SEO 
         title="Hello Beauty Lounge | Best Hair Salon Red Deer | Balayage"
         description="Premium hair salon in Red Deer specializing in balayage, hand-tied extensions, and bridal hair. Kevin Murphy certified. Book your appointment today."
