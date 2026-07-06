@@ -408,13 +408,13 @@ export default function Home() {
             <div>
               <h4 className="font-bold text-lg mb-4">Follow Us</h4>
               <div className="flex justify-center gap-6">
-                <a href="https://www.instagram.com/hellobeautylounge" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" title="Instagram">
+                <a href="https://www.instagram.com/hello.beauty.lounge/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" title="Instagram">
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a href="https://www.facebook.com/hellobeautylounge" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" title="Facebook">
+                <a href="https://www.facebook.com/reddeerhellobeauty" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" title="Facebook">
                   <Facebook className="w-6 h-6" />
                 </a>
-                <a href="https://www.tiktok.com/@hellobeautylounge" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" title="TikTok">
+                <a href="https://twitter.com/hellobeautyhair" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" title="Twitter">
                   <Twitter className="w-6 h-6" />
                 </a>
               </div>
