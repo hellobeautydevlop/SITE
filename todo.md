@@ -18,3 +18,4 @@
 - [x] Optimize images for mobile performance
 - [x] Test mobile responsiveness across devices
 - [x] Add team member Keltie Cummins with photo and bio
+- [x] Add clickable Instagram icons to each stylist's profile card

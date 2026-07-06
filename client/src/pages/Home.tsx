@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import { Phone, MapPin, Clock, Scissors, Sparkles, Palette, Star } from "lucide-react";
+import { Phone, MapPin, Clock, Scissors, Sparkles, Palette, Star, Instagram } from "lucide-react";
 import { useState, useMemo } from "react";
 import { useLocation } from "wouter";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
@@ -61,6 +61,7 @@ export default function Home() {
       rating: 5.0,
       reviews: 12,
       image: "/manus-storage/IMG_4067_Original_13c5ff7d.JPG",
+      instagram: "https://www.instagram.com/nkhamkhay?igsh=MTZiN2Roc2JnM3Uzbw==",
     },
     {
       name: "Melissa Mitchell",
@@ -70,6 +71,7 @@ export default function Home() {
       rating: 5.0,
       reviews: 11,
       image: "/manus-storage/IMG_3887_Original_057626f3.JPG",
+      instagram: "https://www.instagram.com/hairbymelyssam?igsh=MWRzZmVwbzh3eGc5NQ==",
     },
     {
       name: "Tiara Black",
@@ -79,6 +81,7 @@ export default function Home() {
       rating: 5.0,
       reviews: 6,
       image: "/manus-storage/IMG_0253_Original_76cd13e1.JPG",
+      instagram: "https://www.instagram.com/holysnips_bytiara?igsh=bnBhOG84cnA5ZG4z",
     },
     {
       name: "Keltie Cummins",
@@ -88,6 +91,7 @@ export default function Home() {
       rating: 5.0,
       reviews: 8,
       image: "/manus-storage/keltie-cummins_dd27bc42.png",
+      instagram: "https://www.instagram.com/hairbykelt?igsh=MWk1MWM5eDlibTdyMA==",
     },
   ];
 
@@ -311,13 +315,26 @@ export default function Home() {
                   
                   <p className="text-foreground/70 leading-relaxed text-sm mb-4">{member.bio}</p>
                   
-                  <Button 
-                    size="sm" 
-                    className="w-full bg-accent hover:bg-accent/90 text-white"
-                    onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
-                  >
-                    Book with {member.name.split(' ')[0]}
-                  </Button>
+                  <div className="flex gap-3 mb-4">
+                    <Button 
+                      size="sm" 
+                      className="flex-1 bg-accent hover:bg-accent/90 text-white"
+                      onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
+                    >
+                      Book
+                    </Button>
+                    {member.instagram && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="px-3 hover:bg-accent/10"
+                        onClick={() => window.open(member.instagram, '_blank')}
+                        title={`Follow ${member.name} on Instagram`}
+                      >
+                        <Instagram className="w-4 h-4" />
+                      </Button>
+                    )}
+                  </div>
                 </div>
               </article>
             ))}
