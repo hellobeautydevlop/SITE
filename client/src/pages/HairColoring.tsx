@@ -228,6 +228,37 @@ export default function HairColoring() {
         </div>
       </section>
 
+      {/* Free Consultation CTA */}
+      <section className="py-20 bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 border-y border-accent/20">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-3xl md:text-4xl font-bold text-primary mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Not Sure Which Service Is Right for You?
+            </h3>
+            <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
+              Every head of hair is unique. Our master colorists offer free consultations to assess your hair health, discuss your goals, and provide accurate pricing for your custom color transformation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-full px-8 py-6 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all"
+                onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
+              >
+                Book Free Consultation
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-border hover:bg-secondary/30 rounded-full px-8 py-6"
+                onClick={() => setLocation('/#contact')}
+              >
+                Call for Quick Quote
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-24 bg-accent/5">
         <div className="container">
