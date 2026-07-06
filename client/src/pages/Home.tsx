@@ -469,7 +469,7 @@ export default function Home() {
                 <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
                 <li><a href="/reviews" className="hover:text-white transition-colors">Reviews</a></li>
                 <li><a href="#team" className="hover:text-white transition-colors">Team</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+                <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
             <div>
