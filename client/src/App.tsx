@@ -25,6 +25,7 @@ import ServicesOverview from "./pages/ServicesOverview";
 import StylistNoonK from "./pages/StylistNoonK";
 import StylistMelissa from "./pages/StylistMelissa";
 import StylistKeltie from "./pages/StylistKeltie";
+import StylistTiaraBlack from "./pages/StylistTiaraBlack";
 import StylistQuiz from "./components/StylistQuiz";
 import BookingAssistant from "./components/BookingAssistant";
 import ScrollToTop from "./components/ScrollToTop";
@@ -56,6 +57,7 @@ function Router() {
         <Route path={"/stylists/noon-k"} component={StylistNoonK} />
         <Route path={"/stylists/melissa-mitchell"} component={StylistMelissa} />
         <Route path={"/stylists/keltie-cummins"} component={StylistKeltie} />
+        <Route path={"/stylists/tiara-black"} component={StylistTiaraBlack} />
         <Route path={"/services/hair-coloring"} component={HairColoring} />
         <Route path={"/services/cuts-and-styling"} component={CutsAndStyling} />
         <Route path={"/services/hair-extensions"} component={HairExtensions} />

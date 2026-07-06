@@ -78,12 +78,12 @@ export default function Home() {
     },
     {
       name: "Tiara Black",
-      role: "Hair Stylist",
-      specialty: "Precision Cuts & Styling",
-      bio: "With an eye for detail and a knack for making clients feel comfortable and chic, Tiara creates beautiful styles that are sure to turn heads. Your go-to for gorgeous hair at Hello Beauty Lounge.",
+      role: "Extension Specialist",
+      specialty: "Hand-Tied Extensions & Styling",
+      bio: "Tiara specializes in premium hand-tied extensions with seamless blending and expert color matching. With meticulous attention to detail, she transforms hair with beautiful, natural-looking extensions that enhance your style.",
       rating: 5.0,
-      reviews: 6,
-      image: "/manus-storage/IMG_0253_Original_76cd13e1.JPG",
+      reviews: 9,
+      image: "/manus-storage/tiara-black-profile_a8c2f5e1.png",
       instagram: "https://www.instagram.com/holysnips_bytiara?igsh=bnBhOG84cnA5ZG4z",
     },
     {
@@ -342,8 +342,11 @@ export default function Home() {
                     </Button>
                   )}
                   {member.name === "Tiara Black" && (
-                    <Button variant="link" className="text-accent hover:text-primary p-0 h-auto" onClick={() => window.open(member.instagram, '_blank')}>
-                      Instagram <Instagram className="w-4 h-4 ml-1" />
+                    <Button 
+                      onClick={() => setLocation("/stylists/tiara-black")}
+                      className="bg-accent hover:bg-accent/90 text-accent-foreground w-full"
+                    >
+                      View Profile
                     </Button>
                   )}
                 </div>
