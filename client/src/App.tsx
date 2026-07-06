@@ -16,6 +16,7 @@ import NailDesign from "./pages/NailDesign";
 import BridalHair from "./pages/BridalHair";
 import KevinMurphy from "./pages/KevinMurphy";
 import FAQ from "./pages/FAQ";
+import ModelApplication from "./pages/ModelApplication";
 import StylistQuiz from "./components/StylistQuiz";
 import BookingAssistant from "./components/BookingAssistant";
 
@@ -35,6 +36,7 @@ function Router() {
       <Route path={"/reviews"} component={Reviews} />
       <Route path={"/kevin-murphy"} component={KevinMurphy} />
       <Route path={"/faq"} component={FAQ} />
+      <Route path={"/model-application"} component={ModelApplication} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

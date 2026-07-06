@@ -22,3 +22,7 @@
 - [x] Fix hero images and team pictures to fit properly with responsive sizing
 - [x] Apply lazy loading and responsive sizing to gallery images
 - [x] Optimize BeforeAfterSlider component with lazy loading and async decoding
+- [x] Create model application form page
+- [x] Add tRPC procedure for model applications
+- [x] Integrate email sending for model applications
+- [x] Add model application route and navigation link
