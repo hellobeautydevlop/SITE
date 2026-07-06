@@ -86,7 +86,7 @@ export default function StylistKeltie() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
-              onClick={() => window.open("https://vagaro.com", "_blank")}
+              onClick={() => window.open("https://www.vagaro.com/hellobeautylounge", "_blank")}
               className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-full px-8 py-6"
             >
               Book with Keltie
@@ -263,7 +263,7 @@ export default function StylistKeltie() {
             Book a consultation with Keltie to discuss your style goals and create a look that makes you feel confident and beautiful.
           </p>
           <Button 
-            onClick={() => window.open("https://vagaro.com", "_blank")}
+            onClick={() => window.open("https://www.vagaro.com/hellobeautylounge", "_blank")}
             className="bg-accent-foreground text-accent hover:bg-accent-foreground/90"
           >
             Book with Keltie

@@ -86,7 +86,7 @@ export default function StylistMelissa() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
-              onClick={() => window.open("https://vagaro.com", "_blank")}
+              onClick={() => window.open("https://www.vagaro.com/hellobeautylounge", "_blank")}
               className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-full px-8 py-6"
             >
               Book with Melissa
@@ -263,7 +263,7 @@ export default function StylistMelissa() {
             Book a free consultation with Melissa to discuss your extension goals and create your perfect look.
           </p>
           <Button 
-            onClick={() => window.open("https://vagaro.com", "_blank")}
+            onClick={() => window.open("https://www.vagaro.com/hellobeautylounge", "_blank")}
             className="bg-accent-foreground text-accent hover:bg-accent-foreground/90"
           >
             Book with Melissa
