@@ -123,71 +123,7 @@ export default function Home() {
         keywords="hair salon Red Deer, balayage Red Deer, hair extensions Red Deer, bridal hair, Kevin Murphy salon, best hair salon, hair color, professional salon"
         canonicalUrl="https://hellobeautylounge.com/"
       />
-      {/* Sticky Header */}
-      <MobileNav onBookClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')} />
 
-      {/* Desktop Navigation */}
-      <nav className="sticky top-0 z-50 glassmorphism border-b border-border/50 hidden md:block transition-all duration-300">
-        <div className="container py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold tracking-tight text-primary hover:scale-[1.02] transition-transform" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Hello <span className="text-accent font-medium">Beauty Lounge</span>
-          </div>
-          <div className="flex gap-6 items-center font-medium text-sm tracking-wide uppercase">
-            <div className="relative group">
-              <button className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300 flex items-center gap-1">
-                Services
-                <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 duration-300" />
-              </button>
-              <div className="absolute left-0 mt-0 w-56 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible dropdown-menu group-hover:visible z-50 overflow-hidden">
-                <a href="/services/hair-coloring" className="dropdown-item block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-accent/10 text-left">
-                  <div className="font-semibold">Hair Coloring & Balayage</div>
-                  <div className="text-xs text-foreground/60">Custom color & dimensional services</div>
-                </a>
-                <a href="/services/hair-extensions" className="dropdown-item block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-accent/10 text-left border-t border-border">
-                  <div className="font-semibold">Hair Extensions</div>
-                  <div className="text-xs text-foreground/60">Hand-tied extensions & installation</div>
-                </a>
-                <a href="/services/cuts-and-styling" className="dropdown-item block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-accent/10 text-left border-t border-border">
-                  <div className="font-semibold">Cuts & Styling</div>
-                  <div className="text-xs text-foreground/60">Precision cuts & professional styling</div>
-                </a>
-                <a href="/services/bridal-hair" className="dropdown-item block px-4 py-3 text-foreground/80 hover:text-primary hover:bg-accent/10 text-left border-t border-border">
-                  <div className="font-semibold">Bridal Hair</div>
-                  <div className="text-xs text-foreground/60">Wedding & special occasion styling</div>
-                </a>
-              </div>
-            </div>
-            <a href="/gallery" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
-              Gallery
-            </a>
-            <a href="/blog" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
-              Blog
-            </a>
-            <a href="/reviews" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
-              Reviews
-            </a>
-            <a href="/services/bridal-hair" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
-              Weddings
-            </a>
-            <a href="/kevin-murphy" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
-              Kevin Murphy
-            </a>
-            <a href="/faq" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
-              FAQ
-            </a>
-            <a href="/model-application" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
-              Model
-            </a>
-            <a href="/contact" className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent hover:after:w-full after:transition-all after:duration-300">
-              Contact
-            </a>
-            <Button className="bg-primary hover:bg-primary/90 text-white font-medium shadow-sm rounded-full px-6 btn-hover-lift" onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}>
-              <Phone className="w-4 h-4 mr-2" />
-              Book Now
-            </Button>
-          </div>
-        </div>
-      </nav>
 
       {/* Magazine Hero Section */}
       <section className="relative h-[60vh] md:h-[90vh] flex items-center overflow-hidden">

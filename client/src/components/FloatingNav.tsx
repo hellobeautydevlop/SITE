@@ -28,7 +28,7 @@ export default function FloatingNav() {
               <img 
                 src="/manus-storage/IMG_1191_ac255bfa.PNG"
                 alt="Hello Beauty Lounge"
-                className="h-12 w-auto"
+                className="h-10 w-auto"
               />
             </div>
 
