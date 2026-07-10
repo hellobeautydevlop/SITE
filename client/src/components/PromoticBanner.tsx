@@ -14,10 +14,10 @@ export default function PromotionalBanner() {
           <Sparkles className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0 animate-pulse" />
           <div className="min-w-0">
             <p className="text-xs md:text-sm font-semibold leading-tight">
-              ✨ NEW CLIENT SPECIAL: 20% OFF Your First Service!
+              ✨ Check Out Vagaro for Great Deals & Online Booking!
             </p>
             <p className="text-[10px] md:text-xs opacity-90 hidden sm:block">
-              Use code: HELLO20 at checkout
+              Book your appointment online anytime
             </p>
           </div>
         </div>
@@ -30,7 +30,7 @@ export default function PromotionalBanner() {
             rel="noopener noreferrer"
             className="bg-white text-primary px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-bold hover:bg-opacity-90 transition-all duration-300 hover:scale-105 whitespace-nowrap shadow-md"
           >
-            Book Now
+            Book on Vagaro
           </a>
           <button
             onClick={() => setIsVisible(false)}
