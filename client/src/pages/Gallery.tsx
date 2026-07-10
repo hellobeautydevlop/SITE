@@ -264,7 +264,7 @@ export default function Gallery() {
           </div>
           <div className="relative h-80 rounded-lg overflow-hidden">
             <LazyImage
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hair-color-service-6tebwYZCegTwyQL73eTdiv.webp"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/color-transformation-22prrc3bAWznuYQqxW2WHT.webp"
               alt="Transformation"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />

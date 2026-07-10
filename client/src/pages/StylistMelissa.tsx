@@ -44,12 +44,12 @@ export default function StylistMelissa() {
   ];
 
   const portfolio = [
-    { id: 1, title: "Blonde Length Extensions", category: "Hand-Tied" },
-    { id: 2, title: "Volume Enhancement", category: "Volume" },
-    { id: 3, title: "Brunette Transformation", category: "Hand-Tied" },
-    { id: 4, title: "Seamless Blend", category: "Installation" },
-    { id: 5, title: "Luxury Length", category: "Hand-Tied" },
-    { id: 6, title: "Maintenance & Styling", category: "Maintenance" }
+    { id: 1, title: "Blonde Length Extensions", category: "Hand-Tied", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/hair-extensions-before-after-XcUjxiuSv2Y8LJAUExD3UX.webp" },
+    { id: 2, title: "Volume Enhancement", category: "Volume", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/textured-waves-XP6kudM56U5cVukUmGui4j.webp" },
+    { id: 3, title: "Brunette Transformation", category: "Hand-Tied", image: "/manus-storage/IMG_8246_Original_9d25ea97.JPG" },
+    { id: 4, title: "Seamless Blend", category: "Installation", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/balayage-highlights-gbadjSzMkz5TxV2eSjYLY5.webp" },
+    { id: 5, title: "Luxury Length", category: "Hand-Tied", image: "/manus-storage/IMG_8238_Original_0c0e3ba3.JPG" },
+    { id: 6, title: "Maintenance & Styling", category: "Maintenance", image: "/manus-storage/IMG_8239_Original_a55ad1de.JPG" }
   ];
 
   return (
@@ -210,15 +210,14 @@ export default function StylistMelissa() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {portfolio.map((item) => (
-              <Card key={item.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="bg-gradient-to-br from-accent/20 to-accent/5 h-48 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-5xl mb-2">✨</div>
-                    <p className="text-sm font-semibold text-accent">{item.category}</p>
-                  </div>
+              <Card key={item.id} className="overflow-hidden hover:shadow-lg transition-shadow group">
+                <div className="bg-gradient-to-br from-accent/20 to-accent/5 h-48 flex items-center justify-center overflow-hidden relative">
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold text-lg">{item.title}</h3>
+                  <p className="text-sm text-accent font-semibold mt-1">{item.category}</p>
                 </div>
               </Card>
             ))}

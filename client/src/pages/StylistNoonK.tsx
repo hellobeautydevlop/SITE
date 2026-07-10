@@ -44,12 +44,12 @@ export default function StylistNoonK() {
   ];
 
   const portfolio = [
-    { id: 1, title: "Dimensional Balayage", category: "Balayage" },
-    { id: 2, title: "Blonde Transformation", category: "Full Color" },
-    { id: 3, title: "Color Correction", category: "Correction" },
-    { id: 4, title: "Rooted Blonde", category: "Balayage" },
-    { id: 5, title: "Bronde Highlights", category: "Highlights" },
-    { id: 6, title: "Copper Tones", category: "Full Color" }
+    { id: 1, title: "Dimensional Balayage", category: "Balayage", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/balayage-highlights-gbadjSzMkz5TxV2eSjYLY5.webp" },
+    { id: 2, title: "Blonde Transformation", category: "Full Color", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/textured-waves-XP6kudM56U5cVukUmGui4j.webp" },
+    { id: 3, title: "Color Correction", category: "Correction", image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/color-transformation-22prrc3bAWznuYQqxW2WHT.webp" },
+    { id: 4, title: "Rooted Blonde", category: "Balayage", image: "/manus-storage/IMG_8237_Original_e8805da1.JPG" },
+    { id: 5, title: "Bronde Highlights", category: "Highlights", image: "/manus-storage/IMG_8238_Original_0c0e3ba3.JPG" },
+    { id: 6, title: "Copper Tones", category: "Full Color", image: "/manus-storage/IMG_8247_Original_fc0819cd.JPG" }
   ];
 
   return (
@@ -210,15 +210,14 @@ export default function StylistNoonK() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {portfolio.map((item) => (
-              <Card key={item.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="bg-gradient-to-br from-accent/20 to-accent/5 h-48 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-5xl mb-2">✨</div>
-                    <p className="text-sm font-semibold text-accent">{item.category}</p>
-                  </div>
+              <Card key={item.id} className="overflow-hidden hover:shadow-lg transition-shadow group">
+                <div className="bg-gradient-to-br from-accent/20 to-accent/5 h-48 flex items-center justify-center overflow-hidden relative">
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold text-lg">{item.title}</h3>
+                  <p className="text-sm text-accent font-semibold mt-1">{item.category}</p>
                 </div>
               </Card>
             ))}
