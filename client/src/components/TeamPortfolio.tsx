@@ -10,6 +10,7 @@ interface InstagramPost {
   comments: number;
   timestamp: string;
   link: string;
+  comments_showcase?: Array<{ user: string; text: string }>;
 }
 
 interface TeamMember {
@@ -131,6 +132,13 @@ export default function TeamPortfolio({ teamMember }: TeamPortfolioProps) {
               {/* Caption Preview */}
               <div className="p-4">
                 <p className="text-foreground/70 text-sm line-clamp-2 mb-3">{post.caption}</p>
+                {post.comments_showcase && post.comments_showcase.length > 0 && (
+                  <div className="mb-3 pt-3 border-t border-border/30">
+                    <p className="text-xs font-semibold text-accent mb-2">Client Feedback</p>
+                    <p className="text-xs text-foreground/60 italic">"{post.comments_showcase[0].text}"</p>
+                    <p className="text-xs text-foreground/50">— {post.comments_showcase[0].user}</p>
+                  </div>
+                )}
                 <p className="text-xs text-foreground/50">{post.timestamp}</p>
               </div>
             </div>
