@@ -26,8 +26,7 @@ import StylistNoonK from "./pages/StylistNoonK";
 import StylistMelissa from "./pages/StylistMelissa";
 import StylistKeltie from "./pages/StylistKeltie";
 import StylistTiaraBlack from "./pages/StylistTiaraBlack";
-import StylistQuiz from "./components/StylistQuiz";
-import BookingAssistant from "./components/BookingAssistant";
+
 import ScrollToTop from "./components/ScrollToTop";
 import FloatingNav from "./components/FloatingNav";
 
@@ -98,8 +97,6 @@ function App() {
           <Toaster />
           <Router />
           <ScrollToTop />
-          <StylistQuiz />
-          <BookingAssistant />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
