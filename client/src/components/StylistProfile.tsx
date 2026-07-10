@@ -1,6 +1,7 @@
-import { Heart, MessageCircle, Share2, ExternalLink, Star, Instagram, Phone, Mail, MapPin, Award } from "lucide-react";
+import { Heart, MessageCircle, Share2, ExternalLink, Star, Instagram, Phone, Mail, MapPin, Award, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { useLocation } from "wouter";
 
 interface InstagramComment {
   user: string;
@@ -29,6 +30,8 @@ interface StylistProfileProps {
   rating: number;
   reviews: number;
   instagram: string;
+  spotlightSlug?: string;
+  spotlightTitle?: string;
 }
 
 export default function StylistProfile({
@@ -42,7 +45,10 @@ export default function StylistProfile({
   rating,
   reviews,
   instagram,
+  spotlightSlug,
+  spotlightTitle,
 }: StylistProfileProps) {
+  const [, navigate] = useLocation();
   const [selectedPost, setSelectedPost] = useState<InstagramPost | null>(null);
 
   return (
@@ -83,6 +89,17 @@ export default function StylistProfile({
                 <Instagram className="w-5 h-5 text-accent" />
               </a>
             </div>
+
+            {/* Spotlight Button */}
+            {spotlightSlug && (
+              <button
+                onClick={() => navigate(`/blog/${spotlightSlug}`)}
+                className="w-full mb-3 bg-accent/10 hover:bg-accent/20 text-accent font-semibold rounded-full py-3 px-6 border border-accent/30 transition-all duration-300 flex items-center justify-center gap-2 group"
+              >
+                <BookOpen className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                Read My Spotlight
+              </button>
+            )}
 
             {/* Book Button */}
             <a href="https://www.vagaro.com/hellobeautylounge" target="_blank" rel="noopener noreferrer" className="w-full">
@@ -229,6 +246,9 @@ export default function StylistProfile({
                   <h3 className="text-2xl font-bold text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
                     {selectedPost.caption.substring(0, 50)}...
                   </h3>
+                  {spotlightTitle && (
+                    <p className="text-xs text-foreground/60 mt-2">✨ {spotlightTitle}</p>
+                  )}
                 </div>
                 <a href={selectedPost.link} target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80">
                   <ExternalLink className="w-6 h-6" />
@@ -263,6 +283,20 @@ export default function StylistProfile({
                     ))}
                   </div>
                 </div>
+              )}
+
+              {/* Spotlight Button */}
+              {spotlightSlug && (
+                <button
+                  onClick={() => {
+                    setSelectedPost(null);
+                    navigate(`/blog/${spotlightSlug}`);
+                  }}
+                  className="w-full mb-3 bg-accent/10 hover:bg-accent/20 text-accent font-semibold rounded-full py-3 px-6 border border-accent/30 transition-all duration-300 flex items-center justify-center gap-2 group"
+                >
+                  <BookOpen className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                  Read My Spotlight
+                </button>
               )}
 
               {/* Book Button */}

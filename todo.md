@@ -34,3 +34,8 @@
 - [x] Integrate spotlight posts into blog listing and search
 - [x] Update BlogPostDetail.tsx to render spotlight posts
 - [x] Create comprehensive vitest tests for spotlight data and content (25 tests passing)
+- [x] Add "Read My Spotlight" CTA button to stylist profile pages
+- [x] Extend TeamMember interface with spotlight slug and title fields
+- [x] Update all 4 stylist profiles with spotlight metadata
+- [x] Add spotlight button to profile card and modal sections
+- [x] Integrate spotlight navigation with wouter routing

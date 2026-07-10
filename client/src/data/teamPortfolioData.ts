@@ -32,6 +32,8 @@ export interface TeamMember {
   rating: number;
   reviews: number;
   instagram: string;
+  spotlightSlug?: string;
+  spotlightTitle?: string;
 }
 
 // Real team data with Instagram content
@@ -47,6 +49,8 @@ export const teamMembers: TeamMember[] = [
     rating: 5.0,
     reviews: 8,
     instagram: "https://www.instagram.com/hairbykelt?igsh=MWk1MWM5eDlibTdyMA==",
+    spotlightSlug: "stylist-spotlight-keltie-cummins",
+    spotlightTitle: "Stylist Spotlight: Keltie Cummins - The Master of Balayage & Blonde Transformations",
     portfolio: [
       {
         id: "post-keltie-1",
@@ -118,6 +122,8 @@ export const teamMembers: TeamMember[] = [
     rating: 5.0,
     reviews: 9,
     instagram: "https://www.instagram.com/holysnips_bytiara?igsh=bnBhOG84cnA5ZG4z",
+    spotlightSlug: "stylist-spotlight-tiara-black",
+    spotlightTitle: "Stylist Spotlight: Tiara Black - The Creative Colorist & Bold Transformation Expert",
     portfolio: [
       {
         id: "post-tiara-1",
@@ -197,6 +203,8 @@ export const teamMembers: TeamMember[] = [
     rating: 5.0,
     reviews: 12,
     instagram: "https://www.instagram.com/nkhamkhay?igsh=MTZiN2Roc2JnM3Uzbw==",
+    spotlightSlug: "stylist-spotlight-noon-k",
+    spotlightTitle: "Stylist Spotlight: Noon K - The Bridal Hair & Luxury Color Specialist",
     portfolio: [
       {
         id: "post-noon-1",
@@ -280,6 +288,8 @@ export const teamMembers: TeamMember[] = [
     rating: 5.0,
     reviews: 11,
     instagram: "https://www.instagram.com/hairbymelyssam?igsh=MWRzZmVwbzh3eGc5NQ==",
+    spotlightSlug: "stylist-spotlight-melissa-mitchell",
+    spotlightTitle: "Stylist Spotlight: Melissa Mitchell - The Precision Cuts & Styling Expert",
     portfolio: [
       {
         id: "post-melissa-1",
