@@ -41,7 +41,7 @@ export const teamMembers: TeamMember[] = [
     name: "Keltie Cummins",
     title: "Master Colorist & Hair Specialist",
     bio: "Keltie specializes in custom balayage, blonde transformations, and creative color work. With a passion for precision and artistry, she creates stunning hair transformations that enhance each client's natural beauty.",
-    image: "/manus-storage/keltie-profile.jpg",
+    image: "/manus-storage/B4CDC0F0-67B0-4A8D-811F-C42D6B23858D_a84b66aa.JPG",
     specialties: ["Balayage", "Blonde Specialist", "Color Correction", "Hair Extensions"],
     instagramHandle: "hairbykelt",
     rating: 5.0,
@@ -50,8 +50,8 @@ export const teamMembers: TeamMember[] = [
     portfolio: [
       {
         id: "post-keltie-1",
-        image: "/manus-storage/keltie-balayage-1.jpg",
-        caption: "blonde or brunette? Blond-ish 🤷🏼‍♀️ #reddeerhairstylist #reddeerlivedincolour #reddeerblondespecialist #albertabalayagespecialist",
+        image: "/manus-storage/hbl-the-soft-sculpted-lob_539b2d22.png",
+        caption: "The Soft Sculpted Lob - dimensional blonde with seamless blending. This is what we love to create! ✨ #balayage #blondespecialist #reddeerhairstylist #albertabalayagespecialist",
         likes: 13,
         comments: 1,
         timestamp: "3 days ago",
@@ -65,8 +65,8 @@ export const teamMembers: TeamMember[] = [
       },
       {
         id: "post-keltie-2",
-        image: "/manus-storage/keltie-blonde-2.jpg",
-        caption: "Dimensional blonde with seamless blending. This is what we love to create! ✨ #balayage #blondespecialist #reddeerhairstylist",
+        image: "/manus-storage/4819AC72-F1D2-40D6-80DE-A21053BE178F_6d209ecc.JPG",
+        caption: "Lived-in blonde waves with dimensional highlights. Perfect for clients who want low-maintenance, gorgeous hair! ✨ #balayage #blondespecialist #reddeerhairstylist #wavedhair",
         likes: 28,
         comments: 3,
         timestamp: "1 week ago",
@@ -88,8 +88,8 @@ export const teamMembers: TeamMember[] = [
       },
       {
         id: "post-keltie-3",
-        image: "/manus-storage/keltie-extensions-3.jpg",
-        caption: "Hair extensions add volume and length! Check out this stunning transformation 🌟 #hairextensions #volumehair #reddeerhairstylist",
+        image: "/manus-storage/FE736752-034A-4478-BBAA-EF155C2F778F_d283bd41.webp",
+        caption: "Platinum blonde waves with extensions for ultimate volume and length! This is the transformation our clients dream about 🌟 #hairextensions #volumehair #platinumblonde #reddeerhairstylist",
         likes: 42,
         comments: 5,
         timestamp: "2 weeks ago",
@@ -112,7 +112,7 @@ export const teamMembers: TeamMember[] = [
     name: "Tiara Black",
     title: "Creative Colorist & Stylist",
     bio: "Tiara is passionate about creating bold, beautiful color transformations and creative cuts. She specializes in fashion colors, dimensional styling, and personalized looks that make clients feel confident and beautiful.",
-    image: "/manus-storage/tiara-profile.jpg",
+    image: "/manus-storage/83276DBF-E865-4EC3-B7A9-ACBDF0D9261E_3563a7eb.JPG",
     specialties: ["Fashion Color", "Creative Cuts", "Styling", "Color Correction"],
     instagramHandle: "holysnips_bytiara",
     rating: 5.0,
@@ -121,7 +121,7 @@ export const teamMembers: TeamMember[] = [
     portfolio: [
       {
         id: "post-tiara-1",
-        image: "/manus-storage/tiara-brunette-1.jpg",
+        image: "/manus-storage/E7A9A284-41E6-46C8-8443-CB83A37A6CE0_27784a1b.JPG",
         caption: "Rich brunette + 24s, a combo that never misses 🤌🏽✨ • • If you've been thinking about mermaid hair.. here's your sign 🤎 DM/TEXT for booking #copper #reddeerhairstylist #albertahairstylist",
         likes: 22,
         comments: 3,
@@ -144,7 +144,7 @@ export const teamMembers: TeamMember[] = [
       },
       {
         id: "post-tiara-2",
-        image: "/manus-storage/tiara-color-2.jpg",
+        image: "/manus-storage/C6DBBD81-5981-4C11-B7ED-F81297864BC3_6dc5c526.JPG",
         caption: "Bold color transformation! From brunette to vibrant copper 🔥 #fashioncolor #colortransformation #reddeerhairstylist",
         likes: 67,
         comments: 8,
@@ -167,7 +167,7 @@ export const teamMembers: TeamMember[] = [
       },
       {
         id: "post-tiara-3",
-        image: "/manus-storage/tiara-cut-3.jpg",
+        image: "/manus-storage/073B094B-8B04-4CF8-AEE5-D0B38EEC5196_f3814890.JPG",
         caption: "Creative cut with dimensional color! Textured layers and modern vibes 🎨 #creativehair #moderncut #reddeerhairstylist",
         likes: 45,
         comments: 6,
@@ -274,7 +274,7 @@ export const teamMembers: TeamMember[] = [
     name: "Melissa Mitchell",
     title: "Master Stylist & Cuts Specialist",
     bio: "Expert in precision cuts, styling, and creative color. Melissa is passionate about helping clients find their signature look with personalized consultations and expert technique.",
-    image: "/manus-storage/melissa-profile.jpg",
+    image: "/manus-storage/C6503933-91CD-4D61-B640-E0732054FE52_275aa859.JPG",
     specialties: ["Precision Cuts", "Styling", "Color", "Texture Work"],
     instagramHandle: "hello.beauty.lounge",
     rating: 5.0,
@@ -283,7 +283,7 @@ export const teamMembers: TeamMember[] = [
     portfolio: [
       {
         id: "post-melissa-1",
-        image: "/manus-storage/melissa-cut-1.jpg",
+        image: "/manus-storage/hbl-the-modern-shag_dc3d9cb4.png",
         caption: "Fresh cut and style for our client! Textured layers with movement 💇‍♀️ #precisioncut #layeredcut #reddeerhairstylist",
         likes: 31,
         comments: 4,
@@ -306,7 +306,7 @@ export const teamMembers: TeamMember[] = [
       },
       {
         id: "post-melissa-2",
-        image: "/manus-storage/melissa-color-2.jpg",
+        image: "/manus-storage/hbl-sculpted-power-bob_b2c1e761.png",
         caption: "Dimensional color with lived-in texture. This is what we love to create! 🎨 #dimensionalcolor #texturedhair #reddeerhairstylist",
         likes: 44,
         comments: 6,
@@ -329,7 +329,7 @@ export const teamMembers: TeamMember[] = [
       },
       {
         id: "post-melissa-3",
-        image: "/manus-storage/melissa-short-3.jpg",
+        image: "/manus-storage/2DBA256F-0E8A-4C91-A062-3A5B954B0904_20f46e36.webp",
         caption: "Short and chic! This cut is perfect for summer. Who's ready for a change? ✂️ #shortcut #chicstyle #reddeerhairstylist",
         likes: 58,
         comments: 8,
