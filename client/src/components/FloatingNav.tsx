@@ -37,7 +37,7 @@ export default function FloatingNav() {
             {/* Brand Text (Magazine Style) */}
             <button 
               onClick={() => handleNavigation('/')}
-              className="text-sm font-semibold tracking-widest text-foreground hover:text-accent transition-colors uppercase"
+              className="serif-header text-foreground hover:text-accent transition-colors"
             >
               Hello Beauty
             </button>
