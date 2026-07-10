@@ -216,11 +216,13 @@ export default function Gallery() {
               <div className={`relative overflow-hidden bg-muted ${
                 index === 0 ? "h-96 md:h-full" : "h-72 md:h-80"
               }`}>
-                <img
-                  src={transformation.after}
-                  alt={transformation.title}
-                  className="w-full h-full object-cover"
-                />
+                {transformation.after ? (
+                  <img
+                    src={transformation.after}
+                    alt={transformation.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : null}
               </div>
 
               {/* Content */}

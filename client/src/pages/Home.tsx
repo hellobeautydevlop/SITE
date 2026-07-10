@@ -51,7 +51,7 @@ export default function Home() {
       title: "Bridal & Wedding Hair",
       description: "Specialized bridal packages including consultations, trials, and on-the-day styling for your perfect wedding day.",
       link: "/services/bridal-hair",
-      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/salon-hero-luxury-RsaUTEvBovsCDPH6gANBN9.webp",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/bridal-wedding-hair-hero-nMQqA8TqzuUFgCs2nv5b6g.webp",
     },
   ];
 
