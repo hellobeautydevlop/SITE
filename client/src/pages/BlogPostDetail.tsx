@@ -4,13 +4,15 @@ import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { blogPosts } from "@/const/blogData";
+import { stylistSpotlights } from "@/const/stylistSpotlightData";
 
 export default function BlogPostDetail() {
   const [, navigate] = useLocation();
   const [, params] = useRoute("/blog/:slug");
   const slug = params?.slug;
 
-  const post = blogPosts.find((p) => p.slug === slug);
+  // Search in both regular blog posts and stylist spotlights
+  const post = blogPosts.find((p) => p.slug === slug) || stylistSpotlights.find((p) => p.slug === slug);
 
   if (!post) {
     return (

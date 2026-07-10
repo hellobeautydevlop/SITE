@@ -26,3 +26,11 @@
 - [x] Add tRPC procedure for model applications
 - [x] Integrate email sending for model applications
 - [x] Add model application route and navigation link
+- [x] Create comprehensive Stylist Spotlight blog series data structure
+- [x] Write Keltie Cummins Stylist Spotlight blog post (Master Colorist & Hair Specialist)
+- [x] Write Melissa Mitchell Stylist Spotlight blog post (Master Stylist & Cuts Specialist)
+- [x] Write Tiara Black Stylist Spotlight blog post (Creative Colorist & Stylist)
+- [x] Write Noon K Stylist Spotlight blog post (Senior Stylist & Bridal Specialist)
+- [x] Integrate spotlight posts into blog listing and search
+- [x] Update BlogPostDetail.tsx to render spotlight posts
+- [x] Create comprehensive vitest tests for spotlight data and content (25 tests passing)

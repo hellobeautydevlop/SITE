@@ -5,6 +5,7 @@ import { ChevronLeft, Search, Clock, Calendar, User, Sparkles, BookOpen, Home } 
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { useLocation } from "wouter";
 import { blogPosts } from "@/const/blogData";
+import { stylistSpotlights } from "@/const/stylistSpotlightData";
 import Footer from "@/components/Footer";
 
 export default function Blog() {
@@ -12,9 +13,11 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const categories = Array.from(new Set(blogPosts.map((post) => post.category)));
+  // Combine regular blog posts and stylist spotlights
+  const allPosts = [...blogPosts, ...stylistSpotlights];
+  const categories = Array.from(new Set(allPosts.map((post) => post.category)));
 
-  const filteredPosts = blogPosts.filter((post) => {
+  const filteredPosts = allPosts.filter((post) => {
     const matchesCategory = !selectedCategory || post.category === selectedCategory;
     const matchesSearch =
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
