@@ -26,6 +26,8 @@ import StylistNoonK from "./pages/StylistNoonK";
 import StylistMelissa from "./pages/StylistMelissa";
 import StylistKeltie from "./pages/StylistKeltie";
 import StylistTiaraBlack from "./pages/StylistTiaraBlack";
+import StylistNoon from "./pages/StylistNoon";
+import StylistTiara from "./pages/StylistTiara";
 import Weddings from "./pages/Weddings";
 
 import ScrollToTop from "./components/ScrollToTop";
@@ -59,6 +61,8 @@ function Router() {
         <Route path={"/stylists/melissa-mitchell"} component={StylistMelissa} />
         <Route path={"/stylists/keltie-cummins"} component={StylistKeltie} />
         <Route path={"/stylists/tiara-black"} component={StylistTiaraBlack} />
+        <Route path={"/stylists/noon"} component={StylistNoon} />
+        <Route path={"/stylists/tiara"} component={StylistTiara} />
         <Route path={"/services/hair-coloring"} component={HairColoring} />
         <Route path={"/services/cuts-and-styling"} component={CutsAndStyling} />
         <Route path={"/services/hair-extensions"} component={HairExtensions} />

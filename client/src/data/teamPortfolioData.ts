@@ -29,6 +29,9 @@ export interface TeamMember {
   specialties: string[];
   instagramHandle: string;
   portfolio: InstagramPost[];
+  rating: number;
+  reviews: number;
+  instagram: string;
 }
 
 // Real team data with Instagram content
@@ -41,6 +44,9 @@ export const teamMembers: TeamMember[] = [
     image: "/manus-storage/keltie-profile.jpg",
     specialties: ["Balayage", "Blonde Specialist", "Color Correction", "Hair Extensions"],
     instagramHandle: "hairbykelt",
+    rating: 5.0,
+    reviews: 8,
+    instagram: "https://www.instagram.com/hairbykelt?igsh=MWk1MWM5eDlibTdyMA==",
     portfolio: [
       {
         id: "post-keltie-1",
@@ -109,6 +115,9 @@ export const teamMembers: TeamMember[] = [
     image: "/manus-storage/tiara-profile.jpg",
     specialties: ["Fashion Color", "Creative Cuts", "Styling", "Color Correction"],
     instagramHandle: "holysnips_bytiara",
+    rating: 5.0,
+    reviews: 9,
+    instagram: "https://www.instagram.com/holysnips_bytiara?igsh=bnBhOG84cnA5ZG4z",
     portfolio: [
       {
         id: "post-tiara-1",
@@ -185,6 +194,9 @@ export const teamMembers: TeamMember[] = [
     image: "/manus-storage/noon-k-profile.jpg",
     specialties: ["Balayage", "Bridal Hair", "Color Correction", "Hair Extensions"],
     instagramHandle: "hello.beauty.lounge",
+    rating: 5.0,
+    reviews: 12,
+    instagram: "https://www.instagram.com/nkhamkhay?igsh=MTZiN2Roc2JnM3Uzbw==",
     portfolio: [
       {
         id: "post-noon-1",
@@ -265,6 +277,9 @@ export const teamMembers: TeamMember[] = [
     image: "/manus-storage/melissa-profile.jpg",
     specialties: ["Precision Cuts", "Styling", "Color", "Texture Work"],
     instagramHandle: "hello.beauty.lounge",
+    rating: 5.0,
+    reviews: 11,
+    instagram: "https://www.instagram.com/hairbymelyssam?igsh=MWRzZmVwbzh3eGc5NQ==",
     portfolio: [
       {
         id: "post-melissa-1",
