@@ -3,6 +3,7 @@ import { ArrowLeft, Star, ExternalLink } from "lucide-react";
 import SEO from "@/components/SEO";
 import { useLocation } from "wouter";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
+import VideoCarousel from "@/components/VideoCarousel";
 import Footer from "@/components/Footer";
 
 /**
@@ -59,6 +60,9 @@ export default function Reviews() {
           </p>
         </div>
       </section>
+
+      {/* Video Testimonials Carousel */}
+      <VideoCarousel />
 
       {/* Reviews Widget Section */}
       <section className="py-24">
