@@ -24,7 +24,9 @@ export const stylistSpotlights: StylistSpotlight[] = [
     slug: "stylist-spotlight-keltie-cummins",
     title: "Stylist Spotlight: Keltie Cummins - The Master of Balayage & Blonde Transformations",
     excerpt: "Meet Keltie Cummins, our Master Colorist & Hair Specialist. Discover her journey to becoming Red Deer's most sought-after balayage expert, her signature techniques, and the secrets behind her stunning blonde transformations.",
-    content: `# Stylist Spotlight: Keltie Cummins
+    content: `![Keltie Cummins - Master Colorist](/manus-storage/image_1_78df4ae2.jpg)
+
+# Stylist Spotlight: Keltie Cummins
 
 ## The Master of Balayage & Blonde Transformations
 
@@ -39,6 +41,8 @@ Keltie's love for hair started early. Growing up, she was fascinated by transfor
 "I was assisting another colorist, and I became obsessed with understanding how color works," Keltie recalls. "The science behind it, the artistry, the way different tones interact with skin—it all clicked for me. I knew I wanted to specialize in color."
 
 She invested in advanced color training, attended masterclasses with renowned colorists, and spent countless hours perfecting her craft. Her dedication paid off. Within a few years, Keltie became known throughout Red Deer for her exceptional balayage work and her ability to create custom color solutions for even the most challenging hair situations.
+
+![Balayage Transformation](/manus-storage/image_3_792d24db.jpg)
 
 ## The Keltie Signature: Dimensional Balayage
 
@@ -56,6 +60,8 @@ When asked about her techniques, Keltie is generous with her knowledge. She uses
 
 For products, Keltie is a devoted Kevin Murphy user. She believes in using professional-grade products that deliver results without compromising hair health.
 
+![Kevin Murphy Professional Hair Care](/manus-storage/image_8_3fd8c5ea.jpg)
+
 "Kevin Murphy products are game-changers," she explains. "The ANGEL.WASH and ANGEL.RINSE are sulfate-free and specifically formulated for color-treated hair. They keep the color vibrant while maintaining shine and softness. And their color correction products? Incredible. I use them to neutralize unwanted tones and create that perfect blonde."
 
 Her product recommendations for clients include:
@@ -71,6 +77,8 @@ Keltie's day at Hello Beauty Lounge is a blend of artistry, consultation, and co
 "Consultation is everything," she emphasizes. "I spend time really listening to what my clients want. Sometimes they come in with a photo that's not realistic for their hair type, and my job is to guide them toward something that will look amazing and be maintainable."
 
 Between clients, Keltie is constantly learning. She follows other colorists on social media, attends workshops, and experiments with new techniques. She's also mentoring junior stylists at Hello Beauty Lounge, passing on her knowledge and helping them develop their own color expertise.
+
+![Color Technique Mastery](/manus-storage/image_4_6b5766e7.jpg)
 
 "I love seeing younger stylists find their passion for color," she says. "There's so much room for creativity in this industry, and I want to help others discover what I've discovered."
 
@@ -132,7 +140,9 @@ Ready to experience the Keltie difference? Whether you're dreaming of dimensiona
     slug: "stylist-spotlight-melissa-mitchell",
     title: "Stylist Spotlight: Melissa Mitchell - The Precision Cuts & Styling Expert",
     excerpt: "Meet Melissa Mitchell, our Master Stylist & Cuts Specialist. Discover her passion for precision cuts, her approach to personalized styling, and how she helps clients find their signature look.",
-    content: `# Stylist Spotlight: Melissa Mitchell
+    content: `![Melissa Mitchell - Master Stylist](/manus-storage/image_2_77de6b27.jpg)
+
+# Stylist Spotlight: Melissa Mitchell
 
 ## The Precision Cuts & Styling Expert
 
@@ -147,6 +157,8 @@ Melissa's path to becoming a master stylist started with a simple love of hair. 
 "I was always fascinated by how a haircut could completely change someone's look," Melissa recalls. "I wanted to understand the structure, the angles, the way hair falls. That curiosity led me to cosmetology school."
 
 But it was after school, working in various salons, that Melissa discovered her true specialty: precision cutting. She became obsessed with mastering different cutting techniques—from classic bobs to modern shags, textured layers to geometric cuts.
+
+![Precision Cutting Technique](/manus-storage/image_5_26f5e447.jpg)
 
 "I realized that cutting was where I could really make an impact," she explains. "A great cut is the foundation for everything else. You can have the best color in the world, but if the cut isn't right, the whole look falls flat."
 
@@ -193,6 +205,8 @@ She often recommends color services to complement a new cut, and she works close
 
 Like all our stylists, Melissa is passionate about using professional-grade products and maintaining hair health. She's a Kevin Murphy advocate and recommends specific products based on each client's hair type and needs.
 
+![Kevin Murphy Product Line](/manus-storage/image_11_35434dd5.jpg)
+
 "Product quality matters," she emphasizes. "Kevin Murphy products are formulated to work with different hair types and concerns. Whether you have fine, delicate hair or thick, coarse hair, there's a Kevin Murphy product designed for you."
 
 Her product recommendations include:
@@ -208,6 +222,8 @@ Melissa's day at Hello Beauty Lounge is filled with consultations, precise cutti
 "Every client is a new challenge," she says. "I love that. It keeps me engaged and constantly thinking about angles, proportions, and how to create the best cut for that specific person."
 
 Between clients, Melissa is often mentoring junior stylists, demonstrating cutting techniques, or experimenting with new styles. She's also active on social media, sharing before-and-after transformations and styling tips.
+
+![Hair Styling Expertise](/manus-storage/image_6_9021e8de.jpg)
 
 "I love inspiring people to try something new with their hair," she says. "A great cut can be life-changing. I want to help people see the potential in their hair."
 
@@ -273,7 +289,9 @@ Ready to experience the Melissa difference? Whether you're looking for a precisi
     slug: "stylist-spotlight-tiara-black",
     title: "Stylist Spotlight: Tiara Black - The Creative Colorist & Bold Transformation Expert",
     excerpt: "Meet Tiara Black, our Creative Colorist & Stylist. Discover her passion for bold color transformations, fashion colors, and how she helps clients express their unique style through hair.",
-    content: `# Stylist Spotlight: Tiara Black
+    content: `![Tiara Black - Creative Colorist](/manus-storage/image_7_dd361586.jpg)
+
+# Stylist Spotlight: Tiara Black
 
 ## The Creative Colorist & Bold Transformation Expert
 
@@ -288,6 +306,8 @@ Tiara's journey into hair color started with a desire to express creativity. Gro
 "Hair is a canvas," Tiara explains. "Color is paint. I can create something beautiful, bold, and totally unique for each client. That's what drew me to this industry."
 
 Early in her career, Tiara worked with various stylists and colorists, learning different techniques and developing her eye for color. But it wasn't until she started experimenting with fashion colors—coppers, burgundies, jewel tones, creative placements—that she found her true specialty.
+
+![Bold Color Transformation](/manus-storage/image_9_29d4fb54.jpg)
 
 "I became obsessed with color theory," she recalls. "Understanding undertones, how different colors interact with skin tones, how to correct color mistakes, how to create dimension. I invested in advanced training and started building my portfolio of bold transformations."
 
@@ -322,6 +342,8 @@ Tiara's approach to color is consultative and collaborative. She spends time und
 Based on these answers, she recommends a color strategy that works for the client's lifestyle and goals.
 
 For products, Tiara is a devoted Kevin Murphy user and recommends their full range of color-care products.
+
+![Kevin Murphy Color Care Products](/manus-storage/image_12_097a37a9.jpg)
 
 "Kevin Murphy products are essential for maintaining bold colors," she says. "The ANGEL.WASH and ANGEL.RINSE keep color vibrant, and their color correction products are incredible for maintaining tone and preventing brassiness."
 
@@ -403,7 +425,9 @@ Ready to experience the Tiara difference? Whether you're looking for a bold fash
     slug: "stylist-spotlight-noon-k",
     title: "Stylist Spotlight: Noon K - The Bridal Hair & Luxury Color Specialist",
     excerpt: "Meet Noon K, our Senior Stylist & Bridal Specialist. Discover her expertise in custom balayage, bridal hair, and luxury color transformations that make every client feel like a bride.",
-    content: `# Stylist Spotlight: Noon K
+    content: `![Noon K - Bridal Hair Specialist](/manus-storage/image_10_0b7c903c.jpg)
+
+# Stylist Spotlight: Noon K
 
 ## The Bridal Hair & Luxury Color Specialist
 
@@ -418,6 +442,8 @@ Noon's love for hair started early, but it was her experience working on bridal 
 "I realized that bridal hair was different," Noon recalls. "It's not just about creating a beautiful style—it's about understanding the bride's vision, her dress, her venue, her personality. It's about creating something that makes her feel like the best version of herself on the most important day of her life."
 
 From that moment, Noon invested in bridal hair training, studied different bridal styles, and built a portfolio of stunning bridal looks. She also became an expert in balayage and luxury color work, recognizing that many brides want their hair color to be as stunning as their style.
+
+![Bridal Hair Expertise](/manus-storage/image_3_792d24db.jpg)
 
 Today, Noon is known throughout Alberta for her bridal expertise and her ability to create custom looks that are both beautiful and practical for a full day of celebration.
 
@@ -456,6 +482,8 @@ A half-up, half-down style that combines elegance with movement. Perfect for bri
 ## Color + Bridal Hair Collaboration
 
 Many brides also work with Noon on color before their wedding. She often recommends a custom balayage or color refresh to enhance the bridal look.
+
+![Luxury Color & Bridal Styling](/manus-storage/image_8_3fd8c5ea.jpg)
 
 "Color can really elevate a bridal look," Noon explains. "A custom balayage adds dimension and richness to the hair, making the bridal style even more stunning. I often recommend scheduling a color appointment 2-3 weeks before the wedding so the color settles and looks perfect on the big day."
 

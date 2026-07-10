@@ -39,3 +39,7 @@
 - [x] Update all 4 stylist profiles with spotlight metadata
 - [x] Add spotlight button to profile card and modal sections
 - [x] Integrate spotlight navigation with wouter routing
+- [x] Download and upload 12 Kevin Murphy & salon images to S3
+- [x] Add hero images to all 4 stylist spotlight blog posts
+- [x] Insert product/styling images throughout blog content to break up text
+- [x] Verify image rendering in blog posts
