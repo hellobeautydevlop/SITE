@@ -216,7 +216,7 @@ export default function Gallery() {
               <div className={`relative overflow-hidden bg-muted ${
                 index === 0 ? "h-96 md:h-full" : "h-72 md:h-80"
               }`}>
-                {transformation.after ? (
+                {transformation.after && transformation.after.trim() ? (
                   <img
                     src={transformation.after}
                     alt={transformation.title}
