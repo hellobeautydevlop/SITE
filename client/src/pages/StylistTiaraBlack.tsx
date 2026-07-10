@@ -62,7 +62,7 @@ export default function StylistTiaraBlack() {
 
       {/* Hero Section with Image */}
       <section className="relative h-[50vh] md:h-[60vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/tiara-black-profile_a8c2f5e1.png')", backgroundAttachment: "scroll", backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/IMG_1200_b85e3391.PNG')", backgroundAttachment: "scroll", backgroundSize: "cover", backgroundPosition: "center" }}>
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
         </div>
 

@@ -83,7 +83,7 @@ export default function Home() {
       bio: "Tiara specializes in premium hand-tied extensions with seamless blending and expert color matching. With meticulous attention to detail, she transforms hair with beautiful, natural-looking extensions that enhance your style.",
       rating: 5.0,
       reviews: 9,
-      image: "/manus-storage/tiara-black-profile_a8c2f5e1.png",
+      image: "/manus-storage/IMG_1200_b85e3391.PNG",
       instagram: "https://www.instagram.com/holysnips_bytiara?igsh=bnBhOG84cnA5ZG4z",
     },
     {
