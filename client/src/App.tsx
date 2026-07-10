@@ -29,6 +29,7 @@ import StylistTiaraBlack from "./pages/StylistTiaraBlack";
 import StylistQuiz from "./components/StylistQuiz";
 import BookingAssistant from "./components/BookingAssistant";
 import ScrollToTop from "./components/ScrollToTop";
+import FloatingNav from "./components/FloatingNav";
 
 
 function PageTransitionWrapper({ children }: { children: React.ReactNode }) {
@@ -93,6 +94,7 @@ function App() {
         defaultTheme="light"
       >
         <TooltipProvider>
+          <FloatingNav />
           <Toaster />
           <Router />
           <ScrollToTop />

@@ -8,7 +8,7 @@ import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import MobileNav from "@/components/MobileNav";
 import InstagramFeed from "@/components/InstagramFeed";
-import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+
 import PromotionalBanner from "@/components/PromoticBanner";
 
 /**

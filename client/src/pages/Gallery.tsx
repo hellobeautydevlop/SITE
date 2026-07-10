@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import { ChevronLeft, ArrowRight } from "lucide-react";
 import { useLocation } from "wouter";
-import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+
 import LazyImage from "@/components/LazyImage";
 import Footer from "@/components/Footer";
 
@@ -216,11 +216,10 @@ export default function Gallery() {
               <div className={`relative overflow-hidden bg-muted ${
                 index === 0 ? "h-96 md:h-full" : "h-72 md:h-80"
               }`}>
-                <BeforeAfterSlider
-                  beforeImage={transformation.before}
-                  afterImage={transformation.after}
-                  title={transformation.title}
-                  heightClass="h-full"
+                <img
+                  src={transformation.after}
+                  alt={transformation.title}
+                  className="w-full h-full object-cover"
                 />
               </div>
 
