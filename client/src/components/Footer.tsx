@@ -2,8 +2,17 @@ import { Instagram, Facebook, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
+    <footer className="bg-primary text-primary-foreground py-16">
       <div className="container">
+        {/* Logo Section */}
+        <div className="flex justify-center mb-12">
+          <img 
+            src="/manus-storage/IMG_1191_ac255bfa.PNG"
+            alt="Hello Beauty Lounge"
+            className="h-16 w-auto opacity-90 hover:opacity-100 transition-opacity"
+          />
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Quick Links */}
           <div>
@@ -45,7 +54,7 @@ export default function Footer() {
         
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/70">
           <p>&copy; {new Date().getFullYear()} Hello Beauty Lounge. All rights reserved.</p>
-          <p className="mt-2">Designed with passion in Red Deer, Alberta.</p>
+          <p className="mt-2">Crafted with passion in Red Deer, Alberta</p>
         </div>
       </div>
     </footer>

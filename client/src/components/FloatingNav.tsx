@@ -33,23 +33,19 @@ export default function FloatingNav() {
           : 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border'
       }`}>
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <div 
+          <div className="flex items-center justify-between h-16">
+            {/* Brand Text (Magazine Style) */}
+            <button 
               onClick={() => handleNavigation('/')}
-              className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
+              className="text-sm font-semibold tracking-widest text-foreground hover:text-accent transition-colors uppercase"
             >
-              <img 
-                src="/manus-storage/IMG_1191_ac255bfa.PNG"
-                alt="Hello Beauty Lounge"
-                className="h-8 w-auto"
-              />
-            </div>
+              Hello Beauty
+            </button>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6">
               <div className="relative group">
-                <button className="flex items-center gap-1 text-foreground hover:text-accent transition-colors font-medium">
+                <button className="flex items-center gap-1 text-foreground hover:text-accent transition-colors text-sm font-medium">
                   Services
                   <ChevronDown className="w-4 h-4" />
                 </button>
@@ -81,25 +77,25 @@ export default function FloatingNav() {
                 </div>
               </div>
               
-              <button onClick={() => handleNavigation('/gallery')} className="text-foreground hover:text-accent transition-colors font-medium">
+              <button onClick={() => handleNavigation('/gallery')} className="text-foreground hover:text-accent transition-colors text-sm font-medium">
                 Gallery
               </button>
-              <button onClick={() => handleNavigation('/blog')} className="text-foreground hover:text-accent transition-colors font-medium">
+              <button onClick={() => handleNavigation('/blog')} className="text-foreground hover:text-accent transition-colors text-sm font-medium">
                 Blog
               </button>
-              <button onClick={() => handleNavigation('/reviews')} className="text-foreground hover:text-accent transition-colors font-medium">
+              <button onClick={() => handleNavigation('/reviews')} className="text-foreground hover:text-accent transition-colors text-sm font-medium">
                 Reviews
               </button>
-              <button onClick={() => handleNavigation('/weddings')} className="text-foreground hover:text-accent transition-colors font-medium">
+              <button onClick={() => handleNavigation('/weddings')} className="text-foreground hover:text-accent transition-colors text-sm font-medium">
                 Weddings
               </button>
-              <button onClick={() => handleNavigation('/kevin-murphy')} className="text-foreground hover:text-accent transition-colors font-medium">
+              <button onClick={() => handleNavigation('/kevin-murphy')} className="text-foreground hover:text-accent transition-colors text-sm font-medium">
                 Kevin Murphy
               </button>
-              <button onClick={() => handleNavigation('/faq')} className="text-foreground hover:text-accent transition-colors font-medium">
+              <button onClick={() => handleNavigation('/faq')} className="text-foreground hover:text-accent transition-colors text-sm font-medium">
                 FAQ
               </button>
-              <button onClick={() => handleNavigation('/contact')} className="text-foreground hover:text-accent transition-colors font-medium">
+              <button onClick={() => handleNavigation('/contact')} className="text-foreground hover:text-accent transition-colors text-sm font-medium">
                 Contact
               </button>
             </div>
@@ -199,7 +195,7 @@ export default function FloatingNav() {
       </nav>
 
       {/* Spacer to prevent content overlap */}
-      <div className="h-20"></div>
+      <div className="h-16"></div>
     </>
   );
 }
