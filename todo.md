@@ -43,3 +43,6 @@
 - [x] Add hero images to all 4 stylist spotlight blog posts
 - [x] Insert product/styling images throughout blog content to break up text
 - [x] Verify image rendering in blog posts
+- [x] Generate professional bridal hero image for wedding page
+- [x] Integrate bridal image into Weddings.tsx hero section
+- [x] Create responsive layout with image and text side-by-side

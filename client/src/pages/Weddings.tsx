@@ -121,34 +121,44 @@ This inquiry was submitted from the Hello Beauty Lounge website.
         <div className="container">
           <Breadcrumb items={breadcrumbItems} />
           
-          <div className="max-w-3xl mx-auto text-center mt-12">
-            <div className="inline-block mb-6 px-4 py-2 bg-accent/10 rounded-full border border-accent/30">
-              <span className="text-accent font-semibold text-sm tracking-widest uppercase">
-                Your Perfect Day
-              </span>
+          <div className="grid md:grid-cols-2 gap-12 items-center mt-12">
+            <div className="order-2 md:order-1">
+              <img 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/bridal-hero-Se8u4U5JcKKyCB6ZUtjf8h.webp" 
+                alt="Luxury Bridal Hair - Hello Beauty Lounge"
+                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+              />
             </div>
-            
-            <h1 className="text-5xl md:text-6xl mb-6 text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Wedding Hair Excellence
-            </h1>
-            
-            <p className="text-xl text-foreground/70 mb-8 leading-relaxed">
-              Let us create the perfect hairstyle for your wedding day. From bridal updos to bridesmaid styling, we specialize in making you feel absolutely beautiful.
-            </p>
+          
+            <div className="order-1 md:order-2 max-w-2xl">
+              <div className="inline-block mb-6 px-4 py-2 bg-accent/10 rounded-full border border-accent/30">
+                <span className="text-accent font-semibold text-sm tracking-widest uppercase">
+                  Your Perfect Day
+                </span>
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl mb-6 text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Wedding Hair Excellence
+              </h1>
+              
+              <p className="text-xl text-foreground/70 mb-8 leading-relaxed">
+                Let us create the perfect hairstyle for your wedding day. From bridal updos to bridesmaid styling, we specialize in making you feel absolutely beautiful.
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
-                className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 rounded-full"
-              >
-                Book Your Consultation
-              </Button>
-              <Button 
-                variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary/5 font-semibold px-8 py-3 rounded-full"
-              >
-                Learn More
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  onClick={() => window.open('https://www.vagaro.com/hellobeautylounge', '_blank')}
+                  className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 rounded-full"
+                >
+                  Book Your Consultation
+                </Button>
+                <Button 
+                  variant="outline"
+                  className="border-2 border-primary text-primary hover:bg-primary/5 font-semibold px-8 py-3 rounded-full"
+                >
+                  Learn More
+                </Button>
+              </div>
             </div>
           </div>
         </div>
