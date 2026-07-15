@@ -65,3 +65,8 @@
 - [x] Add service-card hover lift effect (translateY -4px with shadow)
 - [x] Update service card component to use new animation classes
 - [x] Verify animations work on desktop and mobile
+- [x] Create useScrollAnimation custom hook for fade-in effects
+- [x] Add scroll-triggered animations to team member cards with staggered delay
+- [x] Add scroll-triggered animations to testimonials carousel
+- [x] Test scroll animations on desktop and mobile
+- [x] Verify animations respect prefers-reduced-motion

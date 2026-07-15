@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { testimonials, testimonialStats } from "@/data/testimonialsData";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function TestimonialsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation({ threshold: 0.1 });
 
   // Auto-rotate carousel every 5 seconds
   useEffect(() => {
@@ -37,7 +40,10 @@ export default function TestimonialsCarousel() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-background to-accent/5">
+    <section 
+      ref={sectionRef}
+      className={`py-16 md:py-24 bg-gradient-to-b from-background to-accent/5 reveal-on-scroll ${sectionVisible ? 'active' : ''}`}
+    >
       <div className="container">
         {/* Header */}
         <div className="text-center mb-12">

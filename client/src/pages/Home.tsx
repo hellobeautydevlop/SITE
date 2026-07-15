@@ -4,9 +4,11 @@ import SEO from "@/components/SEO";
 import { Phone, MapPin, Clock, Scissors, Sparkles, Palette, Star, Instagram, ArrowRight, Mail, Facebook, Linkedin, Twitter, ChevronDown } from "lucide-react";
 import { useState, useMemo } from "react";
 import { useLocation } from "wouter";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import MobileNav from "@/components/MobileNav";
+import AnimatedTeamCard from "@/components/AnimatedTeamCard";
 import InstagramFeed from "@/components/InstagramFeed";
 
 import PromotionalBanner from "@/components/PromoticBanner";
@@ -239,56 +241,7 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-              <Card key={index} className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <img 
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-primary mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    {member.name}
-                  </h3>
-                  <p className="text-accent text-sm font-semibold mb-2">{member.role}</p>
-                  <p className="text-foreground/70 text-sm mb-4">{member.specialty}</p>
-                  <div className="flex justify-center items-center gap-2 text-yellow-500 mb-4">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span>{member.rating} ({member.reviews} reviews)</span>
-                  </div>
-                  {member.name === "Noon K" && (
-                    <Button 
-                      onClick={() => setLocation("/stylists/noon-k")}
-                      className="bg-accent hover:bg-accent/90 text-accent-foreground w-full"
-                    >
-                      View Profile
-                    </Button>
-                  )}
-                  {member.name === "Melissa Mitchell" && (
-                    <Button 
-                      onClick={() => setLocation("/stylists/melissa-mitchell")}
-                      className="bg-accent hover:bg-accent/90 text-accent-foreground w-full"
-                    >
-                      View Profile
-                    </Button>
-                  )}
-                  {member.name === "Keltie Cummins" && (
-                    <Button 
-                      onClick={() => setLocation("/stylists/keltie-cummins")}
-                      className="bg-accent hover:bg-accent/90 text-accent-foreground w-full"
-                    >
-                      View Profile
-                    </Button>
-                  )}
-                  {member.name === "Tiara Black" && (
-                    <Button 
-                      onClick={() => setLocation("/stylists/tiara-black")}
-                      className="bg-accent hover:bg-accent/90 text-accent-foreground w-full"
-                    >
-                      View Profile
-                    </Button>
-                  )}
-                </div>
-              </Card>
+              <AnimatedTeamCard key={index} member={member} index={index} />
             ))}
           </div>
         </div>
