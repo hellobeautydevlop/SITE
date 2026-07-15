@@ -51,3 +51,8 @@
 - [x] Add pricing page route to App.tsx and navigation
 - [x] Create comprehensive vitest tests for pricing data (27 tests passing)
 - [x] Add Pricing link to FloatingNav desktop and mobile menus
+- [x] Create testimonials data structure with 10 client reviews
+- [x] Build TestimonialsCarousel component with auto-rotate and navigation
+- [x] Integrate testimonials carousel into Homepage (already present)
+- [x] Create 30 passing vitest tests for testimonials data and carousel
+- [x] Verify carousel displays correctly on mobile and desktop
