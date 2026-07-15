@@ -92,6 +92,9 @@ export default function FloatingNav() {
               <button onClick={() => handleNavigation('/kevin-murphy')} className="text-foreground hover:text-accent transition-colors text-sm font-medium">
                 Kevin Murphy
               </button>
+              <button onClick={() => handleNavigation('/pricing')} className="text-foreground hover:text-accent transition-colors text-sm font-medium">
+                Pricing
+              </button>
               <button onClick={() => handleNavigation('/faq')} className="text-foreground hover:text-accent transition-colors text-sm font-medium">
                 FAQ
               </button>
@@ -175,6 +178,9 @@ export default function FloatingNav() {
                 </button>
                 <button onClick={() => handleNavigation('/kevin-murphy')} className="w-full text-left px-4 py-2 hover:bg-accent/10 rounded-lg font-medium">
                   Kevin Murphy
+                </button>
+                <button onClick={() => handleNavigation('/pricing')} className="w-full text-left px-4 py-2 hover:bg-accent/10 rounded-lg font-medium">
+                  Pricing
                 </button>
                 <button onClick={() => handleNavigation('/faq')} className="w-full text-left px-4 py-2 hover:bg-accent/10 rounded-lg font-medium">
                   FAQ

@@ -30,6 +30,7 @@ import StylistNoon from "./pages/StylistNoon";
 import StylistTiara from "./pages/StylistTiara";
 import Weddings from "./pages/Weddings";
 import HairTrends from "./pages/HairTrends";
+import Pricing from "./pages/Pricing";
 
 import ScrollToTop from "./components/ScrollToTop";
 import FloatingNav from "./components/FloatingNav";
@@ -81,6 +82,7 @@ function Router() {
         <Route path={"/contact"} component={ContactUs} />
         <Route path="/weddings" component={Weddings} />
         <Route path="/hair-trends" component={HairTrends} />
+        <Route path="/pricing" component={Pricing} />
         <Route path="/404" component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

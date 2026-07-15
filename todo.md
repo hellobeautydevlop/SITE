@@ -46,3 +46,8 @@
 - [x] Generate professional bridal hero image for wedding page
 - [x] Integrate bridal image into Weddings.tsx hero section
 - [x] Create responsive layout with image and text side-by-side
+- [x] Create pricing data structure with all service categories and pricing
+- [x] Build Pricing.tsx page component with service categories and tiered pricing
+- [x] Add pricing page route to App.tsx and navigation
+- [x] Create comprehensive vitest tests for pricing data (27 tests passing)
+- [x] Add Pricing link to FloatingNav desktop and mobile menus
