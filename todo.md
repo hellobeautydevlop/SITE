@@ -80,3 +80,7 @@
 - [x] Style Instagram feed with responsive 3-column grid on desktop
 - [x] Add Instagram feed loading state and error handling
 - [x] Create 25 passing vitest tests for Instagram feed component
+- [x] Create AutoScrollToTop component to scroll to top on route changes
+- [x] Add AutoScrollToTop import and integration to App.tsx
+- [x] Create 24 passing vitest tests for AutoScrollToTop component
+- [x] Verify scroll-to-top works on all page navigations

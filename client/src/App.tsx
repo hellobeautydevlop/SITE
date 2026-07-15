@@ -33,6 +33,7 @@ import HairTrends from "./pages/HairTrends";
 import Pricing from "./pages/Pricing";
 
 import ScrollToTop from "./components/ScrollToTop";
+import AutoScrollToTop from "./components/AutoScrollToTop";
 import FloatingNav from "./components/FloatingNav";
 
 
@@ -103,6 +104,7 @@ function App() {
         defaultTheme="light"
       >
         <TooltipProvider>
+          <AutoScrollToTop />
           <FloatingNav />
           <Toaster />
           <Router />
