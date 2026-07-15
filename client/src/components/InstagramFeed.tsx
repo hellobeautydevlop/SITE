@@ -1,26 +1,44 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Instagram } from "lucide-react";
 
 /**
  * Design Philosophy: Modern Luxury Minimalism
  * - Instagram feed component showcasing salon's real content
  * - Uses Instagram's official embed code for real posts
  * - Links to Instagram profile for social proof
+ * - Includes loading and error states for reliability
  */
 
 export default function InstagramFeed() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
   useEffect(() => {
     // Load Instagram embed script
     const script = document.createElement("script");
     script.src = "//www.instagram.com/embed.js";
     script.async = true;
+    script.onload = () => {
+      setIsLoaded(true);
+      // Process embeds after script loads
+      if ((window as any).instgrm) {
+        (window as any).instgrm.Embeds.process();
+      }
+    };
+    script.onerror = () => {
+      setHasError(true);
+    };
     document.body.appendChild(script);
 
-    // Process embeds if script already loaded
-    if ((window as any).instgrm) {
-      (window as any).instgrm.Embeds.process();
-    }
+    // Cleanup function
+    return () => {
+      try {
+        document.body.removeChild(script);
+      } catch (e) {
+        // Script already removed
+      }
+    };
   }, []);
 
   // Real Instagram post URLs from @hello.beauty.lounge
@@ -60,31 +78,64 @@ export default function InstagramFeed() {
           </Button>
         </div>
 
-        {/* Instagram Embedded Posts Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {instagramPostUrls.map((url, index) => (
-            <div
-              key={index}
-              className="flex justify-center"
-              style={{
-                minHeight: "500px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+        {/* Error State */}
+        {hasError && (
+          <div className="bg-white rounded-lg p-12 text-center mb-8">
+            <Instagram className="w-12 h-12 text-accent/50 mx-auto mb-4" />
+            <p className="text-foreground/70 mb-6">
+              Unable to load Instagram feed. Visit us on Instagram for the latest updates!
+            </p>
+            <Button
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white"
+              onClick={() =>
+                window.open("https://www.instagram.com/hello.beauty.lounge", "_blank")
+              }
             >
-              <blockquote
-                className="instagram-media"
-                data-instgrm-permalink={url}
-                data-instgrm-version="14"
-              >
-                <a href={url} target="_blank" rel="noreferrer">
-                  View this post on Instagram
-                </a>
-              </blockquote>
+              <Instagram className="w-5 h-5 mr-2" />
+              Follow on Instagram
+            </Button>
+          </div>
+        )}
+
+        {/* Loading State */}
+        {!isLoaded && !hasError && (
+          <div className="bg-white rounded-lg p-12 text-center mb-8">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 mb-4">
+              <div className="animate-spin">
+                <Instagram className="w-6 h-6 text-accent" />
+              </div>
             </div>
-          ))}
-        </div>
+            <p className="text-foreground/70">Loading Instagram feed...</p>
+          </div>
+        )}
+
+        {/* Instagram Embedded Posts Grid */}
+        {!hasError && (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {instagramPostUrls.map((url, index) => (
+              <div
+                key={index}
+                className="flex justify-center"
+                style={{
+                  minHeight: "500px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <blockquote
+                  className="instagram-media"
+                  data-instgrm-permalink={url}
+                  data-instgrm-version="14"
+                >
+                  <a href={url} target="_blank" rel="noreferrer">
+                    View this post on Instagram
+                  </a>
+                </blockquote>
+              </div>
+            ))}
+          </div>
+        )}
 
         <div className="text-center md:hidden">
           <Button

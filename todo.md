@@ -75,3 +75,8 @@
 - [x] Display 5-star ratings and verified badges on reviews
 - [x] Create 30 passing vitest tests for Melissa reviews page
 - [x] Update StylistMelissa.tsx to use new reviews component
+- [x] Create InstagramFeed component with 6 real Instagram posts
+- [x] Integrate Instagram feed into Homepage (positioned after reviews section)
+- [x] Style Instagram feed with responsive 3-column grid on desktop
+- [x] Add Instagram feed loading state and error handling
+- [x] Create 25 passing vitest tests for Instagram feed component
