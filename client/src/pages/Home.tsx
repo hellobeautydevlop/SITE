@@ -109,9 +109,9 @@ export default function Home() {
   ];
 
   const brands = [
-    { name: "Kevin Murphy", description: "Premium, environmentally conscious hair care", logo: "🌿" },
-    { name: "Living Proof", description: "Advanced hair science products", logo: "🔬" },
-    { name: "K18", description: "Professional hair repair technology", logo: "✨" },
+    { name: "Kevin Murphy", description: "Premium, environmentally conscious hair care", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/kevin-murphy-logo-bJmscfh9kiS6f4pZqv49Z3.webp" },
+    { name: "Living Proof", description: "Advanced hair science products", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/living-proof-logo-THPgz34PqbVYgQnuXp4thw.webp" },
+    { name: "K18", description: "Professional hair repair technology", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383571117/TThwFCb8x995AqmZMjehqw/k18-logo-Ex7APhk4F7YXe7GEAhjdeV.webp" },
   ];
 
   return (
@@ -172,7 +172,9 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {brands.map((brand, index) => (
                   <article key={index} className="bg-gradient-to-br from-accent/5 to-primary/5 rounded-lg p-8 border border-accent/10 hover:border-accent/30 transition-all group">
-                    <div className="text-4xl mb-4">{brand.logo}</div>
+                    <div className="h-20 mb-4 flex items-center justify-center">
+                      <img src={brand.logo} alt={brand.name} className="h-full object-contain" />
+                    </div>
                     <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">{brand.name}</h3>
                     <p className="text-foreground/70 text-sm">{brand.description}</p>
                   </article>
@@ -185,7 +187,7 @@ export default function Home() {
           <div className="grid md:grid-cols-1 gap-8 items-center bg-gradient-to-r from-accent/10 via-primary/5 to-accent/10 rounded-xl p-8 md:p-12 border border-accent/20">
             <div className="text-center md:text-center">
               <h3 className="text-3xl md:text-4xl font-bold text-primary mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                ✨ Certified Kevin Murphy Salon ✨
+                Certified Kevin Murphy Salon
               </h3>
               <p className="text-foreground/70 leading-relaxed mb-6">
                 We are proud to be an official Kevin Murphy salon partner, using only their premium, environmentally conscious, and weightless formulations across all our services. Our stylists are trained in Kevin Murphy techniques to deliver exceptional results.
