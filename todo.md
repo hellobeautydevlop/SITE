@@ -60,3 +60,8 @@
 - [x] Replace emoji logos with professional images in brands section
 - [x] Remove emoji sparkles from Kevin Murphy certification heading
 - [x] Generate 4 service showcase images (balayage, extensions, cuts, bridal)
+- [x] Add smooth hover effects and zoom animations to service images
+- [x] Create service-card-image CSS animation class (1.08x zoom over 500ms)
+- [x] Add service-card hover lift effect (translateY -4px with shadow)
+- [x] Update service card component to use new animation classes
+- [x] Verify animations work on desktop and mobile

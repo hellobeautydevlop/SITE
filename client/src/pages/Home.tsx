@@ -208,11 +208,11 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <Card key={index} className="service-card group relative overflow-hidden rounded-xl shadow-lg">
                 <img 
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="service-card-image w-full h-48 object-cover"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
