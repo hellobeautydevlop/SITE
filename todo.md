@@ -84,3 +84,11 @@
 - [x] Add AutoScrollToTop import and integration to App.tsx
 - [x] Create 24 passing vitest tests for AutoScrollToTop component
 - [x] Verify scroll-to-top works on all page navigations
+- [x] Create useParallax and useTextReveal hooks for animations
+- [x] Add animations.css with parallax, gradient, and text reveal keyframes
+- [x] Implement text reveal animations for hero section headlines
+- [x] Integrate parallax into hero section with ref tracking
+- [x] Add hero-animated class with gradient overlay
+- [x] Apply text-reveal classes to hero badge, h1, and p tags
+- [x] Create 45 passing vitest tests for all animation features
+- [x] Optimize animations with will-change and backface-visibility

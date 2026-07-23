@@ -5,6 +5,7 @@ import { Phone, MapPin, Clock, Scissors, Sparkles, Palette, Star, Instagram, Arr
 import { useState, useMemo } from "react";
 import { useLocation } from "wouter";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useParallax, useTextReveal } from "@/hooks/useParallax";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import MobileNav from "@/components/MobileNav";
@@ -25,6 +26,8 @@ export default function Home() {
   const [, setLocation] = useLocation();
   const [activeService, setActiveService] = useState(0);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const { ref: heroRef, offset: heroOffset } = useParallax({ speed: 0.5 });
+  const { ref: heroTextRef, isVisible: heroTextVisible } = useTextReveal();
 
   const services = [
     {
@@ -128,20 +131,20 @@ export default function Home() {
 
 
       {/* Magazine Hero Section */}
-      <section className="relative h-[60vh] md:h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/manus-storage/IMG_1156_862a96c0.PNG')", backgroundAttachment: "scroll", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section ref={heroRef} className="relative h-[60vh] md:h-[90vh] flex items-center overflow-hidden hero-animated">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat parallax-bg" style={{ backgroundImage: "url('/manus-storage/IMG_1156_862a96c0.PNG')", backgroundAttachment: "fixed", backgroundSize: "cover", backgroundPosition: "center", transform: `translateY(${heroOffset * 0.5}px)` }}>
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
         </div>
 
-        <div className="container relative z-10 max-w-3xl px-4 md:px-8">
-          <span className="inline-block text-accent font-semibold tracking-widest uppercase text-xs md:text-sm mb-4 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+        <div ref={heroTextRef} className="container relative z-10 max-w-3xl px-4 md:px-8">
+          <span className="inline-block text-accent font-semibold tracking-widest uppercase text-xs md:text-sm mb-4 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-reveal">
             Premium Salon Partner
           </span>
-          <h1 className="text-4xl md:text-7xl text-white mb-4 md:mb-6 font-semibold leading-[1.15]" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="text-4xl md:text-7xl text-white mb-4 md:mb-6 font-semibold leading-[1.15] text-reveal delay-1" style={{ fontFamily: "'Playfair Display', serif" }}>
             Best Hair Salon <br className="hidden md:inline" />
             <span className="text-gold">in Red Deer</span>
           </h1>
-          <p className="text-base md:text-xl text-white/90 mb-8 md:mb-10 leading-relaxed max-w-xl">
+          <p className="text-base md:text-xl text-white/90 mb-8 md:mb-10 leading-relaxed max-w-xl text-reveal delay-2">
             Hello Beauty Lounge is Red Deer's premier hair salon. Expert stylists specializing in custom color, balayage, hair extensions, and bridal hair services using premium Kevin Murphy products.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

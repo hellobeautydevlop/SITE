@@ -1,0 +1,192 @@
+/* Premium Animation Library for Hello Beauty Lounge */
+
+/* ============================================
+   PARALLAX SCROLLING ANIMATIONS
+   ============================================ */
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* ============================================
+   ANIMATED GRADIENT BACKGROUNDS
+   ============================================ */
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+.animated-gradient-hero {
+  background: linear-gradient(
+    135deg,
+    #f5e6d3 0%,
+    #e8d4c0 25%,
+    #dcc2ad 50%,
+    #e8d4c0 75%,
+    #f5e6d3 100%
+  );
+  animation: gradient-shift 20s ease infinite;
+}
+
+.animated-gradient-accent {
+  background: linear-gradient(
+    135deg,
+    #d4a574 0%,
+    #c99563 25%,
+    #be8552 50%,
+    #c99563 75%,
+    #d4a574 100%
+  );
+  animation: gradient-shift 18s ease infinite;
+}
+
+/* ============================================
+   TEXT REVEAL ANIMATIONS
+   ============================================ */
+
+@keyframes text-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-reveal-stagger {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-reveal {
+  opacity: 0;
+  animation: text-reveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.text-reveal.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.text-reveal.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.text-reveal.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.text-reveal.delay-4 {
+  animation-delay: 0.4s;
+}
+
+/* ============================================
+   HERO SECTION ANIMATIONS
+   ============================================ */
+
+.hero-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-animated::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(244, 228, 211, 0.1) 0%,
+    rgba(212, 165, 116, 0.1) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ============================================
+   SERVICE CARD ANIMATIONS
+   ============================================ */
+
+.service-card-animated {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 230, 211, 0.5) 0%,
+    rgba(220, 194, 173, 0.5) 100%
+  );
+  animation: gradient-shift 12s ease infinite;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.service-card-animated:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(212, 165, 116, 0.6) 0%,
+    rgba(188, 133, 82, 0.6) 100%
+  );
+}
+
+/* ============================================
+   ACCESSIBILITY: Respect prefers-reduced-motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-gradient,
+  .animated-gradient-hero,
+  .animated-gradient-accent,
+  .text-reveal,
+  .parallax-bg,
+  .service-card-animated {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .text-reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+.parallax-bg,
+.animated-gradient,
+.text-reveal {
+  will-change: auto;
+}
+
+.parallax-bg:hover,
+.animated-gradient:hover {
+  will-change: transform;
+}
